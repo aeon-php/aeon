@@ -18,7 +18,7 @@ $calendar = GregorianCalendar::UTC();
 
 $holidays = YasumiHolidays::provider(
     \Yasumi\Provider\Poland::class, 
-    $holidays = YasumiHolidays::provider(Poland::class, $calendar->currentYear()->number())
+    YasumiHolidays::provider(Poland::class, $calendar->currentYear()->number())
 );
 
 if ($holidays->isHoliday($calendar->currentYear()->january()->firstDay())) {
