@@ -1,0 +1,62 @@
+{
+    "name": "aeon-php/calendar-holidays-yasumi",
+    "type": "library",
+    "description": "Bridge for Aeon Calendar Holidays library and Yasumi",
+    "keywords": ["calendar", "immutable", "holidays", "yasumi", "bridge"],
+    "require": {
+        "php": ">=7.4.2",
+        "ext-json": "*",
+        "webmozart/assert": "^1.8",
+        "aeon-php/calendar": "dev-master",
+        "aeon-php/calendar-holidays": "dev-master",
+        "azuyalabs/yasumi": "^2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.2",
+        "phpstan/phpstan": "^0.12.25",
+        "vimeo/psalm": "^3.11",
+        "phpstan/phpstan-phpunit": "^0.12.8",
+        "phpstan/phpstan-webmozart-assert": "^0.12.4",
+        "psalm/plugin-phpunit": "^0.10.1",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "google/apiclient": "^2.0"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:aeon-php/calendar.git"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:aeon-php/calendar-holidays.git"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aeon\\": [
+                "src/Aeon"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aeon\\Calendar\\Tests\\": "tests/Aeon/Calendar/Tests/"
+        }
+    },
+    "scripts": {
+        "build": [
+            "@static:analyze",
+            "@test"
+        ],
+        "test": [
+            "phpunit"
+        ],
+        "static:analyze": [
+            "psalm --output-format=compact",
+            "phpstan analyze -c phpstan.neon",
+            "php-cs-fixer fix --dry-run"
+        ],
+        "cs:php:fix": "php-cs-fixer fix"
+    }
+}
