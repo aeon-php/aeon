@@ -14,9 +14,14 @@ that brings `YasumiHolidays` instance of `Holidays`.
 
 ```php
 
-$holidays = YasumiHolidays::provider(\Yasumi\Provider\Poland::class, 2020);
+$calendar = GregorianCalendar::UTC();
 
-if ($holidays->isHoliday(Day::fromString('2020-01-01'))) {
+$holidays = YasumiHolidays::provider(
+    \Yasumi\Provider\Poland::class, 
+    $holidays = YasumiHolidays::provider(Poland::class, $calendar->currentYear()->number())
+);
+
+if ($holidays->isHoliday($calendar->currentYear()->january()->firstDay())) {
     echo "Happy New Year!";
 }
 ```
