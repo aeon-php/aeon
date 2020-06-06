@@ -7,7 +7,6 @@ Time Management Framework for PHP
 > "timeless" or "for eternity".
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Aeon) 
-``` 
 
 This is a brige between [Yasumi](https://yasumi.dev) library and [Aeon Calendar Holidays](https://github.com/aeon-php/calendar-holidays)
 that brings `YasumiHolidays` instance of `Holidays`.
