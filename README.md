@@ -14,7 +14,7 @@ that brings `YasumiHolidays` instance of `Holidays`.
 
 ```php
 
-$holidays = YasumiHolidays::provider(Poland::class, 2020);
+$holidays = YasumiHolidays::provider(\Yasumi\Provider\Poland::class, 2020);
 
 if ($holidays->isHoliday(Day::fromString('2020-01-01'))) {
     echo "Happy New Year!";
