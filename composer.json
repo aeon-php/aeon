@@ -3,6 +3,8 @@
     "type": "library",
     "description": "Bridge for Aeon Calendar Holidays library and Yasumi",
     "keywords": ["calendar", "immutable", "holidays", "yasumi", "bridge"],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.2",
         "ext-json": "*",
@@ -21,16 +23,6 @@
         "friendsofphp/php-cs-fixer": "^2.16",
         "google/apiclient": "^2.0"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:aeon-php/calendar.git"
-        },
-        {
-            "type": "git",
-            "url": "git@github.com:aeon-php/calendar-holidays.git"
-        }
-    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -43,6 +35,10 @@
         "psr-4": {
             "Aeon\\Calendar\\Tests\\": "tests/Aeon/Calendar/Tests/"
         }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
     "scripts": {
         "build": [
@@ -58,5 +54,10 @@
             "php-cs-fixer fix --dry-run"
         ],
         "cs:php:fix": "php-cs-fixer fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
     }
 }
