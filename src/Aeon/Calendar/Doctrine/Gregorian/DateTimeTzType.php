@@ -45,14 +45,14 @@ final class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
             return $value;
         }
 
+        if (!\is_string($value)) {
+            throw ConversionException::conversionFailedInvalidType($value, $this->getName(), ['null', 'string']);
+        }
+
         try {
             $val = DateTime::fromString($value);
         } catch (\Exception $e) {
             throw ConversionException::conversionFailedFormat($value, $this->getName(), $platform->getDateTimeTzFormatString(), $e);
-        }
-
-        if (! $val) {
-            throw ConversionException::conversionFailedFormat($value, $this->getName(), $platform->getDateTimeTzFormatString());
         }
 
         return $val;
