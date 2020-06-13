@@ -34,6 +34,7 @@ Instead of using function go with `SystemProcess` and expect instance of `Proces
 in your [system under test](https://en.wikipedia.org/wiki/System_under_test).  
 
 ```php
+<?php
 
 use Aeon\Calendar\System\SystemProcess;
 use Aeon\Calendar\TimeUnit;
