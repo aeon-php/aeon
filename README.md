@@ -17,13 +17,14 @@ that brings `YasumiHolidays` instance of `Holidays`.
 
 
 ```php
+<?php
+use Aeon\Calendar\Gregorian\GregorianCalendar;
+use Aeon\Calendar\Gregorian\YasumiHolidays;
+use Yasumi\Provider\Poland;
 
 $calendar = GregorianCalendar::UTC();
 
-$holidays = YasumiHolidays::provider(
-    \Yasumi\Provider\Poland::class, 
-    YasumiHolidays::provider(Poland::class, $calendar->currentYear()->number())
-);
+$holidays = YasumiHolidays::provider(Poland::class, $calendar->currentYear()->number());
 
 if ($holidays->isHoliday($calendar->currentYear()->january()->firstDay())) {
     echo "Happy New Year!";
