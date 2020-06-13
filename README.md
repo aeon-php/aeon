@@ -16,6 +16,7 @@ Time Management Framework for PHP
 ## Usage
 
 ```php
+<?php
 use Doctrine\DBAL\Types\Type;
 use Aeon\Calendar\Doctrine\Gregorian\DateType;
 use Aeon\Calendar\Doctrine\Gregorian\DateTimeType;
