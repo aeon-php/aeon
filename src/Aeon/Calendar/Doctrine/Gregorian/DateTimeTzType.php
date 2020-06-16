@@ -57,4 +57,9 @@ final class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
 
         return $val;
     }
+
+    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    {
+        return true;
+    }
 }

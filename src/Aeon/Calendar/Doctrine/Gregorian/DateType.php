@@ -57,4 +57,9 @@ final class DateType extends \Doctrine\DBAL\Types\DateTimeType
 
         return $val;
     }
+
+    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    {
+        return true;
+    }
 }
