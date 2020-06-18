@@ -13,7 +13,7 @@ $start = GregorianCalendar::UTC()->now();
 SystemProcess::current()->sleep(TimeUnit::precise(2.5));
 $end = GregorianCalendar::UTC()->now();
 
-var_dump($start->to($end)->distance()->inSeconds());
+var_dump($start->until($end)->distance()->inSeconds());
 
 --EXPECTF--
 int(2)
