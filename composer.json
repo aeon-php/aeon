@@ -7,11 +7,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.2",
-        "ext-json": "*",
-        "webmozart/assert": "^1.8",
-        "aeon-php/calendar": "dev-master",
-        "aeon-php/calendar-holidays": "dev-master",
-        "azuyalabs/yasumi": "^2.2"
+        "aeon-php/calendar-holidays": "1.x-dev",
+        "azuyalabs/yasumi": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.2",
