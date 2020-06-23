@@ -1,0 +1,10 @@
+--TEST--
+test getting current date
+--TEMPLATE--
+{{ aeon_now() }}
+{{ aeon_now('Europe/Warsaw') }}
+--DATA--
+return []
+--EXPECT--
+2020-01-01T00:00:00+0000
+2020-01-01T01:00:00+0100

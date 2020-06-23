@@ -1,0 +1,59 @@
+{
+    "name": "aeon-php/calendar-twig",
+    "type": "library",
+    "description": "PHP type safe, immutable calendar library",
+    "keywords": ["calendar", "immutable", "twig", "extension"],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4.2",
+        "aeon-php/calendar": "1.x-dev",
+        "twig/twig": "^1|^2|^3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.1",
+        "phpstan/phpstan": "^0.12.25",
+        "vimeo/psalm": "^3.11",
+        "phpstan/phpstan-phpunit": "^0.12.8",
+        "phpstan/phpstan-webmozart-assert": "^0.12.4",
+        "psalm/plugin-phpunit": "^0.10.1",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aeon\\": [
+                "src/Aeon"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aeon\\Twig\\Tests\\": "tests/Aeon/Twig/Tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "build": [
+            "@static:analyze",
+            "@test"
+        ],
+        "test": [
+            "phpunit"
+        ],
+        "static:analyze": [
+            "psalm --output-format=compact",
+            "phpstan analyze -c phpstan.neon",
+            "php-cs-fixer fix --dry-run"
+        ],
+        "cs:php:fix": "php-cs-fixer fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-latest": "1.0-dev"
+        }
+    }
+}
