@@ -1,2 +1,1 @@
-{{ aeon_now() }}
-{{ aeon_now('Europe/Warsaw') }}
+{{ aeon_now() }}|{{ aeon_now('Europe/Warsaw') }}
