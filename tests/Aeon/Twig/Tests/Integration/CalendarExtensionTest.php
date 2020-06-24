@@ -36,8 +36,8 @@ final class CalendarExtensionTest extends TestCase
         );
         $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Europe/Warsaw'));
 
-        $this->assertSame(
-            \trim(\file_get_contents(__DIR__ . '/Fixtures/filters/aeon_date.txt')),
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/filters/aeon_date.txt',
             $twig->render('aeon_date.twig.txt')
         );
     }
@@ -53,8 +53,8 @@ final class CalendarExtensionTest extends TestCase
         );
         $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Europe/Warsaw'));
 
-        $this->assertSame(
-            \trim(\file_get_contents(__DIR__ . '/Fixtures/functions/aeon_now.txt')),
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/functions/aeon_now.txt',
             $twig->render('aeon_now.twig.txt')
         );
     }
