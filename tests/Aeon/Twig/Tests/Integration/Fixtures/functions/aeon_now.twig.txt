@@ -1,0 +1,2 @@
+{{ aeon_now() }}
+{{ aeon_now('Europe/Warsaw') }}

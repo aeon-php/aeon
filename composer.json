@@ -7,8 +7,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.2",
-        "aeon-php/calendar": "1.x-dev",
-        "twig/twig": "^1|^2|^3"
+        "aeon-php/calendar": "^1.0@dev",
+        "twig/twig": "^1.42|^2.10|^3"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.1",

@@ -6,10 +6,12 @@ namespace Aeon\Twig\Tests\Integration;
 
 use Aeon\Calendar\Gregorian\GregorianCalendarStub;
 use Aeon\Twig\CalendarExtension;
+use PHPUnit\Framework\TestCase;
+use Twig\Environment;
 use Twig\Extension\ExtensionInterface;
-use Twig\Test\IntegrationTestCase;
+use Twig\Loader\FilesystemLoader;
 
-final class CalendarExtensionTest extends IntegrationTestCase
+final class CalendarExtensionTest extends TestCase
 {
     private GregorianCalendarStub $calendarStub;
 
@@ -18,18 +20,42 @@ final class CalendarExtensionTest extends IntegrationTestCase
         $this->calendarStub = new GregorianCalendarStub(new \DateTimeImmutable('2020-01-01 00:00:00 UTC'));
     }
 
-    protected function getFixturesDir() : string
-    {
-        return __DIR__ . '/Fixtures';
-    }
-
-    protected function getExtensions() : array
-    {
-        return [new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Europe/Warsaw')];
-    }
-
     public function test_extension() : void
     {
         $this->assertInstanceOf(ExtensionInterface::class, new CalendarExtension($this->calendarStub));
+    }
+
+    public function test_filter_aeon_date() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/filters',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Europe/Warsaw'));
+
+        $this->assertSame(
+            \trim(\file_get_contents(__DIR__ . '/Fixtures/filters/aeon_date.txt')),
+            $twig->render('aeon_date.twig.txt')
+        );
+    }
+
+    public function test_function_aeon_now() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/functions',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Europe/Warsaw'));
+
+        $this->assertSame(
+            \trim(\file_get_contents(__DIR__ . '/Fixtures/functions/aeon_now.txt')),
+            $twig->render('aeon_now.twig.txt')
+        );
     }
 }
