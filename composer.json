@@ -1,0 +1,64 @@
+{
+    "name": "aeon-php/retry",
+    "type": "library",
+    "description": "Retry fragile operations in case of failure with different delay strategies and possibility to skip/terminate execution",
+    "keywords": ["calendar", "fail", "retry"],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4.2",
+        "aeon-php/process": "^1.0@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.1",
+        "phpstan/phpstan": "^0.12.25",
+        "vimeo/psalm": "^3.11",
+        "phpstan/phpstan-phpunit": "^0.12.8",
+        "phpstan/phpstan-webmozart-assert": "^0.12.4",
+        "psalm/plugin-phpunit": "^0.10.1",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "infection/infection": "^0.16.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "files": ["src/Aeon/Retry/retry_helper.php"],
+        "psr-4": {
+            "Aeon\\": [
+                "src/Aeon"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aeon\\Retry\\Tests\\": "tests/Aeon/Retry/Tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "build": [
+            "@static:analyze",
+            "@test",
+            "@test:mutation"
+        ],
+        "test": [
+            "phpunit"
+        ],
+        "test:mutation": [
+            "infection -vvv --test-framework-options='--testsuite=unit' --only-covered --log-verbosity=default --min-covered-msi=60 --threads=2"
+        ],
+        "static:analyze": [
+            "psalm --output-format=compact",
+            "phpstan analyze -c phpstan.neon",
+            "php-cs-fixer fix --dry-run"
+        ],
+        "cs:php:fix": "php-cs-fixer fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-latest": "1.0-dev"
+        }
+    }
+}
