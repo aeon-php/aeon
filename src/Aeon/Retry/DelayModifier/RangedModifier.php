@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Aeon\Retry\DelayModifier;
 
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\TimeUnit;
 use Aeon\Retry\DelayModifier;
-use Webmozart\Assert\Assert;
 
 final class RangedModifier implements DelayModifier
 {
@@ -16,7 +16,10 @@ final class RangedModifier implements DelayModifier
 
     private function __construct(TimeUnit $rangeStart, TimeUnit $rangeEnd)
     {
-        Assert::greaterThan($rangeEnd->inSecondsPrecise(), $rangeStart->inSecondsPrecise());
+        if ($rangeEnd->inSecondsPrecise() <= $rangeStart->inSecondsPrecise()) {
+            throw new InvalidArgumentException("Range end must be greater than range start");
+        }
+
         $this->rangeStart = $rangeStart;
         $this->rangeEnd = $rangeEnd;
     }

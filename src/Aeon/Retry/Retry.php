@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Aeon\Retry;
 
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\System\Process;
 use Aeon\Calendar\TimeUnit;
 use Aeon\Retry\DelayModifier\ConstantDelay;
 use Aeon\Retry\Exception\RetryException;
-use Webmozart\Assert\Assert;
 
 final class Retry
 {
@@ -32,8 +32,13 @@ final class Retry
         int $retries,
         TimeUnit $delay
     ) {
-        Assert::greaterThanEq($retries, 0, "Number of retries must be greater or equal 0.");
-        Assert::true($delay->isPositive(), "Delay between retries must be positive time unit.");
+        if ($retries < 0) {
+            throw new InvalidArgumentException("Number of retries must be greater or equal 0.");
+        }
+
+        if ($delay->isNegative()) {
+            throw new InvalidArgumentException("Delay between retries must be positive time unit.");
+        }
 
         $this->retries = $retries;
         $this->delay = $delay;
@@ -50,11 +55,15 @@ final class Retry
         return $this;
     }
 
-    public function onlyFor(string ...$exceptionClass) : self
+    public function onlyFor(string ...$exceptionClasses) : self
     {
-        Assert::allClassExists($exceptionClass);
+        foreach ($exceptionClasses as $exceptionClass) {
+            if (!\class_exists($exceptionClass)) {
+                throw new InvalidArgumentException("Class " . $exceptionClass . " does not exists.");
+            }
+        }
 
-        $this->onlyForExceptions = $exceptionClass;
+        $this->onlyForExceptions = $exceptionClasses;
 
         return $this;
     }

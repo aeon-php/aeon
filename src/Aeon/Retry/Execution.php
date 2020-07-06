@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Retry;
 
-use Webmozart\Assert\Assert;
+use Aeon\Calendar\Exception\InvalidArgumentException;
 
 final class Execution
 {
@@ -22,10 +22,15 @@ final class Execution
     /**
      * @param int $retry
      * @param array<\Throwable> $exceptions
+     * @psalm-suppress DocblockTypeContradiction
      */
     public function __construct(int $retry, array $exceptions = [])
     {
-        Assert::allIsInstanceOf($exceptions, \Throwable::class);
+        foreach ($exceptions as $exception) {
+            if (!$exception instanceof \Throwable) {
+                throw new InvalidArgumentException("All exceptions must implements \Throwable interface");
+            }
+        }
 
         $this->retry = $retry;
         $this->continue = false;
