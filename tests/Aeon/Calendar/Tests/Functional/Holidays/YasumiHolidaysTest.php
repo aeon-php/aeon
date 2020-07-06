@@ -17,7 +17,7 @@ final class YasumiHolidaysTest extends TestCase
 
         $this->assertTrue($holidays->isHoliday(Day::fromString('2020-01-01')));
         $this->assertCount(1, $holidays->holidaysAt(Day::fromString('2020-01-01')));
-        $this->assertSame("New Year's Day", $holidays->holidaysAt(Day::fromString('2020-01-01'))[0]->name());
+        $this->assertSame("New Year’s Day", $holidays->holidaysAt(Day::fromString('2020-01-01'))[0]->name());
     }
 
     public function test_yasumi_holidays_for_non_existig_provider() : void

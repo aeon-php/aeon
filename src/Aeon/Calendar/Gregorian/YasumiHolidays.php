@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Aeon\Calendar\Gregorian;
 
 use Aeon\Calendar\Exception\HolidayException;
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\Holidays\Holiday as AeonHoliday;
 use Aeon\Calendar\Gregorian\Holidays\HolidayLocaleName;
 use Aeon\Calendar\Gregorian\Holidays\HolidayName;
-use Webmozart\Assert\Assert;
 use Yasumi\Exception\ProviderNotFoundException;
 use Yasumi\Holiday;
 use Yasumi\Provider\AbstractProvider;
@@ -27,10 +27,9 @@ final class YasumiHolidays implements Holidays
 
     private function __construct(string $providerClass, int $year)
     {
-        Assert::true(
-            \class_exists($providerClass),
-            $providerClass . ' is not valid Yasumi provider class.'
-        );
+        if (!\class_exists($providerClass)) {
+            throw new InvalidArgumentException($providerClass . ' is not valid Yasumi provider class.');
+        }
 
         $this->yasumi = null;
         $this->providerClass = $providerClass;

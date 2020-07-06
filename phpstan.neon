@@ -1,5 +1,5 @@
 parameters:
-    level: 8
+    level: max
     paths:
         - src
     ignoreErrors:
@@ -12,7 +12,3 @@ parameters:
             message: "#^Method Aeon\\\\Calendar\\\\Gregorian\\\\YasumiHolidays\\:\\:yasumi\\(\\) return type has no value type specified in iterable type Yasumi\\\\Provider\\\\AbstractProvider\\.$#"
             count: 1
             path: src/Aeon/Calendar/Gregorian/YasumiHolidays.php
-
-includes:
-    - vendor/phpstan/phpstan-webmozart-assert/extension.neon
-
