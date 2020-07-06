@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Aeon\Twig;
 
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\Calendar;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\TimeZone;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use Webmozart\Assert\Assert;
 
 final class CalendarExtension extends AbstractExtension
 {
@@ -23,7 +23,9 @@ final class CalendarExtension extends AbstractExtension
     public function __construct(Calendar $calendar, string $defaultFormat = 'Y-m-d H:i:s', string $defaultTimeZone = null)
     {
         if (\is_string($defaultTimeZone)) {
-            Assert::true(TimeZone::isValid($defaultTimeZone), $defaultTimeZone . " is not valid timezone.");
+            if (!TimeZone::isValid($defaultTimeZone)) {
+                throw new InvalidArgumentException($defaultTimeZone . " is not valid timezone.");
+            }
         }
 
         $this->calendar = $calendar;
