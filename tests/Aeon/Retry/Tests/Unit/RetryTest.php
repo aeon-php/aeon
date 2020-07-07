@@ -70,7 +70,7 @@ final class RetryTest extends TestCase
             TimeUnit::seconds(3)
         );
 
-        $this->assertSame(1, $retry->execute(function (Execution $execution) {
+        $this->assertSame(1, $retry->execute(function (Execution $execution) : void {
             throw new \RuntimeException('Exception');
         }));
 
@@ -89,7 +89,7 @@ final class RetryTest extends TestCase
             TimeUnit::seconds(3)
         );
 
-        $this->assertSame(1, $retry->execute(function (Execution $execution) {
+        $this->assertSame(1, $retry->execute(function (Execution $execution) : void {
             throw new \RuntimeException('Exception');
         }));
 
@@ -128,7 +128,7 @@ final class RetryTest extends TestCase
             TimeUnit::seconds(3)
         );
 
-        $this->assertSame(1, $retry->execute(function (Execution $execution) {
+        $this->assertSame(1, $retry->execute(function (Execution $execution) : void {
             $execution->continue();
         }));
 
@@ -147,8 +147,8 @@ final class RetryTest extends TestCase
             TimeUnit::seconds(3)
         );
 
-        $this->assertSame(1, $retry->execute(function (Execution $execution) {
-            $execution->terminate(new \Exception("Terminated"));
+        $this->assertSame(1, $retry->execute(function (Execution $execution) : void {
+            $execution->terminate(new \Exception('Terminated'));
         }));
 
         $this->assertCount(1, $retry->lastExecution()->exceptions());
@@ -167,8 +167,8 @@ final class RetryTest extends TestCase
             TimeUnit::seconds(3)
         );
 
-        $this->assertSame(1, $retry->execute(function (Execution $execution) {
-            $execution->terminate(new \Exception("Terminated"));
+        $this->assertSame(1, $retry->execute(function (Execution $execution) : void {
+            $execution->terminate(new \Exception('Terminated'));
         }));
 
         $this->assertCount(1, $retry->lastExecution()->exceptions());
@@ -186,8 +186,8 @@ final class RetryTest extends TestCase
             TimeUnit::seconds(3)
         ))->onlyFor(\RuntimeException::class);
 
-        $this->assertSame(1, $retry->execute(function (Execution $execution) {
-            $execution->terminate(new \Exception("Break retries"));
+        $this->assertSame(1, $retry->execute(function (Execution $execution) : void {
+            $execution->terminate(new \Exception('Break retries'));
         }));
 
         $this->assertCount(1, $retry->lastExecution()->exceptions());

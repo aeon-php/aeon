@@ -17,7 +17,7 @@ final class RangedModifier implements DelayModifier
     private function __construct(TimeUnit $rangeStart, TimeUnit $rangeEnd)
     {
         if ($rangeEnd->inSecondsPrecise() <= $rangeStart->inSecondsPrecise()) {
-            throw new InvalidArgumentException("Range end must be greater than range start");
+            throw new InvalidArgumentException('Range end must be greater than range start');
         }
 
         $this->rangeStart = $rangeStart;

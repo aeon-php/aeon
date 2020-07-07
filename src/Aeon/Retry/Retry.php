@@ -33,11 +33,11 @@ final class Retry
         TimeUnit $delay
     ) {
         if ($retries < 0) {
-            throw new InvalidArgumentException("Number of retries must be greater or equal 0.");
+            throw new InvalidArgumentException('Number of retries must be greater or equal 0.');
         }
 
         if ($delay->isNegative()) {
-            throw new InvalidArgumentException("Delay between retries must be positive time unit.");
+            throw new InvalidArgumentException('Delay between retries must be positive time unit.');
         }
 
         $this->retries = $retries;
@@ -59,7 +59,7 @@ final class Retry
     {
         foreach ($exceptionClasses as $exceptionClass) {
             if (!\class_exists($exceptionClass)) {
-                throw new InvalidArgumentException("Class " . $exceptionClass . " does not exists.");
+                throw new InvalidArgumentException('Class ' . $exceptionClass . ' does not exists.');
             }
         }
 
@@ -70,9 +70,12 @@ final class Retry
 
     /**
      * @template FunctionReturnType
-     * @param \Closure(Execution $execution) : FunctionReturnType $function
-     * @return ?FunctionReturnType
+     *
+     * @param callable(Execution $execution) : FunctionReturnType $function
+     *
      * @throws \Throwable
+     *
+     * @return ?FunctionReturnType
      */
     public function execute(callable $function)
     {
@@ -106,7 +109,7 @@ final class Retry
                 if ($this->lastExecution->isContinued()) {
                     $this->wait();
 
-                    continue ;
+                    continue;
                 }
 
                 $terminationException = $this->lastExecution->terminationException();
@@ -135,7 +138,7 @@ final class Retry
             }
         }
 
-        throw new RetryException(\sprintf("Retry failed to execute function and return value in %d attempts", $this->retries));
+        throw new RetryException(\sprintf('Retry failed to execute function and return value in %d attempts', $this->retries));
     }
 
     public function wait() : void
@@ -146,7 +149,7 @@ final class Retry
     public function lastExecution() : Execution
     {
         if ($this->lastExecution === null) {
-            throw new RetryException("Never executed");
+            throw new RetryException('Never executed');
         }
 
         return $this->lastExecution;

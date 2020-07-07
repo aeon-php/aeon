@@ -10,9 +10,12 @@ use Aeon\Retry\DelayModifier\ConstantDelay;
 
 /**
  * @template FunctionReturnType
- * @param \Closure(Execution $execution) : FunctionReturnType $function
- * @return ?FunctionReturnType
+ *
+ * @param callable(Execution $execution) : FunctionReturnType $function
+ *
  * @throws \Throwable
+ *
+ * @return ?FunctionReturnType
  */
 function retry(callable $function, int $retries, TimeUnit $delay, DelayModifier $delayModifier = null)
 {
@@ -29,10 +32,13 @@ function retry(callable $function, int $retries, TimeUnit $delay, DelayModifier 
 
 /**
  * @template FunctionReturnType
- * @param \Closure(Execution $execution) : FunctionReturnType $function
+ *
+ * @param callable(Execution $execution) : FunctionReturnType $function
  * @param array<string> $exceptionClasses
- * @return ?FunctionReturnType
+ *
  * @throws \Throwable
+ *
+ * @return ?FunctionReturnType
  */
 function retryOnlyFor(callable $function, int $retries, TimeUnit $delay, array $exceptionClasses, DelayModifier $delayModifier = null)
 {
