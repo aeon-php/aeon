@@ -85,7 +85,7 @@ final class YasumiHolidays implements Holidays
 
             return $this->yasumi;
         } catch (ProviderNotFoundException $providerNotFoundException) {
-            throw new HolidayException("Yasumi provider " . $this->providerClass . ' does not exists', 0, $providerNotFoundException);
+            throw new HolidayException('Yasumi provider ' . $this->providerClass . ' does not exists', 0, $providerNotFoundException);
         }
     }
 }
