@@ -24,7 +24,7 @@ final class CalendarExtension extends AbstractExtension
     {
         if (\is_string($defaultTimeZone)) {
             if (!TimeZone::isValid($defaultTimeZone)) {
-                throw new InvalidArgumentException($defaultTimeZone . " is not valid timezone.");
+                throw new InvalidArgumentException($defaultTimeZone . ' is not valid timezone.');
             }
         }
 
