@@ -10,7 +10,7 @@ use Aeon\Calendar\TimeUnit;
 function sleep(TimeUnit $timeUnit) : void
 {
     if ($timeUnit->isNegative()) {
-        throw new Exception(\sprintf("Sleep time unit can't be negative, %s given", $timeUnit->inSecondsPreciseString()));
+        throw new Exception(\sprintf("Sleep time unit can't be negative, %s given", $timeUnit->inSecondsPrecise()));
     }
 
     if ($timeUnit->inSeconds()) {
