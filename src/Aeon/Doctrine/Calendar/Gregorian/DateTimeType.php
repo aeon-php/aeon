@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Doctrine\Gregorian;
+namespace Aeon\Doctrine\Calendar\Gregorian;
 
 use Aeon\Calendar\Gregorian\DateTime;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
 
-final class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
+final class DateTimeType extends \Doctrine\DBAL\Types\DateTimeType
 {
-    public const NAME = 'aeon_datetime_tz';
+    public const NAME = 'aeon_datetime';
 
     /**
      * {@inheritdoc}
@@ -30,7 +30,7 @@ final class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
         }
 
         if ($value instanceof DateTime) {
-            return $value->format($platform->getDateTimeTzFormatString());
+            return $value->format($platform->getDateTimeFormatString());
         }
 
         throw ConversionException::conversionFailedInvalidType($value, $this->getName(), ['null', 'DateTime']);
@@ -52,7 +52,7 @@ final class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
         try {
             $val = DateTime::fromString($value);
         } catch (\Exception $e) {
-            throw ConversionException::conversionFailedFormat($value, $this->getName(), $platform->getDateTimeTzFormatString(), $e);
+            throw ConversionException::conversionFailedFormat($value, $this->getName(), $platform->getDateTimeFormatString(), $e);
         }
 
         return $val;

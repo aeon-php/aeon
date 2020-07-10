@@ -22,14 +22,14 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Aeon\\": [
-                "src/Aeon"
+            "Aeon\\Doctrine\\": [
+                "src/Aeon/Doctrine"
             ]
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Aeon\\Calendar\\Tests\\": "tests/Aeon/Calendar/Tests/"
+            "Aeon\\Doctrine\\Tests\\": "tests/Aeon/Doctrine/Tests/"
         }
     },
     "config": {

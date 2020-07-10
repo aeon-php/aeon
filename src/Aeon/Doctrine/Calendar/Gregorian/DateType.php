@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Doctrine\Gregorian;
+namespace Aeon\Doctrine\Calendar\Gregorian;
 
 use Aeon\Calendar\Gregorian\DateTime;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
