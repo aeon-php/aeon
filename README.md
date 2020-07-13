@@ -12,34 +12,6 @@ Time Management Framework for PHP
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Aeon) 
 
-This repository provides literally one function that makes it easier to pause your process for a certain time.
+Aeon is a set of libraries that makes easier to work with PHP Date & Time in elegant Object Oriented way.
 
-Let say you would like to sleep for 200 milliseconds. Instead of using usleep and multiplication of 200 by... 
-exactly, how much? Just use Aeon sleep. 
-
-```php
-<?php
-
-use Aeon\Calendar\TimeUnit;
-use function \Aeon\Calendar\System\sleep;
-
-sleep(TimeUnit::milliseconds(200));
-```
-
-Thanks to [TimeUnit](https://github.com/aeon-php/calendar/blob/master/src/Aeon/Calendar/TimeUnit.php) you can 
-sleep with any precision you need. 
-
-Sleeping in tests might be tricky, one might put sleep in the test case but who likes slow test suite? 
-Instead of using function go with `SystemProcess` and expect instance of `Process`
-in your [system under test](https://en.wikipedia.org/wiki/System_under_test).  
-
-```php
-<?php
-
-use Aeon\Calendar\System\SystemProcess;
-use Aeon\Calendar\TimeUnit;
-
-$process = SystemProcess::current();
-
-$process->sleep(TimeUnit::milliseconds(200));
-```
+Please read [Official Documentation](https://aeon-php.org/docs/process).
