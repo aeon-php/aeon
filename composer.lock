@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c62aa935ee3cd8538c9f9b61b8108e9",
+    "content-hash": "98d7b5a9020e55f31499a6340323a74a",
     "packages": [
         {
             "name": "aeon-php/calendar",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar.git",
-                "reference": "fb8454b381df974b40ca2c374cc3f0afe9e7b25e"
+                "reference": "4383572133352c54688bdd7144c6541a7598295a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/fb8454b381df974b40ca2c374cc3f0afe9e7b25e",
-                "reference": "fb8454b381df974b40ca2c374cc3f0afe9e7b25e",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/4383572133352c54688bdd7144c6541a7598295a",
+                "reference": "4383572133352c54688bdd7144c6541a7598295a",
                 "shasum": ""
             },
             "require": {
@@ -55,11 +55,13 @@
                 "immutable",
                 "sleep"
             ],
-            "support": {
-                "issues": "https://github.com/aeon-php/calendar/issues",
-                "source": "https://github.com/aeon-php/calendar/tree/0.1.0"
-            },
-            "time": "2020-07-10T20:32:51+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/norberttech",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-07-16T19:49:33+00:00"
         }
     ],
     "packages-dev": [
