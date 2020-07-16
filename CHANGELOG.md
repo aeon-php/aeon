@@ -8,3 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 2020-07-13
 ### First release :tada:
 - initial release
+
+## [0.2.0] - 2020-07-16
+### Changed
+- Replaced deprecated [process](https://github.com/aeon-php/process) with [sleep](https://github.com/aeon-php/sleep)
+- Updated aeon-php/calendar dependency 
