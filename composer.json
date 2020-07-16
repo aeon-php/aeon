@@ -1,7 +1,7 @@
 {
-    "name": "aeon-php/process",
+    "name": "aeon-php/sleep",
     "type": "library",
-    "description": "PHP type safe, immutable calendar library",
+    "description": "Improved sleep function that uses simple TimeUnit and decides between \\sleep and \\usleep",
     "keywords": ["calendar", "immutable", "holidays", "sleep"],
     "prefer-stable": true,
     "minimum-stability": "dev",

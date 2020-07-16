@@ -1,10 +1,10 @@
 # Aeon 
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg)](https://php.net/)
-[![Latest Stable Version](https://poser.pugx.org/aeon-php/process/v)](//packagist.org/packages/aeon-php/process)
-[![Latest Unstable Version](https://poser.pugx.org/aeon-php/process/v/unstable)](//packagist.org/packages/aeon-php/process)
-[![License](https://poser.pugx.org/aeon-php/process/license)](//packagist.org/packages/aeon-php/process)
-![Tests](https://github.com/aeon-php/process/workflows/Tests/badge.svg?branch=1.x) 
+[![Latest Stable Version](https://poser.pugx.org/aeon-php/sleep/v)](//packagist.org/packages/aeon-php/sleep)
+[![Latest Unstable Version](https://poser.pugx.org/aeon-php/sleep/v/unstable)](//packagist.org/packages/aeon-php/sleep)
+[![License](https://poser.pugx.org/aeon-php/sleep/license)](//packagist.org/packages/aeon-php/sleep)
+![Tests](https://github.com/aeon-php/sleep/workflows/Tests/badge.svg?branch=1.x) 
 
 Time Management Framework for PHP
 
@@ -16,4 +16,4 @@ Time Management Framework for PHP
 
 Aeon is a set of libraries that makes easier to work with PHP Date & Time in elegant Object Oriented way.
 
-Please read [Official Documentation](https://aeon-php.org/docs/process).
+Please read [Official Documentation](https://aeon-php.org/docs/sleep).
