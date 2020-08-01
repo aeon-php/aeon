@@ -7,7 +7,7 @@ on:
       - "1.x"
 
 jobs:
-  compatibility:
+  tests:
     name: "Tests"
 
     runs-on: ${{ matrix.operating-system }}

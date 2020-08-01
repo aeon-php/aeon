@@ -63,7 +63,7 @@ final class YasumiHolidays implements Holidays
                 \array_filter(
                     $this->yasumi()->getHolidays(),
                     function (Holiday $holiday) use ($day) : bool {
-                        return Day::fromDateTime($holiday)->equals($day);
+                        return Day::fromDateTime($holiday)->isEqual($day);
                     }
                 )
             )
