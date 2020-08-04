@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Aeon\Doctrine\Calendar\Gregorian;
 
-use Aeon\Calendar\Gregorian\DateTime;
+use Aeon\Calendar\Gregorian\Day;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
 
-final class DateType extends \Doctrine\DBAL\Types\DateTimeType
+final class DayType extends \Doctrine\DBAL\Types\DateTimeType
 {
-    public const NAME = 'aeon_date';
+    public const NAME = 'aeon_day';
 
     /**
      * {@inheritdoc}
@@ -29,11 +29,11 @@ final class DateType extends \Doctrine\DBAL\Types\DateTimeType
             return $value;
         }
 
-        if ($value instanceof DateTime) {
+        if ($value instanceof Day) {
             return $value->format($platform->getDateFormatString());
         }
 
-        throw ConversionException::conversionFailedInvalidType($value, $this->getName(), ['null', 'DateTime']);
+        throw ConversionException::conversionFailedInvalidType($value, $this->getName(), ['null', 'Day']);
     }
 
     /**
@@ -41,7 +41,7 @@ final class DateType extends \Doctrine\DBAL\Types\DateTimeType
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
-        if ($value === null || $value instanceof DateTime) {
+        if ($value === null || $value instanceof Day) {
             return $value;
         }
 
@@ -50,7 +50,7 @@ final class DateType extends \Doctrine\DBAL\Types\DateTimeType
         }
 
         try {
-            $val = DateTime::fromString($value);
+            $val = Day::fromString($value);
         } catch (\Exception $e) {
             throw ConversionException::conversionFailedFormat($value, $this->getName(), $platform->getDateFormatString(), $e);
         }
