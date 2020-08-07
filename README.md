@@ -12,12 +12,6 @@ Time Management Framework for PHP
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Aeon) 
 
-Twig extension for Aeon
+Aeon is a set of libraries that makes easier to work with PHP Date & Time in elegant Object Oriented way.
 
-### Filters
-
-* `aeon_date(string $format = null, string $timezone = null) : string` - formats Aeon `DateTime` object into string
-
-### Functions
-
-* `aeon_now(string $timezone = null) : Aeon\Calendar\Gregorian\DateTime` - creates new instance of Aeon `DateTime` from current time
+Please read [Official Documentation](https://aeon-php.org/docs/calendar-twig/).
