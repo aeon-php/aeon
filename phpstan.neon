@@ -2,13 +2,3 @@ parameters:
     level: max
     paths:
         - src
-    ignoreErrors:
-        -
-            message: "#^Property Aeon\\\\Calendar\\\\Gregorian\\\\YasumiHolidays\\:\\:\\$yasumi type has no value type specified in iterable type Yasumi\\\\Provider\\\\AbstractProvider\\.$#"
-            count: 1
-            path: src/Aeon/Calendar/Gregorian/YasumiHolidays.php
-
-        -
-            message: "#^Method Aeon\\\\Calendar\\\\Gregorian\\\\YasumiHolidays\\:\\:yasumi\\(\\) return type has no value type specified in iterable type Yasumi\\\\Provider\\\\AbstractProvider\\.$#"
-            count: 1
-            path: src/Aeon/Calendar/Gregorian/YasumiHolidays.php

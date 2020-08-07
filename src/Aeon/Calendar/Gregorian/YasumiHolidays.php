@@ -19,6 +19,7 @@ use Yasumi\Yasumi;
  */
 final class YasumiHolidays implements Holidays
 {
+    /** @phpstan-ignore-next-line */
     private ?AbstractProvider $yasumi;
 
     private string $providerClass;
@@ -70,6 +71,7 @@ final class YasumiHolidays implements Holidays
         );
     }
 
+    /** @phpstan-ignore-next-line */
     private function yasumi() : AbstractProvider
     {
         if ($this->yasumi instanceof AbstractProvider) {
