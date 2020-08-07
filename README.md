@@ -12,23 +12,6 @@ Time Management Framework for PHP
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Aeon) 
 
-This is a brige between [Yasumi](https://yasumi.dev) library and [Aeon Calendar Holidays](https://github.com/aeon-php/calendar-holidays)
-that brings `YasumiHolidays` instance of `Holidays`.
+Aeon is a set of libraries that makes easier to work with PHP Date & Time in elegant Object Oriented way.
 
-
-```php
-<?php
-use Aeon\Calendar\Gregorian\GregorianCalendar;
-use Aeon\Calendar\Gregorian\YasumiHolidays;
-use Yasumi\Provider\Poland;
-
-$calendar = GregorianCalendar::UTC();
-
-$holidays = YasumiHolidays::provider(Poland::class, $calendar->currentYear()->number());
-
-if ($holidays->isHoliday($calendar->currentYear()->january()->firstDay())) {
-    echo "Happy New Year!";
-}
-```
-
-  
+Please read [Official Documentation](https://aeon-php.org/docs/calendar-holidays-yasumi/).  
