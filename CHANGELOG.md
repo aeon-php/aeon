@@ -7,9 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.4.0] - 2020-08-19 
+### Changed
+- updated aeon-php/sleep dependency to >=0.5.0
+- updated aeon-php/calendar dependency to >=0.4.0
+
 ## [0.3.0] - 2020-08-18 
 ### Changed
-- updated aeon-php/calendar dependency to >=0.4.0
+- updated aeon-php/calendar dependency to ^0.4.0
 - updated phpunit to version ^9.3
 
 ## [0.2.0] - 2020-08-03
