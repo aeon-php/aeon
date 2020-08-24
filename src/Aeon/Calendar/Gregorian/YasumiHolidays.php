@@ -37,6 +37,9 @@ final class YasumiHolidays implements Holidays
         $this->year = $year;
     }
 
+    /**
+     * @psalm-pure
+     */
     public static function provider(string $providerClass, int $year) : self
     {
         return new self($providerClass, $year);
