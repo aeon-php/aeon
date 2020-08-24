@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aeon-php/calendar",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar.git",
-                "reference": "c082ccd33577bb8a67b6c2218d888fc4907785a4"
+                "reference": "8dd66af0e646f40dd2ab9251352f7e8e65b78e27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/c082ccd33577bb8a67b6c2218d888fc4907785a4",
-                "reference": "c082ccd33577bb8a67b6c2218d888fc4907785a4",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/8dd66af0e646f40dd2ab9251352f7e8e65b78e27",
+                "reference": "8dd66af0e646f40dd2ab9251352f7e8e65b78e27",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar/issues",
-                "source": "https://github.com/aeon-php/calendar/tree/0.4.0"
+                "source": "https://github.com/aeon-php/calendar/tree/0.5.0"
             },
             "funding": [
                 {
@@ -60,7 +60,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-15T18:07:07+00:00"
+            "time": "2020-08-24T08:00:41+00:00"
         },
         {
             "name": "aeon-php/calendar-holidays",
