@@ -7,7 +7,10 @@ namespace Aeon\Twig;
 use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\Calendar;
 use Aeon\Calendar\Gregorian\DateTime;
+use Aeon\Calendar\Gregorian\Day;
+use Aeon\Calendar\Gregorian\Month;
 use Aeon\Calendar\Gregorian\TimeZone;
+use Aeon\Calendar\Gregorian\Year;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
@@ -44,6 +47,9 @@ final class CalendarExtension extends AbstractExtension
     {
         return [
             new TwigFunction('aeon_now', [$this, 'aeon_now']),
+            new TwigFunction('aeon_current_day', [$this, 'aeon_current_day']),
+            new TwigFunction('aeon_current_month', [$this, 'aeon_current_month']),
+            new TwigFunction('aeon_current_year', [$this, 'aeon_current_year']),
         ];
     }
 
@@ -71,5 +77,20 @@ final class CalendarExtension extends AbstractExtension
         }
 
         return $this->calendar->now();
+    }
+
+    public function aeon_current_day() : Day
+    {
+        return $this->calendar->currentDay();
+    }
+
+    public function aeon_current_month() : Month
+    {
+        return $this->calendar->currentMonth();
+    }
+
+    public function aeon_current_year() : Year
+    {
+        return $this->calendar->currentYear();
     }
 }

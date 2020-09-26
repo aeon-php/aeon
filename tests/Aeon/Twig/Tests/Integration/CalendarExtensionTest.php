@@ -58,4 +58,55 @@ final class CalendarExtensionTest extends TestCase
             $twig->render('aeon_now.twig.txt')
         );
     }
+
+    public function test_function_aeon_current_day() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/functions',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub));
+
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/functions/aeon_current_day.txt',
+            $twig->render('aeon_current_day.twig.txt')
+        );
+    }
+
+    public function test_function_aeon_current_month() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/functions',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub));
+
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/functions/aeon_current_month.txt',
+            $twig->render('aeon_current_month.twig.txt')
+        );
+    }
+
+    public function test_function_aeon_current_year() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/functions',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub));
+
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/functions/aeon_current_year.txt',
+            $twig->render('aeon_current_year.twig.txt')
+        );
+    }
 }
