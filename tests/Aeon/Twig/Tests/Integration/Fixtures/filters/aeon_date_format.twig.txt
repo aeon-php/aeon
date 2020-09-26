@@ -1,0 +1,1 @@
+{{ aeon_now() | aeon_date_format('Y-m-d') }}|{{ aeon_now() | aeon_date_format }}|{{ aeon_now() | aeon_date_format('Y-m-d H:i:s') }}|{{ aeon_now() | aeon_date_format('Y-m-d H:i:s', 'UTC') }}

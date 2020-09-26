@@ -34,11 +34,45 @@ final class CalendarExtensionTest extends TestCase
                 ]
             )
         );
-        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Europe/Warsaw'));
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'Europe/Warsaw'));
 
         $this->assertStringEqualsFile(
-            __DIR__ . '/Fixtures/filters/aeon_date.txt',
-            $twig->render('aeon_date.twig.txt')
+            __DIR__ . '/Fixtures/filters/aeon_date_format.txt',
+            $twig->render('aeon_date_format.twig.txt')
+        );
+    }
+
+    public function test_filter_time_units() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/filters',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub));
+
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/filters/aeon_time_units.txt',
+            $twig->render('aeon_time_units.twig.txt')
+        );
+    }
+
+    public function test_filter_interval() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/filters',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub));
+
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/filters/aeon_interval.txt',
+            $twig->render('aeon_interval.twig.txt')
         );
     }
 
@@ -51,7 +85,7 @@ final class CalendarExtensionTest extends TestCase
                 ]
             )
         );
-        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Europe/Warsaw'));
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'Europe/Warsaw'));
 
         $this->assertStringEqualsFile(
             __DIR__ . '/Fixtures/functions/aeon_now.txt',

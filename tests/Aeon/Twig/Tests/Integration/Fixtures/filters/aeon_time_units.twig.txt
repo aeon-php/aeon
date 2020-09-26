@@ -1,0 +1,1 @@
+{{ 1 | aeon_second | aeon_in_seconds }}|{{ 10 | aeon_seconds | aeon_in_seconds }}|{{ 1 | aeon_minute | aeon_in_seconds }}|{{ 10 | aeon_minutes | aeon_in_seconds }}|{{ 1 | aeon_hour | aeon_in_seconds }}|{{ 10 | aeon_hours | aeon_in_seconds }}|{{ 1 | aeon_day | aeon_in_seconds }}|{{ 10 | aeon_days | aeon_in_seconds }}
