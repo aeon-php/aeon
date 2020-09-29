@@ -33,10 +33,14 @@
     "scripts": {
         "build": [
             "@static:analyze",
-            "@test"
+            "@test",
+            "@test:mutation"
         ],
         "test": [
             "phpunit"
+        ],
+        "test:mutation": [
+            "tools/infection -j2"
         ],
         "static:analyze": [
             "tools/psalm --output-format=compact",

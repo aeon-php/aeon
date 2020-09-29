@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Twig\Tests\Unit;
 
+use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;
 use Aeon\Calendar\Gregorian\GregorianCalendarStub;
@@ -37,6 +38,35 @@ final class CalendarExtensionTest extends TestCase
         $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
 
         $this->assertEquals(Interval::closed(), $extension->aeon_interval('closed'));
+        $this->assertEquals($extension->aeon_interval('CLOSED'), $extension->aeon_interval('closed'));
+    }
+
+    public function test_aeon_interval_left_open() : void
+    {
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+
+        $this->assertEquals(Interval::leftOpen(), $extension->aeon_interval_left_open());
+    }
+
+    public function test_aeon_interval_right_open() : void
+    {
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+
+        $this->assertEquals(Interval::rightOpen(), $extension->aeon_interval_right_open());
+    }
+
+    public function test_aeon_interval_open() : void
+    {
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+
+        $this->assertEquals(Interval::open(), $extension->aeon_interval_open());
+    }
+
+    public function test_aeon_interval_closed() : void
+    {
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+
+        $this->assertEquals(Interval::closed(), $extension->aeon_interval_closed());
     }
 
     public function test_aeon_in_seconds() : void
@@ -113,5 +143,20 @@ final class CalendarExtensionTest extends TestCase
         $calendar->setNow($now = DateTime::fromString('2002-01-01 00:00:00 UTC'));
 
         $this->assertEquals($now->year(), $extension->aeon_current_year());
+    }
+
+    public function test_aeon_throws_exception_when_invalid_timezone() : void
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        new CalendarExtension(new GregorianCalendarStub(), 'Y-m-d H:i:s', 'Y-m-d', 'invalid timezone');
+    }
+
+    public function test_aeon_interval_throws_exception_when_invalid_type() : void
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        $extension = new CalendarExtension(new GregorianCalendarStub());
+        $extension->aeon_interval('invalid interval');
     }
 }

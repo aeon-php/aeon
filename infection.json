@@ -1,0 +1,29 @@
+{
+    "timeout": 1000,
+    "source": {
+        "directories": [
+            "src\/Aeon"
+        ]
+    },
+    "logs": {
+        "text": "./var/infection/infection.log",
+        "summary": "./var/infection/infection_summary.log",
+        "debug": "./var/infection/infection_summary.log",
+        "badge": {
+            "branch": "1.x"
+        }
+    },
+    "mutators": {
+        "@default": true,
+        "ArrayItemRemoval": {
+            "ignore": [
+                "Aeon\\Twig\\CalendarExtension::getFilters",
+                "Aeon\\Twig\\CalendarExtension::getFunctions"
+            ]
+        }
+    },
+    "testFramework": "phpunit",
+    "bootstrap": "./vendor/autoload.php",
+    "minMsi": 100,
+    "minCoveredMsi": 100
+}
