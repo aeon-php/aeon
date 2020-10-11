@@ -24,7 +24,7 @@ final class DateTimeTzTypeTest extends TestCase
     {
         $type = Type::getType(DateTimeTzType::NAME);
 
-        $stringDate = $type->convertToDatabaseValue($dateTime = DateTime::fromString('2020-01-01 01:00:00'), $this->createPlatformMock());
+        $stringDate = $type->convertToDatabaseValue($dateTime = DateTime::fromString('2020-01-01 01:00:00+0000'), $this->createPlatformMock());
         $dateTimeConverted = $type->convertToPHPValue($stringDate, $this->createPlatformMock());
 
         $this->assertSame('2020-01-01 01:00:00+0000', $stringDate);
