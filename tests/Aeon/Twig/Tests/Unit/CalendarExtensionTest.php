@@ -108,7 +108,7 @@ final class CalendarExtensionTest extends TestCase
     {
         $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
 
-        $this->assertSame('2020-01-01 00', $extension->aeon_date_format(DateTime::fromString('2020-01-01 00:00:00 UTC'), 'Y-m-d H'));
+        $this->assertSame('2020-01-01 00', $extension->aeon_datetime_format(DateTime::fromString('2020-01-01 00:00:00 UTC'), 'Y-m-d H'));
     }
 
     public function test_aeon_day_format() : void
@@ -143,13 +143,6 @@ final class CalendarExtensionTest extends TestCase
         $calendar->setNow($now = DateTime::fromString('2002-01-01 00:00:00 UTC'));
 
         $this->assertEquals($now->year(), $extension->aeon_current_year());
-    }
-
-    public function test_aeon_throws_exception_when_invalid_timezone() : void
-    {
-        $this->expectException(InvalidArgumentException::class);
-
-        new CalendarExtension(new GregorianCalendarStub(), 'Y-m-d H:i:s', 'Y-m-d', 'invalid timezone');
     }
 
     public function test_aeon_interval_throws_exception_when_invalid_type() : void

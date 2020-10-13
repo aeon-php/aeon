@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "916be4255df4d3c01366e5ff7b2753bc",
+    "content-hash": "37cd544b43fb92477f9b425e1fbb4e7b",
     "packages": [
         {
             "name": "aeon-php/calendar",
-            "version": "0.8.0",
+            "version": "0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar.git",
-                "reference": "df694a58eea9532c3c4cd480dff5dd859ce876cf"
+                "reference": "2c0ca7310614807eacab857ba82049b4bd075591"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/df694a58eea9532c3c4cd480dff5dd859ce876cf",
-                "reference": "df694a58eea9532c3c4cd480dff5dd859ce876cf",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/2c0ca7310614807eacab857ba82049b4bd075591",
+                "reference": "2c0ca7310614807eacab857ba82049b4bd075591",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar/issues",
-                "source": "https://github.com/aeon-php/calendar/tree/0.8.0"
+                "source": "https://github.com/aeon-php/calendar/tree/0.9.0"
             },
             "funding": [
                 {
@@ -60,7 +60,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-11T17:00:56+00:00"
+            "time": "2020-10-13T13:22:59+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

@@ -1,0 +1,2 @@
+{{ aeon_current_day() | aeon_day_format('Y m d') }}
+{{ aeon_current_day() | aeon_day_format }}

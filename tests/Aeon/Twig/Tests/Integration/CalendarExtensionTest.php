@@ -25,7 +25,7 @@ final class CalendarExtensionTest extends TestCase
         $this->assertInstanceOf(ExtensionInterface::class, new CalendarExtension($this->calendarStub));
     }
 
-    public function test_filter_aeon_date() : void
+    public function test_filter_aeon_datetime() : void
     {
         $twig = new Environment(
             new FilesystemLoader(
@@ -34,11 +34,45 @@ final class CalendarExtensionTest extends TestCase
                 ]
             )
         );
-        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'Europe/Warsaw'));
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
 
         $this->assertStringEqualsFile(
-            __DIR__ . '/Fixtures/filters/aeon_date_format.txt',
-            $twig->render('aeon_date_format.twig.txt')
+            __DIR__ . '/Fixtures/filters/aeon_datetime_format.txt',
+            $twig->render('aeon_datetime_format.twig.txt')
+        );
+    }
+
+    public function test_filter_aeon_day() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/filters',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
+
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/filters/aeon_day_format.txt',
+            $twig->render('aeon_day_format.twig.txt')
+        );
+    }
+
+    public function test_filter_aeon_time() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/filters',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
+
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/filters/aeon_time_format.txt',
+            $twig->render('aeon_time_format.twig.txt')
         );
     }
 
@@ -85,7 +119,7 @@ final class CalendarExtensionTest extends TestCase
                 ]
             )
         );
-        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'Europe/Warsaw'));
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d'));
 
         $this->assertStringEqualsFile(
             __DIR__ . '/Fixtures/functions/aeon_now.txt',

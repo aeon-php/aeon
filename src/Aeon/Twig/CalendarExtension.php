@@ -10,6 +10,7 @@ use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;
 use Aeon\Calendar\Gregorian\Interval;
 use Aeon\Calendar\Gregorian\Month;
+use Aeon\Calendar\Gregorian\Time;
 use Aeon\Calendar\Gregorian\TimeZone;
 use Aeon\Calendar\Gregorian\Year;
 use Aeon\Calendar\TimeUnit;
@@ -25,27 +26,22 @@ final class CalendarExtension extends AbstractExtension
 
     private string $defaultDayFormat;
 
-    private ?string $defaultTimeZone;
+    private string $defaultTimeFormat;
 
-    public function __construct(Calendar $calendar, string $defaultDateTimeFormat = 'Y-m-d H:i:s', string $defaultDayFormat = 'Y-m-d', string $defaultTimeZone = null)
+    public function __construct(Calendar $calendar, string $defaultDateTimeFormat = 'Y-m-d H:i:s', string $defaultDayFormat = 'Y-m-d', string $defaultTimeFormat = 'H:i:s')
     {
-        if (\is_string($defaultTimeZone)) {
-            if (!TimeZone::isValid($defaultTimeZone)) {
-                throw new InvalidArgumentException($defaultTimeZone . ' is not valid timezone.');
-            }
-        }
-
         $this->calendar = $calendar;
         $this->defaultDateTimeFormat = $defaultDateTimeFormat;
         $this->defaultDayFormat = $defaultDayFormat;
-        $this->defaultTimeZone = $defaultTimeZone;
+        $this->defaultTimeFormat = $defaultTimeFormat;
     }
 
     public function getFilters() : array
     {
         return [
-            new TwigFilter('aeon_date_format', [$this, 'aeon_date_format']),
+            new TwigFilter('aeon_datetime_format', [$this, 'aeon_datetime_format']),
             new TwigFilter('aeon_day_format', [$this, 'aeon_day_format']),
+            new TwigFilter('aeon_time_format', [$this, 'aeon_time_format']),
             new TwigFilter('aeon_in_seconds', [$this, 'aeon_in_seconds']),
             new TwigFilter('aeon_in_seconds_precise', [$this, 'aeon_in_seconds_precise']),
             new TwigFilter('aeon_interval', [$this, 'aeon_interval']),
@@ -64,6 +60,7 @@ final class CalendarExtension extends AbstractExtension
     {
         return [
             new TwigFunction('aeon_now', [$this, 'aeon_now']),
+            new TwigFunction('aeon_current_time', [$this, 'aeon_current_time']),
             new TwigFunction('aeon_current_day', [$this, 'aeon_current_day']),
             new TwigFunction('aeon_current_month', [$this, 'aeon_current_month']),
             new TwigFunction('aeon_current_year', [$this, 'aeon_current_year']),
@@ -74,21 +71,30 @@ final class CalendarExtension extends AbstractExtension
         ];
     }
 
-    public function aeon_date_format(DateTime $dateTime, string $format = null, string $timezone = null) : string
+    public function aeon_datetime_format(DateTime $dateTime, string $format = null, string $timezone = null) : string
     {
-        $tz = \is_string($timezone)
-            ? $timezone
-            : (\is_string($this->defaultTimeZone) ? $this->defaultTimeZone : null);
+        $tz = (\is_string($timezone) && TimeZone::isValid($timezone))
+            ? new TimeZone($timezone)
+            : null;
 
         $fmt = \is_string($format)
             ? $format
             : $this->defaultDateTimeFormat;
 
-        if (\is_string($tz)) {
-            return $dateTime->toTimeZone(new TimeZone($tz))->format($fmt);
+        if ($tz instanceof TimeZone) {
+            return $dateTime->toTimeZone($tz)->format($fmt);
         }
 
         return $dateTime->format($fmt);
+    }
+
+    public function aeon_time_format(Time $time, string $format = null) : string
+    {
+        $fmt = \is_string($format)
+            ? $format
+            : $this->defaultTimeFormat;
+
+        return $time->format($fmt);
     }
 
     public function aeon_day_format(Day $day, string $format = null) : string
@@ -156,6 +162,11 @@ final class CalendarExtension extends AbstractExtension
         }
 
         return $this->calendar->now();
+    }
+
+    public function aeon_current_time() : Time
+    {
+        return $this->calendar->now()->time();
     }
 
     public function aeon_current_day() : Day

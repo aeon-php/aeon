@@ -1,0 +1,2 @@
+{{ aeon_current_time() | aeon_time_format('H i s') }}
+{{ aeon_current_time() | aeon_time_format }}
