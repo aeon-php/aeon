@@ -40,9 +40,9 @@ final class YasumiHolidays implements Holidays
     /**
      * @psalm-pure
      */
-    public static function provider(string $providerClass, int $year) : self
+    public static function provider(string $providerClass, Calendar $calendar) : self
     {
-        return new self($providerClass, $year);
+        return new self($providerClass, $calendar->currentYear()->number());
     }
 
     public function isHoliday(Day $day) : bool
