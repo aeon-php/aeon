@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.4.0] - 2020-10-13
+### Changed
+- Unified YasumiHolidays provider static constructor
+
 ## [0.3.0] - 2020-08-24
 ### Added
 - Add psalm-pure for static factory methods 
