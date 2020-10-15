@@ -22,5 +22,5 @@
   "testFramework": "phpunit",
   "bootstrap": "./vendor/autoload.php",
   "minMsi": 60,
-  "minCoveredMsi": 100
+  "minCoveredMsi": 60
 }
