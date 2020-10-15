@@ -2,12 +2,10 @@
 
 declare(strict_types=1);
 
-/** @phpstan-ignore-next-line */
 use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
 use Aeon\Twig\CalendarExtension;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-/** @psalm-suppress DeprecatedFunction */
 return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
 

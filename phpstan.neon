@@ -2,3 +2,5 @@ parameters:
     level: 8
     paths:
         - src
+    excludes_analyse:
+        - 'src/Aeon/Symfony/AeonBundle/Resources/config/*'
