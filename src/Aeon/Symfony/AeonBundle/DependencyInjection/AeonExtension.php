@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aeon\AeonBundle\DependencyInjection;
+namespace Aeon\Symfony\AeonBundle\DependencyInjection;
 
 use Aeon\Calendar\Gregorian\GregorianCalendarStub;
 use Symfony\Component\Config\FileLocator;
@@ -12,8 +12,13 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 final class AeonExtension extends Extension
 {
+    /** @phpstan-ignore-next-line  */
     public function load(array $configs, ContainerBuilder $container) : void
     {
+        /**
+         * @psalm-suppress PossiblyNullArgument
+         * @phpstan-ignore-next-line
+         */
         $config = $this->processConfiguration($this->getConfiguration($configs, $container), $configs);
 
         $loader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));

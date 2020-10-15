@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Aeon\AeonBundle\Tests\Unit\DependencyInjection;
+namespace Aeon\Symfony\AeonBundle\Tests\Unit\DependencyInjection;
 
-use Aeon\AeonBundle\DependencyInjection\Configuration;
+use Aeon\Symfony\AeonBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Processor;
 

@@ -16,12 +16,9 @@
         "symfony/http-kernel": "^4.4|^5.0|^5.1"
     },
     "require-dev": {
-        "symfony/framework-bundle": "^4.4|^5.0|^5.1",
         "phpunit/phpunit": "^9.1",
-        "phpstan/phpstan": "^0.12.25",
-        "vimeo/psalm": "^3.11",
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "infection/infection": "^0.16.3"
+        "symfony/framework-bundle": "^4.4|^5.0|^5.1",
+        "vimeo/psalm": "^3.11"
     },
     "license": "MIT",
     "autoload": {
@@ -33,7 +30,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Aeon\\AeonBundle\\Tests\\": "tests/Aeon/AeonBundle/Tests/"
+            "Aeon\\Symfony\\AeonBundle\\Tests\\": "tests/Aeon/Symfony/AeonBundle/Tests/"
         }
     },
     "config": {

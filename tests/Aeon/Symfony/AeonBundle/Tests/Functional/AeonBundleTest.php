@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Aeon\AeonBundle\Tests\Functional;
+namespace Aeon\Symfony\AeonBundle\Tests\Functional;
 
-use Aeon\AeonBundle\Tests\Functional\App\TestAppKernel;
 use Aeon\Calendar\Gregorian\Calendar;
 use Aeon\Calendar\Gregorian\GregorianCalendar;
 use Aeon\Calendar\Gregorian\GregorianCalendarStub;
 use Aeon\Calendar\Gregorian\TimeZone;
+use Aeon\Symfony\AeonBundle\Tests\Functional\App\TestAppKernel;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 final class AeonBundleTest extends KernelTestCase

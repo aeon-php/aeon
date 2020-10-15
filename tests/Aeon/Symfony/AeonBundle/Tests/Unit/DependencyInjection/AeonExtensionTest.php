@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Aeon\AeonBundle\Tests\Unit\DependencyInjection;
+namespace Aeon\Symfony\AeonBundle\Tests\Unit\DependencyInjection;
 
-use Aeon\AeonBundle\DependencyInjection\AeonExtension;
 use Aeon\Calendar\Gregorian\Calendar;
+use Aeon\Symfony\AeonBundle\DependencyInjection\AeonExtension;
 use Aeon\Twig\CalendarExtension;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

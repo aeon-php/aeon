@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Aeon\AeonBundle\Tests\Functional\App;
+namespace Aeon\Symfony\AeonBundle\Tests\Functional\App;
 
-use Aeon\AeonBundle\AeonBundle;
+use Aeon\Symfony\AeonBundle\AeonBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;

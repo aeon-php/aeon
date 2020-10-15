@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aeon\AeonBundle\DependencyInjection;
+namespace Aeon\Symfony\AeonBundle\DependencyInjection;
 
 use Aeon\Calendar\Gregorian\TimeZone;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -13,6 +13,10 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder('aeon');
+        /**
+         * @psalm-suppress MixedAssignment
+         * @phpstan-ignore-next-line
+         */
         $rootNode = \method_exists(TreeBuilder::class, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('aeon');
 
         $rootNode

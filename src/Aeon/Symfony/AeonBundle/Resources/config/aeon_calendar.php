@@ -8,6 +8,7 @@ use Aeon\Calendar\Gregorian\GregorianCalendar;
 use Aeon\Calendar\Gregorian\TimeZone;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
+/** @psalm-suppress DeprecatedFunction */
 return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
 
