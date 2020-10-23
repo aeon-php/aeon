@@ -85,7 +85,7 @@ final class CalendarExtension extends AbstractExtension
             return $dateTime->toTimeZone($tz)->format($fmt);
         }
 
-        return $dateTime->format($fmt);
+        return $dateTime->toTimeZone($this->calendar->timeZone())->format($fmt);
     }
 
     public function aeon_time_format(Time $time, string $format = null) : string

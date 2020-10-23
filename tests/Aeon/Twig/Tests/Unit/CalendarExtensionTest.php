@@ -26,6 +26,30 @@ final class CalendarExtensionTest extends TestCase
         $this->assertEquals(TimeZone::europeWarsaw(), $extension->aeon_now(TimeZone::EUROPE_WARSAW)->timeZone());
     }
 
+    public function test_aeon_datetime_format_takes_timezone_from_calendar_instance_when_not_provided() : void
+    {
+        $extension = new CalendarExtension(
+            $calendar = new GregorianCalendarStub(new \DateTimeImmutable('2020-01-01 Europe/Warsaw'))
+        );
+
+        $this->assertEquals(
+            '2020-01-01 01:00:00',
+            $extension->aeon_datetime_format(DateTime::fromString('2020-01-01 00:00:00 UTC'))
+        );
+    }
+
+    public function test_aeon_datetime_format_takes_timezone_from_argument_when_provided() : void
+    {
+        $extension = new CalendarExtension(
+            $calendar = new GregorianCalendarStub(new \DateTimeImmutable('2020-01-01 Europe/Warsaw'))
+        );
+
+        $this->assertEquals(
+            '2019-12-31 16:00:00',
+            $extension->aeon_datetime_format(DateTime::fromString('2020-01-01 00:00:00 UTC'), null, 'America/Los_Angeles')
+        );
+    }
+
     public function test_aeon_in_seconds_precise() : void
     {
         $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
