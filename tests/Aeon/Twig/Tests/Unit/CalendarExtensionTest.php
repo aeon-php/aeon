@@ -16,6 +16,14 @@ use PHPUnit\Framework\TestCase;
 
 final class CalendarExtensionTest extends TestCase
 {
+    public function test_create_with_invalid_timezone() : void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('not_timezone is not valid timezone name.');
+
+        new CalendarExtension($calendar = new GregorianCalendarStub(), 'not_timezone');
+    }
+
     public function test_aeon_now() : void
     {
         $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
@@ -29,7 +37,8 @@ final class CalendarExtensionTest extends TestCase
     public function test_aeon_datetime_format_takes_timezone_from_calendar_instance_when_not_provided() : void
     {
         $extension = new CalendarExtension(
-            $calendar = new GregorianCalendarStub(new \DateTimeImmutable('2020-01-01 Europe/Warsaw'))
+            $calendar = new GregorianCalendarStub(new \DateTimeImmutable('2020-01-01 UTC')),
+            'Europe/Warsaw'
         );
 
         $this->assertEquals(

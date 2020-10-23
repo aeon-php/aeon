@@ -22,15 +22,22 @@ final class CalendarExtension extends AbstractExtension
 {
     private Calendar $calendar;
 
+    private TimeZone $defaultTimeZone;
+
     private string $defaultDateTimeFormat;
 
     private string $defaultDayFormat;
 
     private string $defaultTimeFormat;
 
-    public function __construct(Calendar $calendar, string $defaultDateTimeFormat = 'Y-m-d H:i:s', string $defaultDayFormat = 'Y-m-d', string $defaultTimeFormat = 'H:i:s')
+    public function __construct(Calendar $calendar, string $defaultTimeZone = 'UTC', string $defaultDateTimeFormat = 'Y-m-d H:i:s', string $defaultDayFormat = 'Y-m-d', string $defaultTimeFormat = 'H:i:s')
     {
+        if (!TimeZone::isValid($defaultTimeZone)) {
+            throw new InvalidArgumentException($defaultTimeZone . ' is not valid timezone name.');
+        }
+
         $this->calendar = $calendar;
+        $this->defaultTimeZone = new TimeZone($defaultTimeZone);
         $this->defaultDateTimeFormat = $defaultDateTimeFormat;
         $this->defaultDayFormat = $defaultDayFormat;
         $this->defaultTimeFormat = $defaultTimeFormat;
@@ -85,7 +92,7 @@ final class CalendarExtension extends AbstractExtension
             return $dateTime->toTimeZone($tz)->format($fmt);
         }
 
-        return $dateTime->toTimeZone($this->calendar->timeZone())->format($fmt);
+        return $dateTime->toTimeZone($this->defaultTimeZone)->format($fmt);
     }
 
     public function aeon_time_format(Time $time, string $format = null) : string

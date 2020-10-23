@@ -34,7 +34,7 @@ final class CalendarExtensionTest extends TestCase
                 ]
             )
         );
-        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'UTC', 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
 
         $this->assertStringEqualsFile(
             __DIR__ . '/Fixtures/filters/aeon_datetime_format.txt',
@@ -51,7 +51,7 @@ final class CalendarExtensionTest extends TestCase
                 ]
             )
         );
-        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'UTC', 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
 
         $this->assertStringEqualsFile(
             __DIR__ . '/Fixtures/filters/aeon_day_format.txt',
@@ -68,7 +68,7 @@ final class CalendarExtensionTest extends TestCase
                 ]
             )
         );
-        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'UTC', 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
 
         $this->assertStringEqualsFile(
             __DIR__ . '/Fixtures/filters/aeon_time_format.txt',
@@ -119,7 +119,7 @@ final class CalendarExtensionTest extends TestCase
                 ]
             )
         );
-        $twig->addExtension(new CalendarExtension($this->calendarStub, 'Y-m-d H:i:sO', 'Y-m-d'));
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'UTC', 'Y-m-d H:i:sO', 'Y-m-d'));
 
         $this->assertStringEqualsFile(
             __DIR__ . '/Fixtures/functions/aeon_now.txt',
