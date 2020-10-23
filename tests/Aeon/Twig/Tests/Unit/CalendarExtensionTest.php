@@ -21,12 +21,12 @@ final class CalendarExtensionTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('not_timezone is not valid timezone name.');
 
-        new CalendarExtension($calendar = new GregorianCalendarStub(), 'not_timezone');
+        new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()), 'not_timezone');
     }
 
     public function test_aeon_now() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $calendar->setNow($now = DateTime::fromString('2002-01-01 00:00:00 UTC'));
 
@@ -36,10 +36,10 @@ final class CalendarExtensionTest extends TestCase
 
     public function test_aeon_datetime_format_takes_timezone_from_calendar_instance_when_not_provided() : void
     {
-        $extension = new CalendarExtension(
-            $calendar = new GregorianCalendarStub(new \DateTimeImmutable('2020-01-01 UTC')),
-            'Europe/Warsaw'
-        );
+        $calendar = new GregorianCalendarStub(TimeZone::UTC());
+        $calendar->setNow(DateTime::fromString('2020-01-01 UTC'));
+
+        $extension = new CalendarExtension($calendar, 'Europe/Warsaw');
 
         $this->assertEquals(
             '2020-01-01 01:00:00',
@@ -49,9 +49,10 @@ final class CalendarExtensionTest extends TestCase
 
     public function test_aeon_datetime_format_takes_timezone_from_argument_when_provided() : void
     {
-        $extension = new CalendarExtension(
-            $calendar = new GregorianCalendarStub(new \DateTimeImmutable('2020-01-01 Europe/Warsaw'))
-        );
+        $calendar = new GregorianCalendarStub(TimeZone::UTC());
+        $calendar->setNow(DateTime::fromString('2020-01-01 Europe/Warsaw'));
+
+        $extension = new CalendarExtension($calendar);
 
         $this->assertEquals(
             '2019-12-31 16:00:00',
@@ -61,14 +62,14 @@ final class CalendarExtensionTest extends TestCase
 
     public function test_aeon_in_seconds_precise() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals('10.000000', $extension->aeon_in_seconds_precise(TimeUnit::seconds(10)));
     }
 
     public function test_aeon_interval() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(Interval::closed(), $extension->aeon_interval('closed'));
         $this->assertEquals($extension->aeon_interval('CLOSED'), $extension->aeon_interval('closed'));
@@ -76,84 +77,84 @@ final class CalendarExtensionTest extends TestCase
 
     public function test_aeon_interval_left_open() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(Interval::leftOpen(), $extension->aeon_interval_left_open());
     }
 
     public function test_aeon_interval_right_open() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(Interval::rightOpen(), $extension->aeon_interval_right_open());
     }
 
     public function test_aeon_interval_open() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(Interval::open(), $extension->aeon_interval_open());
     }
 
     public function test_aeon_interval_closed() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(Interval::closed(), $extension->aeon_interval_closed());
     }
 
     public function test_aeon_in_seconds() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(10, $extension->aeon_in_seconds(TimeUnit::seconds(10)));
     }
 
     public function test_aeon_second() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(TimeUnit::seconds(15), $extension->aeon_second(15));
     }
 
     public function test_aeon_minute() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(TimeUnit::minutes(15), $extension->aeon_minute(15));
     }
 
     public function test_aeon_hour() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(TimeUnit::hours(15), $extension->aeon_hour(15));
     }
 
     public function test_aeon_day() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(TimeUnit::days(15), $extension->aeon_day(15));
     }
 
     public function test_aeon_date_format() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertSame('2020-01-01 00', $extension->aeon_datetime_format(DateTime::fromString('2020-01-01 00:00:00 UTC'), 'Y-m-d H'));
     }
 
     public function test_aeon_day_format() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertSame('2020 01 01', $extension->aeon_day_format(Day::fromString('2020-01-01'), 'Y m d'));
     }
 
     public function test_aeon_current_day() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $calendar->setNow($now = DateTime::fromString('2002-01-01 00:00:00 UTC'));
 
@@ -162,7 +163,7 @@ final class CalendarExtensionTest extends TestCase
 
     public function test_aeon_current_month() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $calendar->setNow($now = DateTime::fromString('2002-01-01 00:00:00 UTC'));
 
@@ -171,7 +172,7 @@ final class CalendarExtensionTest extends TestCase
 
     public function test_aeon_current_year() : void
     {
-        $extension = new CalendarExtension($calendar = new GregorianCalendarStub());
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $calendar->setNow($now = DateTime::fromString('2002-01-01 00:00:00 UTC'));
 
@@ -182,7 +183,7 @@ final class CalendarExtensionTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        $extension = new CalendarExtension(new GregorianCalendarStub());
+        $extension = new CalendarExtension(new GregorianCalendarStub(TimeZone::UTC()));
         $extension->aeon_interval('invalid interval');
     }
 }

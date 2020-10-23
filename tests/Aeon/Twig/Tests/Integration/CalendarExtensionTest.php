@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Aeon\Twig\Tests\Integration;
 
+use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\GregorianCalendarStub;
+use Aeon\Calendar\Gregorian\TimeZone;
 use Aeon\Twig\CalendarExtension;
 use PHPUnit\Framework\TestCase;
 use Twig\Environment;
@@ -17,7 +19,8 @@ final class CalendarExtensionTest extends TestCase
 
     public function setUp() : void
     {
-        $this->calendarStub = new GregorianCalendarStub(new \DateTimeImmutable('2020-01-01 00:00:00 UTC'));
+        $this->calendarStub = new GregorianCalendarStub(new TimeZone('UTC'));
+        $this->calendarStub->setNow(DateTime::fromString('2020-01-01 00:00:00'));
     }
 
     public function test_extension() : void
