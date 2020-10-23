@@ -10,6 +10,6 @@ return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
 
     $services->set('calendar.twig', CalendarExtension::class)
-        ->args([ref('calendar'), '%aeon.datetime_format%', '%aeon.date_format%', '%aeon.time_format%'])
+        ->args([ref('calendar'),  '%aeon.timezone%', '%aeon.datetime_format%', '%aeon.date_format%', '%aeon.time_format%'])
         ->tag('twig.extension', []);
 };

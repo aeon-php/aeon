@@ -47,5 +47,6 @@ final class AeonExtensionTest extends TestCase
         $this->assertInstanceOf(Calendar::class, $this->container->get('calendar'));
         $this->assertTrue($this->container->hasDefinition('calendar.twig'));
         $this->assertInstanceOf(CalendarExtension::class, $this->container->get('calendar.twig'));
+        $this->assertTrue($this->container->getDefinition('calendar.twig')->hasTag('twig.extension'));
     }
 }

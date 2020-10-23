@@ -33,8 +33,7 @@ final class AeonExtension extends Extension
         if ($container->hasParameter('kernel.environment')) {
             if ($container->getParameter('kernel.environment') === 'test') {
                 $container->getDefinition('calendar')
-                    ->setClass(GregorianCalendarStub::class)
-                    ->setArguments([]);
+                    ->setClass(GregorianCalendarStub::class);
 
                 $container->setAlias(GregorianCalendarStub::class, 'calendar')
                     ->setPublic(true);
