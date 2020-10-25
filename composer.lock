@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "17d5553dd01d6bb71a0bdb37f9274c38",
+    "content-hash": "6c7cf682d02307936eec8a8dd1802959",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -64,20 +64,20 @@
         },
         {
             "name": "aeon-php/calendar-holidays",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays.git",
-                "reference": "9c7fa21be9ea58fe05f4010ed155869300753a7b"
+                "reference": "37910869a2ab22395333b83a5e75eabe7b7c95fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/9c7fa21be9ea58fe05f4010ed155869300753a7b",
-                "reference": "9c7fa21be9ea58fe05f4010ed155869300753a7b",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/37910869a2ab22395333b83a5e75eabe7b7c95fa",
+                "reference": "37910869a2ab22395333b83a5e75eabe7b7c95fa",
                 "shasum": ""
             },
             "require": {
-                "aeon-php/calendar": ">=0.4.0",
+                "aeon-php/calendar": ">=0.11.0",
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "php": ">=7.4.2"
@@ -112,7 +112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar-holidays/issues",
-                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.3.0"
+                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.4.0"
             },
             "funding": [
                 {
@@ -120,7 +120,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-25T08:42:15+00:00"
+            "time": "2020-10-25T08:55:12+00:00"
         },
         {
             "name": "azuyalabs/yasumi",
@@ -2105,20 +2105,20 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.19.0",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "aed596913b70fae57be53d86faa2e9ef85a2297b"
+                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/aed596913b70fae57be53d86faa2e9ef85a2297b",
-                "reference": "aed596913b70fae57be53d86faa2e9ef85a2297b",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f4ba089a5b6366e453971d3aad5fe8e897b37f41",
+                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "suggest": {
                 "ext-ctype": "For best performance"
@@ -2126,7 +2126,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.19-dev"
+                    "dev-main": "1.20-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -2164,7 +2164,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.19.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.20.0"
             },
             "funding": [
                 {
@@ -2180,7 +2180,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-23T09:01:57+00:00"
+            "time": "2020-10-23T14:02:19+00:00"
         },
         {
             "name": "theseer/tokenizer",
