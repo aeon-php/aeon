@@ -25,10 +25,11 @@ final class AeonExtension extends Extension
         $loader->load('aeon_calendar.php');
         $loader->load('aeon_calendar_twig.php');
 
-        $container->setParameter('aeon.timezone', $config['timezone']);
-        $container->setParameter('aeon.datetime_format', $config['datetime_format']);
-        $container->setParameter('aeon.date_format', $config['date_format']);
-        $container->setParameter('aeon.time_format', $config['time_format']);
+        $container->setParameter('aeon.calendar_timezone', $config['calendar_timezone']);
+        $container->setParameter('aeon.ui_timezone', $config['ui_timezone']);
+        $container->setParameter('aeon.ui_datetime_format', $config['ui_datetime_format']);
+        $container->setParameter('aeon.ui_date_format', $config['ui_date_format']);
+        $container->setParameter('aeon.ui_time_format', $config['ui_time_format']);
 
         if ($container->hasParameter('kernel.environment')) {
             if ($container->getParameter('kernel.environment') === 'test') {

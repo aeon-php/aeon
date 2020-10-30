@@ -21,10 +21,11 @@ final class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('timezone')->defaultValue(TimeZone::UTC)->end()
-                ->scalarNode('datetime_format')->defaultValue('Y-m-d H:i:s')->end()
-                ->scalarNode('date_format')->defaultValue('Y-m-d')->end()
-                ->scalarNode('time_format')->defaultValue('H:i:s')->end()
+                ->scalarNode('calendar_timezone')->defaultValue(TimeZone::UTC)->end()
+                ->scalarNode('ui_timezone')->defaultValue(TimeZone::UTC)->end()
+                ->scalarNode('ui_datetime_format')->defaultValue('Y-m-d H:i:s')->end()
+                ->scalarNode('ui_date_format')->defaultValue('Y-m-d')->end()
+                ->scalarNode('ui_time_format')->defaultValue('H:i:s')->end()
             ->end();
 
         return $treeBuilder;

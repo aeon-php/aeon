@@ -11,13 +11,13 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
 
-    $services->set('timezone', TimeZone::class)
-        ->args(['%aeon.timezone%'])
-        ->alias(TimeZone::class, 'timezone')
+    $services->set('calendar_timezone', TimeZone::class)
+        ->args(['%aeon.calendar_timezone%'])
+        ->alias(TimeZone::class, 'calendar_timezone')
         ->public();
 
     $services->set('calendar', GregorianCalendar::class)
-        ->args([ref('timezone')])
+        ->args([ref('calendar_timezone')])
         ->public()
         ->alias(Calendar::class, 'calendar')
         ->public();
