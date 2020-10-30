@@ -4,3 +4,4 @@ parameters:
         - src
     excludes_analyse:
         - 'src/Aeon/Symfony/AeonBundle/Resources/config/*'
+        - 'src/Aeon/Symfony/AeonBundle/Validator/Constraints/*'
