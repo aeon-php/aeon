@@ -12,3 +12,7 @@ Time Management Framework for PHP
 > "timeless" or "for eternity".
 
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Aeon) 
+
+Aeon is a set of libraries that makes easier to work with PHP Date & Time in elegant Object Oriented way.
+
+Please read [Official Documentation](https://aeon-php.org/docs/symfony-bundle).
