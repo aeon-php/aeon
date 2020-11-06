@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c7cf682d02307936eec8a8dd1802959",
+    "content-hash": "e38cd55bc231e4394b16b6fb9255716b",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -64,16 +64,16 @@
         },
         {
             "name": "aeon-php/calendar-holidays",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays.git",
-                "reference": "37910869a2ab22395333b83a5e75eabe7b7c95fa"
+                "reference": "fe57a0be9b517b1539d329e6a89cb303526f93fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/37910869a2ab22395333b83a5e75eabe7b7c95fa",
-                "reference": "37910869a2ab22395333b83a5e75eabe7b7c95fa",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/fe57a0be9b517b1539d329e6a89cb303526f93fd",
+                "reference": "fe57a0be9b517b1539d329e6a89cb303526f93fd",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar-holidays/issues",
-                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.4.0"
+                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.5.0"
             },
             "funding": [
                 {
@@ -120,7 +120,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-25T08:55:12+00:00"
+            "time": "2020-11-05T22:01:09+00:00"
         },
         {
             "name": "azuyalabs/yasumi",

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Aeon\Calendar\Gregorian;
 
 use Aeon\Calendar\Exception\HolidayException;
-use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\Holidays\Holiday as AeonHoliday;
 use Aeon\Calendar\Gregorian\Holidays\HolidayLocaleName;
 use Aeon\Calendar\Gregorian\Holidays\HolidayName;
@@ -19,36 +18,23 @@ use Yasumi\Yasumi;
  */
 final class YasumiHolidays implements Holidays
 {
-    /** @phpstan-ignore-next-line */
-    private ?AbstractProvider $yasumi;
+    /**
+     * @var array<int, AbstractProvider>
+     */
+    private array $yasumi;
 
     private string $providerClass;
 
-    private int $year;
-
-    private function __construct(string $providerClass, int $year)
+    public function __construct(string $countryCode)
     {
-        if (!\class_exists($providerClass)) {
-            throw new InvalidArgumentException($providerClass . ' is not valid Yasumi provider class.');
-        }
-
-        $this->yasumi = null;
-        $this->providerClass = $providerClass;
-        $this->year = $year;
-    }
-
-    /**
-     * @psalm-pure
-     */
-    public static function provider(string $providerClass, Calendar $calendar) : self
-    {
-        return new self($providerClass, $calendar->currentYear()->number());
+        $this->yasumi = [];
+        $this->providerClass = Providers::fromCountryCode($countryCode);
     }
 
     public function isHoliday(Day $day) : bool
     {
         /** @psalm-suppress ImpureMethodCall */
-        return $this->yasumi()->isHoliday($day->toDateTimeImmutable());
+        return $this->yasumi($day->year()->number())->isHoliday($day->toDateTimeImmutable());
     }
 
     public function holidaysAt(Day $day) : array
@@ -65,7 +51,7 @@ final class YasumiHolidays implements Holidays
                     );
                 },
                 \array_filter(
-                    $this->yasumi()->getHolidays(),
+                    $this->yasumi($day->year()->number())->getHolidays(),
                     function (Holiday $holiday) use ($day) : bool {
                         return Day::fromDateTime($holiday)->isEqual($day);
                     }
@@ -75,10 +61,10 @@ final class YasumiHolidays implements Holidays
     }
 
     /** @phpstan-ignore-next-line */
-    private function yasumi() : AbstractProvider
+    private function yasumi(int $year) : AbstractProvider
     {
-        if ($this->yasumi instanceof AbstractProvider) {
-            return $this->yasumi;
+        if (isset($this->yasumi[$year])) {
+            return $this->yasumi[$year];
         }
 
         try {
@@ -86,9 +72,9 @@ final class YasumiHolidays implements Holidays
              * @psalm-suppress InaccessibleProperty
              * @psalm-suppress ImpureMethodCall
              */
-            $this->yasumi = Yasumi::create($this->providerClass, $this->year, 'en_US');
+            $this->yasumi[$year] = Yasumi::create($this->providerClass, $year, 'en_US');
 
-            return $this->yasumi;
+            return $this->yasumi[$year];
         } catch (ProviderNotFoundException $providerNotFoundException) {
             throw new HolidayException('Yasumi provider ' . $this->providerClass . ' does not exists', 0, $providerNotFoundException);
         }
