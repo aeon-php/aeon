@@ -24,7 +24,7 @@ final class AeonDayType extends AbstractType
      */
     public function getBlockPrefix() : string
     {
-        return 'date';
+        return 'aeon_day';
     }
 
     /**

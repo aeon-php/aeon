@@ -24,7 +24,7 @@ final class AeonTimeZoneType extends AbstractType
      */
     public function getBlockPrefix() : string
     {
-        return 'timezone';
+        return 'aeon_timezone';
     }
 
     /**

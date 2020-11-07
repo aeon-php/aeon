@@ -24,7 +24,7 @@ final class AeonTimeType extends AbstractType
      */
     public function getBlockPrefix() : string
     {
-        return 'time';
+        return 'aeon_time';
     }
 
     /**
