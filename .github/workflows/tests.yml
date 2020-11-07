@@ -24,7 +24,7 @@ jobs:
           - "7.4"
         operating-system:
           - "ubuntu-latest"
-          - "windows-latest"
+          # - "windows-latest" https://twitter.com/norbert_tech/status/1324958486506115073 - feel free to fix
 
     steps:
       - name: "Checkout"

@@ -15,7 +15,7 @@ final class AeonDayToDateTimeTransformer implements DataTransformerInterface
      */
     public function transform($value)
     {
-        if ($value instanceof DAy) {
+        if ($value instanceof Day) {
             return $value->toDateTimeImmutable();
         }
 

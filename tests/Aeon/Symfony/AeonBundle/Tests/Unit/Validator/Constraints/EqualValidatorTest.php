@@ -11,7 +11,7 @@ use Aeon\Symfony\AeonBundle\Validator\Constraints\EqualValidator;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
-final class EqualValidatorTest extends AbstractConstraintValidatorTestCase
+final class EqualValidatorTest extends AbstractComparisonValidatorTestCase
 {
     public function provideValidComparisons() : \Generator
     {

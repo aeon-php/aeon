@@ -11,7 +11,7 @@ use Aeon\Symfony\AeonBundle\Validator\Constraints\AfterValidator;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
-final class AfterValidatorTest extends AbstractConstraintValidatorTestCase
+final class AfterValidatorTest extends AbstractComparisonValidatorTestCase
 {
     public function provideValidComparisons() : \Generator
     {

@@ -7,7 +7,7 @@ namespace Aeon\Symfony\AeonBundle\Tests\Unit\Validator\Constraints;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Test\ConstraintValidatorTestCase;
 
-abstract class AbstractConstraintValidatorTestCase extends ConstraintValidatorTestCase
+abstract class AbstractComparisonValidatorTestCase extends ConstraintValidatorTestCase
 {
     /**
      * @dataProvider provideValidComparisons

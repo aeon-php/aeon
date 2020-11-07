@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Symfony\AeonBundle\Tests\Unit\DependencyInjection;
 
+use Aeon\Calendar\Gregorian\Holidays\GoogleRegionalHolidaysFactory;
 use Aeon\Symfony\AeonBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Processor;
@@ -19,6 +20,7 @@ final class ConfigurationTest extends TestCase
         $this->assertEquals('Y-m-d H:i:s', $config['ui_datetime_format']);
         $this->assertEquals('Y-m-d', $config['ui_date_format']);
         $this->assertEquals('H:i:s', $config['ui_time_format']);
+        $this->assertEquals(GoogleRegionalHolidaysFactory::class, $config['calendar_holidays_factory_service']);
     }
 
     public function test_changed_configuration() : void

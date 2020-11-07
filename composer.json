@@ -8,6 +8,7 @@
     "require": {
         "php": ">=7.4.2",
         "aeon-php/calendar": ">=0.11.0",
+        "aeon-php/calendar-holidays": ">=0.5.0",
         "aeon-php/calendar-twig": ">=0.6.0",
         "aeon-php/retry": ">=0.4.0",
         "aeon-php/sleep": ">=0.5.0",
@@ -18,7 +19,9 @@
         "symfony/validator": "^4.4|^5.0|^5.1"
     },
     "require-dev": {
+        "aeon-php/calendar-holidays-yasumi": ">=0.5.0",
         "phpunit/phpunit": "^9.1",
+        "symfony/browser-kit": "^4.4|^5.0|^5.1",
         "symfony/framework-bundle": "^4.4|^5.0|^5.1"
     },
     "license": "MIT",

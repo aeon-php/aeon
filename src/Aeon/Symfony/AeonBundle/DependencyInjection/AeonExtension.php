@@ -24,12 +24,19 @@ final class AeonExtension extends Extension
         $loader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('aeon_calendar.php');
         $loader->load('aeon_calendar_twig.php');
+        $loader->load('aeon_calendar_holidays_google.php');
+        $loader->load('aeon_calendar_holidays_yasumi.php');
+        $loader->load('aeon_calendar_holidays.php');
 
         $container->setParameter('aeon.calendar_timezone', $config['calendar_timezone']);
         $container->setParameter('aeon.ui_timezone', $config['ui_timezone']);
         $container->setParameter('aeon.ui_datetime_format', $config['ui_datetime_format']);
         $container->setParameter('aeon.ui_date_format', $config['ui_date_format']);
         $container->setParameter('aeon.ui_time_format', $config['ui_time_format']);
+
+        if ($container->has((string) $config['calendar_holidays_factory_service'])) {
+            $container->setAlias('aeon.calendar.holidays.factory', (string) $config['calendar_holidays_factory_service']);
+        }
 
         if ($container->hasParameter('kernel.environment')) {
             if ($container->getParameter('kernel.environment') === 'test') {

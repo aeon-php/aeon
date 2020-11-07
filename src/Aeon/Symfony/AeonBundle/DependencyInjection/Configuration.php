@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Symfony\AeonBundle\DependencyInjection;
 
+use Aeon\Calendar\Gregorian\Holidays\GoogleRegionalHolidaysFactory;
 use Aeon\Calendar\Gregorian\TimeZone;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -22,6 +23,7 @@ final class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('calendar_timezone')->defaultValue(TimeZone::UTC)->end()
+                ->scalarNode('calendar_holidays_factory_service')->defaultValue(GoogleRegionalHolidaysFactory::class)->end()
                 ->scalarNode('ui_timezone')->defaultValue(TimeZone::UTC)->end()
                 ->scalarNode('ui_datetime_format')->defaultValue('Y-m-d H:i:s')->end()
                 ->scalarNode('ui_date_format')->defaultValue('Y-m-d')->end()
