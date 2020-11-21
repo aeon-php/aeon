@@ -16,3 +16,5 @@ Time Management Framework for PHP
 [Source: Wikipedia](https://en.wikipedia.org/wiki/Aeon) 
 
 Please read [Official Documentation](https://aeon-php.org/docs/retry).
+
+Looking for help? Visit our official [forum](https://forum.aeon-php.org)
