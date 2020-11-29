@@ -20,7 +20,7 @@ final class ThrottleRequestTest extends WebTestCase
 
         $this->assertSame(5, (int) $client->getResponse()->headers->get('x-ratelimit-limit'));
         $this->assertSame(4, (int) $client->getResponse()->headers->get('x-ratelimit-remaining'));
-        $this->assertSame(1, (int) $client->getResponse()->headers->get('x-ratelimit-reset'));
+        $this->assertEqualsWithDelta(10, (int) $client->getResponse()->headers->get('x-ratelimit-reset'), 2);
 
         $client->request('POST', '/throttle');
 
@@ -28,7 +28,7 @@ final class ThrottleRequestTest extends WebTestCase
 
         $this->assertSame(5, (int) $client->getResponse()->headers->get('x-ratelimit-limit'));
         $this->assertSame(3, (int) $client->getResponse()->headers->get('x-ratelimit-remaining'));
-        $this->assertSame(1, (int) $client->getResponse()->headers->get('x-ratelimit-reset'));
+        $this->assertEqualsWithDelta(10, (int) $client->getResponse()->headers->get('x-ratelimit-reset'), 2);
 
         $client->request('POST', '/throttle');
 
@@ -36,7 +36,7 @@ final class ThrottleRequestTest extends WebTestCase
 
         $this->assertSame(5, (int) $client->getResponse()->headers->get('x-ratelimit-limit'));
         $this->assertSame(2, (int) $client->getResponse()->headers->get('x-ratelimit-remaining'));
-        $this->assertSame(1, (int) $client->getResponse()->headers->get('x-ratelimit-reset'));
+        $this->assertEqualsWithDelta(10, (int) $client->getResponse()->headers->get('x-ratelimit-reset'), 2);
 
         $client->request('POST', '/throttle');
 
@@ -44,7 +44,7 @@ final class ThrottleRequestTest extends WebTestCase
 
         $this->assertSame(5, (int) $client->getResponse()->headers->get('x-ratelimit-limit'));
         $this->assertSame(1, (int) $client->getResponse()->headers->get('x-ratelimit-remaining'));
-        $this->assertSame(1, (int) $client->getResponse()->headers->get('x-ratelimit-reset'));
+        $this->assertEqualsWithDelta(10, (int) $client->getResponse()->headers->get('x-ratelimit-reset'), 2);
 
         $client->request('POST', '/throttle');
 
@@ -52,7 +52,7 @@ final class ThrottleRequestTest extends WebTestCase
 
         $this->assertSame(5, (int) $client->getResponse()->headers->get('x-ratelimit-limit'));
         $this->assertSame(0, (int) $client->getResponse()->headers->get('x-ratelimit-remaining'));
-        $this->assertSame(1, (int) $client->getResponse()->headers->get('x-ratelimit-reset'));
+        $this->assertEqualsWithDelta(10, (int) $client->getResponse()->headers->get('x-ratelimit-reset'), 2);
 
         $client->request('POST', '/throttle');
 
@@ -61,7 +61,7 @@ final class ThrottleRequestTest extends WebTestCase
 
         $this->assertSame(5, (int) $client->getResponse()->headers->get('x-ratelimit-limit'));
         $this->assertSame(0, (int) $client->getResponse()->headers->get('x-ratelimit-remaining'));
-        $this->assertSame(1, (int) $client->getResponse()->headers->get('x-ratelimit-reset'));
+        $this->assertEqualsWithDelta(10, (int) $client->getResponse()->headers->get('x-ratelimit-reset'), 2);
     }
 
     public function test_throttled_endpoint_with_not_throttled_method() : void
@@ -88,7 +88,7 @@ final class ThrottleRequestTest extends WebTestCase
 
         $this->assertSame(5, (int) $client->getResponse()->headers->get('x-ratelimit-limit'));
         $this->assertSame(0, (int) $client->getResponse()->headers->get('x-ratelimit-remaining'));
-        $this->assertSame(1, (int) $client->getResponse()->headers->get('x-ratelimit-reset'));
+        $this->assertEqualsWithDelta(10, (int) $client->getResponse()->headers->get('x-ratelimit-reset'), 2);
     }
 
     protected static function getKernelClass()

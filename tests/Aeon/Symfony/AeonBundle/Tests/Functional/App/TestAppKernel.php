@@ -93,7 +93,7 @@ final class TestAppKernel extends BaseKernel
                     'algorithm' => 'sliding_window',
                     'configuration' => [
                         'limit' => 5,
-                        'time_window' => '1 second',
+                        'time_window' => '10 seconds',
                         'storage_service_id' => 'cache.psr.array',
                     ],
                 ],
