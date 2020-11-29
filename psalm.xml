@@ -12,6 +12,7 @@
             <directory name="vendor"/>
             <directory name="src/Aeon/Symfony/AeonBundle/Resources/config"/>
             <directory name="src/Aeon/Symfony/AeonBundle/Validator/Constraints"/>
+            <file name="src/Aeon/Symfony/AeonBundle/DependencyInjection/AeonExtension.php"/>
         </ignoreFiles>
     </projectFiles>
 </psalm>

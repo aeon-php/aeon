@@ -5,3 +5,4 @@ parameters:
     excludes_analyse:
         - 'src/Aeon/Symfony/AeonBundle/Resources/config/*'
         - 'src/Aeon/Symfony/AeonBundle/Validator/Constraints/*'
+        - 'src/Aeon/Symfony/AeonBundle/DependencyInjection/AeonExtension.php'
