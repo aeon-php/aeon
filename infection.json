@@ -20,6 +20,9 @@
     "@default": true
   },
   "testFramework": "phpunit",
+  "phpUnit": {
+    "customPath": "tools\/phpunit.phar"
+  },
   "bootstrap": "./vendor/autoload.php",
   "minMsi": 50,
   "minCoveredMsi": 50
