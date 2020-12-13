@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Doctrine\Tests\Unit\Calendar\Gregorian;
+namespace Aeon\Doctrine\Tests\Unit;
 
 use Aeon\Calendar\Gregorian\Day;
 use Aeon\Doctrine\Calendar\Gregorian\DayType;
