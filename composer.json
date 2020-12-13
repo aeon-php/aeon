@@ -9,9 +9,6 @@
         "php": ">=7.4.2",
         "aeon-php/calendar": ">=0.4.0"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^9.3"
-    },
     "license": "MIT",
     "autoload": {
         "files": ["src/Aeon/Calendar/System/sleep.php"],
@@ -37,7 +34,7 @@
             "@test:mutation"
         ],
         "test": [
-            "phpunit"
+            "tools/phpunit.phar"
         ],
         "test:mutation": [
             "tools/infection --threads=2"
