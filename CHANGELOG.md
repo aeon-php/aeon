@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.5.0] - 2020-12-20
+### Changed
+- Moved phpunit to tools, updated tools #21
+
 ## [0.4.0] - 2020-08-19 
 ### Changed
 - updated aeon-php/sleep dependency to >=0.5.0
