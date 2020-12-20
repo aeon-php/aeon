@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.6.0] - 2020-12-20
+### Changed
+- Fixed holidays namespace and moved phpunit to tools #24
+
 ## [0.5.0] - 2020-11-06
 ### Added
 - Added HolidaysFactory implementation
