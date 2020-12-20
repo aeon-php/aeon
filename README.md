@@ -13,8 +13,10 @@ Time Management Framework for PHP
 > "generation" or "a period of time", though it tended to be translated as "age" in the sense of "ages", "forever", 
 > "timeless" or "for eternity".
 
-[Source: Wikipedia](https://en.wikipedia.org/wiki/Aeon) 
+[Source: Wikipedia](https://en.wikipedia.org/wiki/Aeon)
 
-Please read [Official Documentation](https://aeon-php.org/docs/retry).
+Aeon is a set of libraries that makes easier to work with PHP Date & Time in elegant Object Oriented way.
 
-Looking for help? Visit our official [forum](https://forum.aeon-php.org)
+* [Documentation & Examples](https://aeon-php.org/docs/retry/)
+* [Contributing & Development](https://github.com/aeon-php/.github/blob/master/CONTRIBUTING.md)
+* [Forum](https://forum.aeon-php.org)

@@ -21,5 +21,8 @@
     "PublicVisibility": false
   },
   "testFramework": "phpunit",
+  "phpUnit": {
+    "customPath": "tools\/phpunit.phar"
+  },
   "bootstrap": "./vendor/autoload.php"
 }

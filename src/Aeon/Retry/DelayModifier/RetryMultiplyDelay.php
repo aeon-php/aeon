@@ -11,6 +11,6 @@ final class RetryMultiplyDelay implements DelayModifier
 {
     public function modify(int $retry, TimeUnit $timeUnit) : TimeUnit
     {
-        return $timeUnit->multiply($retry);
+        return $timeUnit->multiply(TimeUnit::seconds($retry));
     }
 }
