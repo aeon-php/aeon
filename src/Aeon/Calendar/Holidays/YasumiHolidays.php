@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Gregorian;
+namespace Aeon\Calendar\Holidays;
 
 use Aeon\Calendar\Exception\HolidayException;
-use Aeon\Calendar\Gregorian\Holidays\Holiday as AeonHoliday;
-use Aeon\Calendar\Gregorian\Holidays\HolidayLocaleName;
-use Aeon\Calendar\Gregorian\Holidays\HolidayName;
+use Aeon\Calendar\Gregorian\Day;
+use Aeon\Calendar\Holidays;
+use Aeon\Calendar\Holidays\Holiday as AeonHoliday;
 use Yasumi\Exception\ProviderNotFoundException;
 use Yasumi\Holiday;
 use Yasumi\Provider\AbstractProvider;
@@ -39,6 +39,7 @@ final class YasumiHolidays implements Holidays
 
     public function holidaysAt(Day $day) : array
     {
+        /** @psalm-suppress ImpureFunctionCall */
         return \array_values(
             \array_map(
                 function (Holiday $holiday) : AeonHoliday {

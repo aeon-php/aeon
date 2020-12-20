@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Gregorian;
+namespace Aeon\Calendar\Holidays;
+
+use Aeon\Calendar\Holidays;
+use Aeon\Calendar\HolidaysFactory;
 
 final class YasumiHolidaysFactory implements HolidaysFactory
 {

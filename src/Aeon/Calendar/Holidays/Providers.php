@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Gregorian;
+namespace Aeon\Calendar\Holidays;
 
 use Aeon\Calendar\Exception\InvalidArgumentException;
 use Yasumi\Provider\Australia;

@@ -8,7 +8,7 @@ use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;
 use Aeon\Calendar\Gregorian\GregorianCalendarStub;
 use Aeon\Calendar\Gregorian\TimeZone;
-use Aeon\Calendar\Gregorian\YasumiHolidays;
+use Aeon\Calendar\Holidays\YasumiHolidays;
 use PHPUnit\Framework\TestCase;
 
 final class YasumiHolidaysTest extends TestCase

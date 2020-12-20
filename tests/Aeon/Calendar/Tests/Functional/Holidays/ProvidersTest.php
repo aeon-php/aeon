@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Aeon\Calendar\Tests\Functional\Holidays;
 
 use Aeon\Calendar\Exception\InvalidArgumentException;
-use Aeon\Calendar\Gregorian\Providers;
+use Aeon\Calendar\Holidays\Providers;
 use PHPUnit\Framework\TestCase;
 use Yasumi\Provider\USA;
 
