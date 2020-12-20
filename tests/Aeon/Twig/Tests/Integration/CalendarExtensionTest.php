@@ -19,7 +19,7 @@ final class CalendarExtensionTest extends TestCase
 
     public function setUp() : void
     {
-        $this->calendarStub = new GregorianCalendarStub(new TimeZone('UTC'));
+        $this->calendarStub = new GregorianCalendarStub(TimeZone::UTC());
         $this->calendarStub->setNow(DateTime::fromString('2020-01-01 00:00:00'));
     }
 

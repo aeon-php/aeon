@@ -20,9 +20,17 @@
                 "Aeon\\Twig\\CalendarExtension::getFilters",
                 "Aeon\\Twig\\CalendarExtension::getFunctions"
             ]
+        },
+        "SharedCaseRemoval": {
+            "ignore": [
+                "Aeon\\Twig\\CalendarExtension::aeon_interval"
+            ]
         }
     },
     "testFramework": "phpunit",
+    "phpUnit": {
+        "customPath": "tools\/phpunit.phar"
+    },
     "bootstrap": "./vendor/autoload.php",
     "minMsi": 100,
     "minCoveredMsi": 100

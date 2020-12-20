@@ -37,7 +37,7 @@ final class CalendarExtension extends AbstractExtension
         }
 
         $this->calendar = $calendar;
-        $this->defaultTimeZone = new TimeZone($defaultTimeZone);
+        $this->defaultTimeZone = TimeZone::fromString($defaultTimeZone);
         $this->defaultDateTimeFormat = $defaultDateTimeFormat;
         $this->defaultDayFormat = $defaultDayFormat;
         $this->defaultTimeFormat = $defaultTimeFormat;
@@ -81,7 +81,7 @@ final class CalendarExtension extends AbstractExtension
     public function aeon_datetime_format(DateTime $dateTime, string $format = null, string $timezone = null) : string
     {
         $tz = (\is_string($timezone) && TimeZone::isValid($timezone))
-            ? new TimeZone($timezone)
+            ? TimeZone::fromString($timezone)
             : null;
 
         $fmt = \is_string($format)
@@ -165,7 +165,7 @@ final class CalendarExtension extends AbstractExtension
     public function aeon_now(string $timezone = null) : DateTime
     {
         if (\is_string($timezone) && TimeZone::isValid($timezone)) {
-            return $this->calendar->now()->toTimeZone(new TimeZone($timezone));
+            return $this->calendar->now()->toTimeZone(TimeZone::fromString($timezone));
         }
 
         return $this->calendar->now();

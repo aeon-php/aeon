@@ -31,7 +31,7 @@ final class CalendarExtensionTest extends TestCase
         $calendar->setNow($now = DateTime::fromString('2002-01-01 00:00:00 UTC'));
 
         $this->assertEquals($now, $extension->aeon_now());
-        $this->assertEquals(TimeZone::europeWarsaw(), $extension->aeon_now(TimeZone::EUROPE_WARSAW)->timeZone());
+        $this->assertEquals(TimeZone::europeWarsaw(), $extension->aeon_now('Europe/Warsaw')->timeZone());
     }
 
     public function test_aeon_datetime_format_takes_timezone_from_calendar_instance_when_not_provided() : void

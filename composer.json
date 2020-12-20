@@ -7,11 +7,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.2",
-        "aeon-php/calendar": ">=0.11.0",
-        "twig/twig": "^1.42|^2.10|^3"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.4"
+        "aeon-php/calendar": ">=0.13.0",
+        "twig/twig": "^1.43|^2.10|^3"
     },
     "license": "MIT",
     "autoload": {
@@ -37,7 +34,7 @@
             "@test:mutation"
         ],
         "test": [
-            "phpunit"
+            "tools/phpunit.phar"
         ],
         "test:mutation": [
             "tools/infection -j2"
