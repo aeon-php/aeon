@@ -29,7 +29,7 @@ final class AeonTimeZoneToDateTimeTransformer implements DataTransformerInterfac
         }
 
         if (\is_string($value)) {
-            return new TimeZone($value);
+            return TimeZone::fromString($value);
         }
 
         if ($value instanceof \DateTimeZone) {

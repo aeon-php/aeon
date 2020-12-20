@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Aeon\Symfony\AeonBundle\Validator\Constraints;
 
 use Aeon\Calendar\Gregorian\Day;
-use Aeon\Calendar\Gregorian\HolidaysFactory;
+use Aeon\Calendar\HolidaysFactory;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;

@@ -12,6 +12,7 @@ return static function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
 
     $services->set('calendar_timezone', TimeZone::class)
+        ->factory([TimeZone::class, 'fromString'])
         ->args(['%aeon.calendar_timezone%'])
         ->alias(TimeZone::class, 'calendar_timezone')
         ->public();

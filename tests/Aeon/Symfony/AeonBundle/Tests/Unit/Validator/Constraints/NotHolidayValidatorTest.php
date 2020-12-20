@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Aeon\Symfony\AeonBundle\Tests\Unit\Validator\Constraints;
 
 use Aeon\Calendar\Gregorian\Day;
-use Aeon\Calendar\Gregorian\Holidays\GoogleRegionalHolidaysFactory;
+use Aeon\Calendar\Holidays\GoogleRegionalHolidaysFactory;
 use Aeon\Symfony\AeonBundle\Validator\Constraints\NotHoliday;
 use Aeon\Symfony\AeonBundle\Validator\Constraints\NotHolidayValidator;
 use Symfony\Component\Validator\ConstraintValidator;

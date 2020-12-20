@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Symfony\AeonBundle\Tests\Unit\DependencyInjection;
 
-use Aeon\Calendar\Gregorian\Holidays\GoogleRegionalHolidaysFactory;
+use Aeon\Calendar\Holidays\GoogleRegionalHolidaysFactory;
 use Aeon\Symfony\AeonBundle\DependencyInjection\Configuration;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
