@@ -8,7 +8,7 @@
     "require": {
         "php": ">=7.4.2",
         "aeon-php/calendar": ">=0.4.0",
-        "doctrine/dbal": "^2.6"
+        "doctrine/dbal": "^2.6 || ^3.0"
     },
     "license": "MIT",
     "autoload": {

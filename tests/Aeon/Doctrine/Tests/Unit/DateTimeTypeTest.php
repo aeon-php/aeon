@@ -44,7 +44,6 @@ final class DateTimeTypeTest extends TestCase
         $type = Type::getType(DateTimeType::NAME);
 
         $this->expectException(ConversionException::class);
-        $this->expectExceptionMessage('Could not convert PHP value \'invalid date\' of type \'string\' to type \'aeon_datetime\'. Expected one of the following types: null, DateTime');
         $type->convertToDatabaseValue('invalid date', $this->createPlatformMock());
     }
 
@@ -53,7 +52,6 @@ final class DateTimeTypeTest extends TestCase
         $type = Type::getType(DateTimeType::NAME);
 
         $this->expectException(ConversionException::class);
-        $this->expectExceptionMessage('Could not convert database value "invalid date" to Doctrine Type aeon_datetime. Expected format: Y-m-d H:i:s');
         $type->convertToPHPValue('invalid date', $this->createPlatformMock());
     }
 

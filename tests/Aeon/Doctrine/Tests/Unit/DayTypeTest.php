@@ -44,7 +44,6 @@ final class DayTypeTest extends TestCase
         $type = Type::getType(DayType::NAME);
 
         $this->expectException(ConversionException::class);
-        $this->expectExceptionMessage('Could not convert PHP value \'invalid date\' of type \'string\' to type \'aeon_day\'. Expected one of the following types: null, Day');
         $type->convertToDatabaseValue('invalid date', $this->createPlatformMock());
     }
 
@@ -53,7 +52,6 @@ final class DayTypeTest extends TestCase
         $type = Type::getType(DayType::NAME);
 
         $this->expectException(ConversionException::class);
-        $this->expectExceptionMessage('Could not convert database value "invalid date" to Doctrine Type aeon_day. Expected format: Y-m-d');
         $type->convertToPHPValue('invalid date', $this->createPlatformMock());
     }
 
