@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-01-21
+## [0.8.0] - 2021-01-21
 
 ### Added
   - [#44](https://github.com/aeon-php/calendar-twig/pull/44) - **Added integration with Automation** - [@norberttech](https://github.com/norberttech)
