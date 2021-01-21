@@ -1,6 +1,7 @@
 ## [Unreleased] - 2021-01-21
 
 ### Added
+  - [#29](https://github.com/aeon-php/symfony-bundle/pull/29) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
   - [#11](https://github.com/aeon-php/symfony-bundle/pull/11) - **possibilit to validate if given day is not a holiday** - [@norberttech](https://github.com/norberttech)
   - [#8](https://github.com/aeon-php/symfony-bundle/pull/8) - **comparison validators** - [@norberttech](https://github.com/norberttech)
   - [#2](https://github.com/aeon-php/symfony-bundle/pull/2) - **Aeon Form Types** - [@norberttech](https://github.com/norberttech)
