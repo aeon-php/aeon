@@ -4,11 +4,13 @@
   - [#44](https://github.com/aeon-php/calendar-twig/pull/44) - **Added integration with Automation** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
-  - [4b7687](https://github.com/aeon-php/calendar-twig/commit/4b7687cc312b2e9baf5254f51441ac10031506ed) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
   - [b3ee84](https://github.com/aeon-php/calendar-twig/commit/b3ee8485afceedd8964e22fe67ee6b6d47dfc982) - **changelog** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
   - [#44](https://github.com/aeon-php/calendar-twig/pull/44) - **Fixed tests failing because of bug in dependency** - [@norberttech](https://github.com/norberttech)
+
+### Removed
+  - [85363c](https://github.com/aeon-php/calendar-twig/commit/85363c7e29a204ec2c0169c037986a864ac785de) - **dependabot mentions from changelog** - [@norberttech](https://github.com/norberttech)
 
 ## [0.7.0] - 2020-12-20
 
@@ -56,7 +58,7 @@
   - [f4f328](https://github.com/aeon-php/calendar-twig/commit/f4f328ffe1b6951f877b1273651be5961c76fae8) - **changelog** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
-  - [2cee8a](https://github.com/aeon-php/calendar-twig/commit/2cee8aa218c2e12b51df51155cd44e7589050f23) - **aeon-php/calendar dependency to >=0.4.0** - [@norberttech](https://github.com/norberttech)
+  - [2cee8a](https://github.com/aeon-php/calendar-twig/commit/2cee8aa218c2e12b51df51155cd44e7589050f23) - **aeon-php/calendar dependency to &gt;=0.4.0** - [@norberttech](https://github.com/norberttech)
   - [59b14a](https://github.com/aeon-php/calendar-twig/commit/59b14a48162080661373cee2598a96ce77d74a1c) - **dependencies, moved tools to phive** - [@norberttech](https://github.com/norberttech)
 
 ### Removed
