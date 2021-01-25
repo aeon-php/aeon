@@ -1,3 +1,11 @@
+## [Unreleased] - 2021-01-25
+
+### Added
+- [#25](https://github.com/aeon-php/calendar-holidays-yasumi/pull/25) - **aeon-php/automation integration** - [@norberttech](https://github.com/norberttech)
+
+### Changed
+- [338bc0](https://github.com/aeon-php/calendar-holidays-yasumi/commit/338bc09e899cdbf387916f7f6392cffc752b7f64) - **Update CHANGELOG.md** - [@norberttech](https://github.com/norberttech)
+
 ## [0.6.0] - 2020-12-20
 
 ### Changed
