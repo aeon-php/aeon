@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-01-25
+## [0.6.0] - 2021-01-25
 
 ### Added
 - [#36](https://github.com/aeon-php/sleep/pull/36) - **aeon-php/automation integration** - [@norberttech](https://github.com/norberttech)
