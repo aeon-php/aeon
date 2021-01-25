@@ -1,12 +1,17 @@
-## [Unreleased] - 2020-12-20
+## [Unreleased] - 2021-01-25
+
+### Added
+- [#36](https://github.com/aeon-php/sleep/pull/36) - **aeon-php/automation integration** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [d2bbbb](https://github.com/aeon-php/sleep/commit/d2bbbb91a0002bebc299c3c5b62676c1a49b8cd0) - **Update CHANGELOG.md** - [@norberttech](https://github.com/norberttech)
 - [22d80c](https://github.com/aeon-php/sleep/commit/22d80caffea41c062c24e1284912224b3d18960d) - **aeon-php/calendar dependency** - [@norberttech](https://github.com/norberttech)
 - [#32](https://github.com/aeon-php/sleep/pull/32) - **Moved phpunit to tools, updated tools** - [@norberttech](https://github.com/norberttech)
 - [8c724d](https://github.com/aeon-php/sleep/commit/8c724d237ad9049f02709803c66d8cbd23480be7) - **Update README.md** - [@norberttech](https://github.com/norberttech)
 - [0dd185](https://github.com/aeon-php/sleep/commit/0dd18526e9b685dfcaee6c63ead87e91442b30ad) - **dependencies** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [#36](https://github.com/aeon-php/sleep/pull/36) - **invalid namespace for whole library** - [@norberttech](https://github.com/norberttech)
 - [#28](https://github.com/aeon-php/sleep/pull/28) - **functional tests execution** - [@norberttech](https://github.com/norberttech)
 
 ## [0.5.0] - 2020-08-18
