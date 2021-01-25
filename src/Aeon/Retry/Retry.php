@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Aeon\Retry;
 
 use Aeon\Calendar\Exception\InvalidArgumentException;
-use Aeon\Calendar\System\Process;
 use Aeon\Calendar\TimeUnit;
 use Aeon\Retry\DelayModifier\ConstantDelay;
 use Aeon\Retry\Exception\RetryException;
+use Aeon\Sleep\Process;
 
 final class Retry
 {

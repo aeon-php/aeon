@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Aeon\Retry;
 
-use Aeon\Calendar\System\SystemProcess;
 use Aeon\Calendar\TimeUnit;
 use Aeon\Retry\DelayModifier\ConstantDelay;
+use Aeon\Sleep\SystemProcess;
 
 /**
  * @template FunctionReturnType

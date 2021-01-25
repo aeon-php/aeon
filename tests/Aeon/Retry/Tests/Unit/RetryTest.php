@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Aeon\Retry\Tests\Unit;
 
-use Aeon\Calendar\System\DummyProcess;
 use Aeon\Calendar\TimeUnit;
 use Aeon\Retry\DelayModifier\ConstantDelay;
 use Aeon\Retry\Exception\RetryException;
 use Aeon\Retry\Execution;
 use Aeon\Retry\Retry;
+use Aeon\Sleep\DummyProcess;
 use PHPUnit\Framework\TestCase;
 
 final class RetryTest extends TestCase
