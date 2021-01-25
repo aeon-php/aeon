@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Tests\Functional\System;
+namespace Aeon\Sleep\Tests\Functional;
 
 use Aeon\Calendar\Stopwatch;
-use Aeon\Calendar\System\SystemProcess;
 use Aeon\Calendar\TimeUnit;
+use Aeon\Sleep\SystemProcess;
 use PHPUnit\Framework\TestCase;
 
 final class SleepTest extends TestCase

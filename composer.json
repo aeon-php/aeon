@@ -7,11 +7,11 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.2",
-        "aeon-php/calendar": ">=0.4.0"
+        "aeon-php/calendar": ">=0.14.0"
     },
     "license": "MIT",
     "autoload": {
-        "files": ["src/Aeon/Calendar/System/sleep.php"],
+        "files": ["src/Aeon/Sleep/sleep.php"],
         "psr-4": {
             "Aeon\\": [
                 "src/Aeon"
@@ -20,7 +20,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Aeon\\Calendar\\Tests\\": "tests/Aeon/Calendar/Tests/"
+            "Aeon\\Sleep\\Tests\\": "tests/Aeon/Sleep/Tests/"
         }
     },
     "config": {

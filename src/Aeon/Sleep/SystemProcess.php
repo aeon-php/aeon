@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\System;
+namespace Aeon\Sleep;
 
-use function Aeon\Calendar\System\sleep as system_sleep;
+use function Aeon\Sleep\sleep as system_sleep;
 use Aeon\Calendar\TimeUnit;
 
 final class SystemProcess implements Process

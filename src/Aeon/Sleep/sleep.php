@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\System;
+namespace Aeon\Sleep;
 
 use Aeon\Calendar\Exception\Exception;
 use Aeon\Calendar\TimeUnit;

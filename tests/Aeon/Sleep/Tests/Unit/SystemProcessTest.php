@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\Tests\Unit\System;
+namespace Aeon\Sleep\Tests\Unit;
 
-use Aeon\Calendar\System\SystemProcess;
 use Aeon\Calendar\TimeUnit;
+use Aeon\Sleep\SystemProcess;
 use PHPUnit\Framework\TestCase;
 
 final class SystemProcessTest extends TestCase

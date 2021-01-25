@@ -16,10 +16,10 @@
   <logging/>
   <testsuites>
     <testsuite name="functional">
-      <directory>tests/Aeon/Calendar/Tests/Functional</directory>
+      <directory>tests/Aeon/Sleep/Tests/Functional</directory>
     </testsuite>
     <testsuite name="unit">
-      <directory>tests/Aeon/Calendar/Tests/Unit</directory>
+      <directory>tests/Aeon/Sleep/Tests/Unit</directory>
     </testsuite>
   </testsuites>
 </phpunit>
