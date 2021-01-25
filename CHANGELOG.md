@@ -1,3 +1,11 @@
+## [Unreleased] - 2021-01-25
+
+### Added
+- [#25](https://github.com/aeon-php/retry/pull/25) - **aeon-php/automation integration** - [@norberttech](https://github.com/norberttech)
+
+### Changed
+- [e4b3ff](https://github.com/aeon-php/retry/commit/e4b3ff7e6857cff8e5a5d24f03e77c7174f41d7f) - **Update CHANGELOG.md** - [@norberttech](https://github.com/norberttech)
+
 ## [0.5.0] - 2020-12-20
 
 ### Changed
