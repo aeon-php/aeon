@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-01-25
+## [0.4.0] - 2021-01-25
 
 ### Added
 - [#42](https://github.com/aeon-php/calendar-doctrine/pull/42) - **aeon-php/automation integration** - [@norberttech](https://github.com/norberttech)
