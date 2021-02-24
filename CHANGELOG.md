@@ -25,6 +25,7 @@
 - [4606da](https://github.com/aeon-php/symfony-bundle/commit/4606daf0e77bd210a56d134367ca1aa41a46d656) - **Initial commit** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [#52](https://github.com/aeon-php/symfony-bundle/pull/52) - **form data transformers empty value handling** - [@norberttech](https://github.com/norberttech)
 - [#12](https://github.com/aeon-php/symfony-bundle/pull/12) - **FormTypes block prefixes** - [@norberttech](https://github.com/norberttech)
 - [78cf87](https://github.com/aeon-php/symfony-bundle/commit/78cf878e836577b2b434f1c969ffe6afd90be2e1) - **failing tests** - [@norberttech](https://github.com/norberttech)
 
