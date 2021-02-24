@@ -28,6 +28,10 @@ final class AeonTimeZoneToDateTimeTransformer implements DataTransformerInterfac
             return null;
         }
 
+        if ($value === '') {
+            return null;
+        }
+
         if (\is_string($value)) {
             return TimeZone::fromString($value);
         }

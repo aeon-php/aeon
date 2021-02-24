@@ -28,6 +28,10 @@ final class AeonDayToDateTimeTransformer implements DataTransformerInterface
             return null;
         }
 
+        if ($value === '') {
+            return null;
+        }
+
         if ($value instanceof \DateTimeInterface) {
             return Day::fromDateTime($value);
         }

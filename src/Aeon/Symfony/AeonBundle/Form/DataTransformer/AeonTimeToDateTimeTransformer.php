@@ -29,6 +29,10 @@ final class AeonTimeToDateTimeTransformer implements DataTransformerInterface
             return null;
         }
 
+        if ($value === '') {
+            return null;
+        }
+
         if (\is_string($value)) {
             return Time::fromString($value);
         }

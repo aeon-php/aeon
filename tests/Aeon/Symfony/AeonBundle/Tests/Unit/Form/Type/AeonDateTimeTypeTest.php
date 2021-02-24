@@ -98,6 +98,20 @@ final class AeonDateTimeTypeTest extends TypeTestCase
         $this->assertEquals($dateTime, $form->getData());
     }
 
+    public function test_submit_single_text_widget_empty_value() : void
+    {
+        $form = $this->factory->create(self::TESTED_TYPE, null, [
+            'model_timezone' => 'Europe/Warsaw',
+            'widget' => 'single_text',
+        ]);
+
+        $form->setData(DateTime::fromString('2020-01-01 00:00:00 UTC'));
+
+        $form->submit('');
+
+        $this->assertNull($form->getData());
+    }
+
     protected function getTestedType()
     {
         return self::TESTED_TYPE;
