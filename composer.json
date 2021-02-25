@@ -18,7 +18,7 @@
         "aeon-php/calendar": ">=0.14.0",
         "aeon-php/calendar-holidays": ">=0.7.0",
         "aeon-php/calendar-twig": ">=0.8.0",
-        "aeon-php/rate-limiter": ">=0.6.0",
+        "aeon-php/rate-limiter": ">=0.7.0",
         "aeon-php/retry": ">=0.6.0",
         "aeon-php/sleep": ">=0.6.0",
         "symfony/config": "^4.4.12|^5.0",

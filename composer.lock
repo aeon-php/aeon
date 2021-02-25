@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a9a0908d235639b019ffbdf15f2232e",
+    "content-hash": "f720cdd9e3a8160f07494b80adb066b6",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -176,16 +176,16 @@
         },
         {
             "name": "aeon-php/rate-limiter",
-            "version": "0.6.0",
+            "version": "0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/rate-limiter.git",
-                "reference": "cb68a3b78774e5e3589d2da902a2cc962c83afc3"
+                "reference": "6ca6a2625d14a3484ff2432acbfee526fe52ab3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/rate-limiter/zipball/cb68a3b78774e5e3589d2da902a2cc962c83afc3",
-                "reference": "cb68a3b78774e5e3589d2da902a2cc962c83afc3",
+                "url": "https://api.github.com/repos/aeon-php/rate-limiter/zipball/6ca6a2625d14a3484ff2432acbfee526fe52ab3c",
+                "reference": "6ca6a2625d14a3484ff2432acbfee526fe52ab3c",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/rate-limiter/issues",
-                "source": "https://github.com/aeon-php/rate-limiter/tree/0.6.0"
+                "source": "https://github.com/aeon-php/rate-limiter/tree/0.7.0"
             },
             "funding": [
                 {
@@ -228,7 +228,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-24T11:32:21+00:00"
+            "time": "2021-02-25T11:43:27+00:00"
         },
         {
             "name": "aeon-php/retry",
