@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-02-24
+## [Unreleased] - 2021-02-25
 
 ### Added
 - [#29](https://github.com/aeon-php/symfony-bundle/pull/29) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
@@ -8,6 +8,7 @@
 - [1a874e](https://github.com/aeon-php/symfony-bundle/commit/1a874ef13537e683a646e228db5e33b223d44bb7) - **mutation score to README** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#53](https://github.com/aeon-php/symfony-bundle/pull/53) - **Bump aeon-php/rate-limiter** - [@DawidSajdak](https://github.com/DawidSajdak)
 - [#51](https://github.com/aeon-php/symfony-bundle/pull/51) - **Bump aeon-php/rate-limiter** - [@DawidSajdak](https://github.com/DawidSajdak)
 - [#31](https://github.com/aeon-php/symfony-bundle/pull/31) - **Updated aeon-php dependencies** - [@norberttech](https://github.com/norberttech)
 - [#31](https://github.com/aeon-php/symfony-bundle/pull/31) - **Updated phive dependencies** - [@norberttech](https://github.com/norberttech)
