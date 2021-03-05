@@ -3593,16 +3593,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "51854aa28585d196e60519271338aecad86f95f5"
+                "reference": "ec3162de6b75df14fffb9f60c1ae1051ae46037e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/51854aa28585d196e60519271338aecad86f95f5",
-                "reference": "51854aa28585d196e60519271338aecad86f95f5",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/ec3162de6b75df14fffb9f60c1ae1051ae46037e",
+                "reference": "ec3162de6b75df14fffb9f60c1ae1051ae46037e",
                 "shasum": ""
             },
             "require": {
@@ -3672,7 +3672,7 @@
             "description": "Provides a tight integration of the Security component into the Symfony full-stack framework",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-bundle/tree/v5.2.3"
+                "source": "https://github.com/symfony/security-bundle/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -3688,20 +3688,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T10:15:41+00:00"
+            "time": "2021-02-04T12:00:01+00:00"
         },
         {
             "name": "symfony/security-core",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-core.git",
-                "reference": "a468c863d65e2c3768b897b8ddf7547abb4512f8"
+                "reference": "07feaed0887fc9f53e03fe30546895c1f7588362"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/a468c863d65e2c3768b897b8ddf7547abb4512f8",
-                "reference": "a468c863d65e2c3768b897b8ddf7547abb4512f8",
+                "url": "https://api.github.com/repos/symfony/security-core/zipball/07feaed0887fc9f53e03fe30546895c1f7588362",
+                "reference": "07feaed0887fc9f53e03fe30546895c1f7588362",
                 "shasum": ""
             },
             "require": {
@@ -3761,7 +3761,7 @@
             "description": "Symfony Security Component - Core Library",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-core/tree/v5.2.3"
+                "source": "https://github.com/symfony/security-core/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -3777,11 +3777,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-28T22:06:19+00:00"
+            "time": "2021-03-04T15:41:09+00:00"
         },
         {
             "name": "symfony/security-csrf",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-csrf.git",
@@ -3832,7 +3832,7 @@
             "description": "Symfony Security Component - CSRF Library",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-csrf/tree/v5.2.3"
+                "source": "https://github.com/symfony/security-csrf/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -3852,7 +3852,7 @@
         },
         {
             "name": "symfony/security-guard",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-guard.git",
@@ -3899,7 +3899,7 @@
             "description": "Symfony Security Component - Guard",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-guard/tree/v5.2.3"
+                "source": "https://github.com/symfony/security-guard/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -3919,16 +3919,16 @@
         },
         {
             "name": "symfony/security-http",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-http.git",
-                "reference": "122c8f52fd080fcc582ca475baf2b8e63d62e980"
+                "reference": "46876779ad5405d0b7f4c93d8203ad1984568e7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-http/zipball/122c8f52fd080fcc582ca475baf2b8e63d62e980",
-                "reference": "122c8f52fd080fcc582ca475baf2b8e63d62e980",
+                "url": "https://api.github.com/repos/symfony/security-http/zipball/46876779ad5405d0b7f4c93d8203ad1984568e7a",
+                "reference": "46876779ad5405d0b7f4c93d8203ad1984568e7a",
                 "shasum": ""
             },
             "require": {
@@ -3982,7 +3982,7 @@
             "description": "Symfony Security Component - HTTP Integration",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-http/tree/v5.2.3"
+                "source": "https://github.com/symfony/security-http/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -3998,7 +3998,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-28T22:06:19+00:00"
+            "time": "2021-02-25T17:36:22+00:00"
         },
         {
             "name": "symfony/var-exporter",
