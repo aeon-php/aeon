@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-05-02
+## [0.4.1] - 2021-05-02
 
 ### Changed
 - [#51](https://github.com/aeon-php/calendar-doctrine/pull/51) - **Updated dependencies to the latest versions** - [@norberttech](https://github.com/norberttech)
