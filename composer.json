@@ -7,7 +7,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4.2",
-        "aeon-php/calendar": ">=0.14.0",
+        "aeon-php/calendar": ">=0.18.0",
         "twig/twig": "^1.43|^2.10|^3"
     },
     "license": "MIT",
@@ -34,21 +34,23 @@
             "@test:mutation"
         ],
         "test": [
-            "tools/phpunit.phar"
+            "tools\/vendor\/bin\/phpunit"
         ],
         "test:mutation": [
-            "tools/infection -j2"
+            "tools\/vendor\/bin\/infection -j2"
         ],
         "static:analyze": [
-            "tools/psalm --output-format=compact",
-            "tools/phpstan analyze -c phpstan.neon",
-            "tools/php-cs-fixer fix --dry-run"
+            "tools\/vendor\/bin\/psalm --output-format=compact",
+            "tools\/vendor\/bin\/phpstan analyze -c phpstan.neon",
+            "tools\/vendor\/bin\/php-cs-fixer fix --dry-run"
         ],
-        "cs:php:fix": "tools/php-cs-fixer fix"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-latest": "1.0-dev"
-        }
+        "cs:php:fix": "tools\/vendor\/bin\/php-cs-fixer fix",
+        "tools:install": "composer install --working-dir=./tools",
+        "post-install-cmd": [
+            "@tools:install"
+        ],
+        "post-update-cmd": [
+            "@tools:install"
+        ]
     }
 }

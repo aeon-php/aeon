@@ -182,6 +182,7 @@ final class CalendarExtensionTest extends TestCase
     public function test_aeon_interval_throws_exception_when_invalid_type() : void
     {
         $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Invalid interval type: invalid interval');
 
         $extension = new CalendarExtension(new GregorianCalendarStub(TimeZone::UTC()));
         $extension->aeon_interval('invalid interval');

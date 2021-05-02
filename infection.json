@@ -29,7 +29,7 @@
     },
     "testFramework": "phpunit",
     "phpUnit": {
-        "customPath": "tools\/phpunit.phar"
+        "customPath": "tools\/vendor\/bin\/phpunit"
     },
     "bootstrap": "./vendor/autoload.php",
     "minMsi": 100,
