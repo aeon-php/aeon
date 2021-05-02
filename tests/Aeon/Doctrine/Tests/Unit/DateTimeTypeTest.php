@@ -28,7 +28,7 @@ final class DateTimeTypeTest extends TestCase
         $dateTimeConverted = $type->convertToPHPValue($stringDate, $this->createPlatformMock());
 
         $this->assertSame('2020-01-01 01:00:00', $stringDate);
-        $this->assertEquals($dateTime, $dateTimeConverted);
+        $this->assertObjectEquals($dateTime, $dateTimeConverted, 'isEqual');
     }
 
     public function test_converting_null() : void
