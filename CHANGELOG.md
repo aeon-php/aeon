@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-04-05
+## [Unreleased] - 2021-05-02
 
 ### Added
 - [#29](https://github.com/aeon-php/symfony-bundle/pull/29) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
@@ -8,6 +8,7 @@
 - [1a874e](https://github.com/aeon-php/symfony-bundle/commit/1a874ef13537e683a646e228db5e33b223d44bb7) - **mutation score to README** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **updated dependencies** - [@norberttech](https://github.com/norberttech)
 - [#69](https://github.com/aeon-php/symfony-bundle/pull/69) - **dependency constraint: aeon-php/calendar >=0.16.3** - [@norberttech](https://github.com/norberttech)
 - [#53](https://github.com/aeon-php/symfony-bundle/pull/53) - **Bump aeon-php/rate-limiter** - [@DawidSajdak](https://github.com/DawidSajdak)
 - [#51](https://github.com/aeon-php/symfony-bundle/pull/51) - **Bump aeon-php/rate-limiter** - [@DawidSajdak](https://github.com/DawidSajdak)
@@ -32,6 +33,7 @@
 - [78cf87](https://github.com/aeon-php/symfony-bundle/commit/78cf878e836577b2b434f1c969ffe6afd90be2e1) - **failing tests** - [@norberttech](https://github.com/norberttech)
 
 ### Removed
+- [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **phive** - [@norberttech](https://github.com/norberttech)
 - [70e932](https://github.com/aeon-php/symfony-bundle/commit/70e9321b2ceda4c1895e8e1f8496a9b6fdc5fdb9) - **redundant |^5.1 constraint from symfony dependencies** - [@norberttech](https://github.com/norberttech)
 - [30a14d](https://github.com/aeon-php/symfony-bundle/commit/30a14db1e6b5bdb4a971d09215eb3d7be2cad319) - **not used dependency** - [@norberttech](https://github.com/norberttech)
 
