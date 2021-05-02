@@ -1,3 +1,11 @@
+## [Unreleased] - 2021-05-02
+
+### Fixed
+- [#53](https://github.com/aeon-php/calendar-twig/pull/53) - **broken test due to error in calendar library** - [@norberttech](https://github.com/norberttech)
+
+### Removed
+- [#53](https://github.com/aeon-php/calendar-twig/pull/53) - **phive** - [@norberttech](https://github.com/norberttech)
+
 ## [0.8.0] - 2021-01-21
 
 ### Added
