@@ -69,7 +69,18 @@ final class AeonTimeZoneTypeTest extends TypeTestCase
         $this->assertNull($form->getData());
     }
 
-    protected function getTestedType()
+    public function test_submit_string_with_non_empty_data() : void
+    {
+        $form = $this->factory->create(self::TESTED_TYPE, 'Europe/Warsaw');
+
+        $form->submit('Europe/Warsaw');
+
+        $timeZone = TimeZone::europeWarsaw();
+
+        $this->assertEquals($timeZone, $form->getData());
+    }
+
+    protected function getTestedType() : string
     {
         return self::TESTED_TYPE;
     }

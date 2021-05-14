@@ -110,7 +110,20 @@ final class AeonDayTimeTypeTest extends TypeTestCase
         $this->assertNull($form->getData());
     }
 
-    protected function getTestedType()
+    public function test_submit_single_text_widget_with_non_empty_data() : void
+    {
+        $form = $this->factory->create(self::TESTED_TYPE, '2010-06-02', [
+            'widget' => 'single_text',
+        ]);
+
+        $form->submit('2010-06-02');
+
+        $dateTime = Day::fromString('2010-06-02');
+
+        $this->assertEquals($dateTime, $form->getData());
+    }
+
+    protected function getTestedType() : string
     {
         return self::TESTED_TYPE;
     }

@@ -20,6 +20,10 @@ final class AeonTimeToDateTimeTransformer implements DataTransformerInterface
             return new \DateTimeImmutable($value->toString());
         }
 
+        if (\is_string($value)) {
+            return new \DateTimeImmutable($value);
+        }
+
         return $value;
     }
 

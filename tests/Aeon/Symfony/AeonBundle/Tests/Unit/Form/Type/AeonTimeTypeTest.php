@@ -110,7 +110,20 @@ final class AeonTimeTypeTest extends TypeTestCase
         $this->assertNull($form->getData());
     }
 
-    protected function getTestedType()
+    public function test_submit_single_text_widget_with_non_empty_data() : void
+    {
+        $form = $this->factory->create(self::TESTED_TYPE, '13:00', [
+            'widget' => 'single_text',
+        ]);
+
+        $form->submit('13:00');
+
+        $dateTime = Time::fromString('13:00');
+
+        $this->assertEquals($dateTime, $form->getData());
+    }
+
+    protected function getTestedType() : string
     {
         return self::TESTED_TYPE;
     }
