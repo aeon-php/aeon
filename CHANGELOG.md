@@ -8,6 +8,7 @@
 - [1a874e](https://github.com/aeon-php/symfony-bundle/commit/1a874ef13537e683a646e228db5e33b223d44bb7) - **mutation score to README** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [afb969](https://github.com/aeon-php/symfony-bundle/commit/afb969c36c340fa09ffa8a3f55b83475c4746986) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **updated dependencies** - [@norberttech](https://github.com/norberttech)
 - [#69](https://github.com/aeon-php/symfony-bundle/pull/69) - **dependency constraint: aeon-php/calendar >=0.16.3** - [@norberttech](https://github.com/norberttech)
 - [#53](https://github.com/aeon-php/symfony-bundle/pull/53) - **Bump aeon-php/rate-limiter** - [@DawidSajdak](https://github.com/DawidSajdak)
