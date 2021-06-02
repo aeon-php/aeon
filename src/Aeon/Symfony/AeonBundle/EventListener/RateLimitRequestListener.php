@@ -25,8 +25,15 @@ final class RateLimitRequestListener
 
     public function onKernelRequest(RequestEvent $event) : void
     {
-        if (!$event->isMasterRequest()) {
-            return;
+        if (\method_exists($event, 'isMainRequest')) {
+            if (!$event->isMainRequest()) {
+                return;
+            }
+        } else {
+            /** @psalm-suppress DeprecatedMethod */
+            if (!$event->isMasterRequest()) {
+                return;
+            }
         }
 
         $throttle = $this->requestThrottling->findFor($event->getRequest());
