@@ -1,3 +1,9 @@
+## [Unreleased] - 2021-06-20
+
+### Changed
+- [#46](https://github.com/aeon-php/sleep/pull/46) - **locked calendar dependency to ^1.0** - [@norberttech](https://github.com/norberttech)
+- [#46](https://github.com/aeon-php/sleep/pull/46) - **Replaced phive with another composer.json** - [@norberttech](https://github.com/norberttech)
+
 ## [0.6.0] - 2021-01-25
 
 ### Added
