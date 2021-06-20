@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d19cf3af1512d17c50c4b5d23fe55314",
+    "content-hash": "d4db9804409541e31b63d548f016468c",
     "packages": [
         {
             "name": "aeon-php/calendar",
-            "version": "0.15.0",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar.git",
-                "reference": "d4fe56303100e404e0071ea5ab2e91f9b5c7befb"
+                "reference": "0e1d1a958283b06d40748355547b455418a52be5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/d4fe56303100e404e0071ea5ab2e91f9b5c7befb",
-                "reference": "d4fe56303100e404e0071ea5ab2e91f9b5c7befb",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/0e1d1a958283b06d40748355547b455418a52be5",
+                "reference": "0e1d1a958283b06d40748355547b455418a52be5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4.2"
+                "php": "^7.4.2 || ^8.0"
             },
             "require-dev": {
                 "ext-bcmath": "*"
@@ -51,7 +51,7 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar/issues",
-                "source": "https://github.com/aeon-php/calendar/tree/0.15.0"
+                "source": "https://github.com/aeon-php/calendar/tree/1.0.0"
             },
             "funding": [
                 {
@@ -59,7 +59,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-01T23:15:31+00:00"
+            "time": "2021-06-06T10:10:28+00:00"
         }
     ],
     "packages-dev": [],
@@ -69,7 +69,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4.2"
+        "php": "^7.4.2 || ^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

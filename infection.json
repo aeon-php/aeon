@@ -3,9 +3,6 @@
   "source": {
     "directories": [
       "src\/Aeon"
-    ],
-    "excludes": [
-      "/\\.phpt/"
     ]
   },
   "logs": {
@@ -21,7 +18,7 @@
   },
   "testFramework": "phpunit",
   "phpUnit": {
-    "customPath": "tools\/phpunit.phar"
+    "customPath": "tools/vendor/bin/phpunit"
   },
   "bootstrap": "./vendor/autoload.php",
   "minMsi": 100,
