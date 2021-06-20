@@ -1,3 +1,8 @@
+## [Unreleased] - 2021-06-20
+
+### Fixed
+- [6602f9](https://github.com/aeon-php/sleep/commit/6602f9d256b4a41619b2a62c73514211cf983f91) - **tools composer install scripts** - [@norberttech](https://github.com/norberttech)
+
 ## [1.0.0] - 2021-06-20
 
 ### Changed
