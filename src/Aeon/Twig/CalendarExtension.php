@@ -46,6 +46,7 @@ final class CalendarExtension extends AbstractExtension
     public function getFilters() : array
     {
         return [
+            new TwigFilter('aeon_datetime_create', [$this, 'aeon_datetime_create']),
             new TwigFilter('aeon_datetime_format', [$this, 'aeon_datetime_format']),
             new TwigFilter('aeon_day_format', [$this, 'aeon_day_format']),
             new TwigFilter('aeon_time_format', [$this, 'aeon_time_format']),
@@ -76,6 +77,39 @@ final class CalendarExtension extends AbstractExtension
             new TwigFunction('aeon_interval_right_open', [$this, 'aeon_interval_right_open']),
             new TwigFunction('aeon_interval_left_open', [$this, 'aeon_interval_left_open']),
         ];
+    }
+
+    /**
+     * @param \DateTimeInterface|int|string $dateTime
+     * @param null|string $timezone
+     *
+     * @throws InvalidArgumentException
+     *
+     * @return DateTime
+     *
+     * @psalm-suppress RedundantConditionGivenDocblockType
+     */
+    public function aeon_datetime_create($dateTime, string $timezone = null) : DateTime
+    {
+        if (\is_string($dateTime)) {
+            $aeonDateTime = DateTime::fromString($dateTime);
+        } elseif ($dateTime instanceof \DateTimeInterface) {
+            $aeonDateTime = DateTime::fromDateTime($dateTime);
+        } elseif (\is_int($dateTime)) {
+            $aeonDateTime = DateTime::fromTimestampUnix($dateTime);
+        } else {
+            throw new InvalidArgumentException("Expected string, \DateTimeInterface or integer, got " . \gettype($dateTime));
+        }
+
+        $tz = (\is_string($timezone) && TimeZone::isValid($timezone))
+            ? TimeZone::fromString($timezone)
+            : null;
+
+        if ($tz instanceof TimeZone) {
+            return $aeonDateTime->toTimeZone($tz);
+        }
+
+        return $aeonDateTime;
     }
 
     public function aeon_datetime_format(DateTime $dateTime, string $format = null, string $timezone = null) : string

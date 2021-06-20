@@ -6,8 +6,8 @@
     "prefer-stable": true,
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.4.2",
-        "aeon-php/calendar": ">=0.18.0",
+        "php": "^7.4.2 || ^8.0",
+        "aeon-php/calendar": "^1.0",
         "twig/twig": "^1.43|^2.10|^3"
     },
     "license": "MIT",

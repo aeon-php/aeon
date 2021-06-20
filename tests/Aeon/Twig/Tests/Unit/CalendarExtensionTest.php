@@ -24,6 +24,33 @@ final class CalendarExtensionTest extends TestCase
         new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()), 'not_timezone');
     }
 
+    public function test_aeon_create_from_string() : void
+    {
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
+
+        $this->assertEquals(DateTime::fromString('2002-01-01 00:00:00 UTC'), $extension->aeon_datetime_create('2002-01-01 00:00:00 UTC'));
+    }
+
+    public function test_aeon_create_from_string_with_tz() : void
+    {
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
+
+        $this->assertEquals(
+            DateTime::fromString('2001-12-31 16:00:00 America/Los_Angeles'),
+            $extension->aeon_datetime_create('2002-01-01 00:00:00 UTC', 'America/Los_Angeles')
+        );
+    }
+
+    public function test_aeon_create_from_invalid_type() : void
+    {
+        $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
+
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Expected string, \DateTimeInterface or integer, got array');
+
+        $extension->aeon_datetime_create(['array'], 'America/Los_Angeles');
+    }
+
     public function test_aeon_now() : void
     {
         $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));

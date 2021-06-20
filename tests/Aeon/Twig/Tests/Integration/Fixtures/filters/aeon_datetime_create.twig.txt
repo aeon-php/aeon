@@ -1,0 +1,4 @@
+{{ '2020-01-01 00:00:00' | aeon_datetime_create | aeon_datetime_format }}
+{{ 1577836800 | aeon_datetime_create | aeon_datetime_format }}
+{{ phpDateTime | aeon_datetime_create | aeon_datetime_format }}
+{{ '2020-01-01 00:00:00' | aeon_datetime_create('America/Los_Angeles') | aeon_datetime_format(null, 'America/Los_Angeles') }}

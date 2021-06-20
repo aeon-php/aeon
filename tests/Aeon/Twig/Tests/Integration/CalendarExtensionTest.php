@@ -28,6 +28,25 @@ final class CalendarExtensionTest extends TestCase
         $this->assertInstanceOf(ExtensionInterface::class, new CalendarExtension($this->calendarStub));
     }
 
+    public function test_filter_aeon_datetime_create() : void
+    {
+        $twig = new Environment(
+            new FilesystemLoader(
+                [
+                    __DIR__ . '/Fixtures/filters',
+                ]
+            )
+        );
+        $twig->addExtension(new CalendarExtension($this->calendarStub, 'UTC', 'Y-m-d H:i:sO', 'Y-m-d', 'H:i:s'));
+
+        $this->assertStringEqualsFile(
+            __DIR__ . '/Fixtures/filters/aeon_datetime_create.txt',
+            $twig->render('aeon_datetime_create.twig.txt', [
+                'phpDateTime' => new \DateTimeImmutable('2020-01-01 00:00:00'),
+            ])
+        );
+    }
+
     public function test_filter_aeon_datetime() : void
     {
         $twig = new Environment(
