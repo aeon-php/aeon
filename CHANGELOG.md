@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-06-20
+## [1.0.0] - 2021-06-20
 
 ### Changed
 - [#46](https://github.com/aeon-php/sleep/pull/46) - **locked calendar dependency to ^1.0** - [@norberttech](https://github.com/norberttech)
