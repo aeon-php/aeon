@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-06-20
+## [0.10.0] - 2021-06-20
 
 ### Added
 - [#68](https://github.com/aeon-php/calendar-twig/pull/68) - **aeon_datetime_create filter** - [@norberttech](https://github.com/norberttech)
