@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-06-02
+## [Unreleased] - 2021-06-20
 
 ### Added
 - [#29](https://github.com/aeon-php/symfony-bundle/pull/29) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
@@ -29,6 +29,7 @@
 - [4606da](https://github.com/aeon-php/symfony-bundle/commit/4606daf0e77bd210a56d134367ca1aa41a46d656) - **Initial commit** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [cf4d43](https://github.com/aeon-php/symfony-bundle/commit/cf4d430ee4229455999ecad9336d089f31297bc7) - **symfony deprecated methods usage** - [@norberttech](https://github.com/norberttech)
 - [#90](https://github.com/aeon-php/symfony-bundle/pull/90) - **Transformers failing when data provided as a string** - [@norberttech](https://github.com/norberttech)
 - [#52](https://github.com/aeon-php/symfony-bundle/pull/52) - **form data transformers empty value handling** - [@norberttech](https://github.com/norberttech)
 - [#12](https://github.com/aeon-php/symfony-bundle/pull/12) - **FormTypes block prefixes** - [@norberttech](https://github.com/norberttech)
