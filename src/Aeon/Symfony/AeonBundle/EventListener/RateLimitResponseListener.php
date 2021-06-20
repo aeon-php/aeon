@@ -22,8 +22,15 @@ final class RateLimitResponseListener
 
     public function onKernelResponse(ResponseEvent $event) : void
     {
-        if (!$event->isMasterRequest()) {
-            return;
+        if (\method_exists($event, 'isMainRequest')) {
+            if (!$event->isMainRequest()) {
+                return;
+            }
+        } else {
+            /** @psalm-suppress DeprecatedMethod */
+            if (!$event->isMasterRequest()) {
+                return;
+            }
         }
 
         if ($event->getResponse()->getStatusCode() === $this->rateLimitHttpProtocol->responseCode()) {
