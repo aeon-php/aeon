@@ -63,21 +63,21 @@
         },
         {
             "name": "aeon-php/sleep",
-            "version": "0.6.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/sleep.git",
-                "reference": "7a1d91733edd07aaa2dbb8249117b3f114634e43"
+                "reference": "289d6513bdddc950fec97273d50a3b2939b75ca6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/sleep/zipball/7a1d91733edd07aaa2dbb8249117b3f114634e43",
-                "reference": "7a1d91733edd07aaa2dbb8249117b3f114634e43",
+                "url": "https://api.github.com/repos/aeon-php/sleep/zipball/289d6513bdddc950fec97273d50a3b2939b75ca6",
+                "reference": "289d6513bdddc950fec97273d50a3b2939b75ca6",
                 "shasum": ""
             },
             "require": {
-                "aeon-php/calendar": ">=0.14.0",
-                "php": ">=7.4.2"
+                "aeon-php/calendar": "^1.0",
+                "php": "^7.4.2 || ^8.0"
             },
             "type": "library",
             "autoload": {
@@ -103,7 +103,7 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/sleep/issues",
-                "source": "https://github.com/aeon-php/sleep/tree/0.6.0"
+                "source": "https://github.com/aeon-php/sleep/tree/1.0.1"
             },
             "funding": [
                 {
@@ -111,7 +111,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-25T19:37:34+00:00"
+            "time": "2021-06-20T14:25:59+00:00"
         }
     ],
     "packages-dev": [],
@@ -124,5 +124,5 @@
         "php": ">=7.4.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
