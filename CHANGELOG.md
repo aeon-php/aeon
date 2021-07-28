@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-07-27
+## [Unreleased] - 2021-07-28
 
 ### Added
 - [#29](https://github.com/aeon-php/symfony-bundle/pull/29) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
