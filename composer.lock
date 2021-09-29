@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b626ce650a84a4f3b13048be2089202b",
+    "content-hash": "106b5109fed5b65e4324e322ca1b71e4",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -63,33 +63,33 @@
         },
         {
             "name": "aeon-php/calendar-holidays",
-            "version": "0.8.0",
+            "version": "0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays.git",
-                "reference": "7fa1472b0fbd5851e7f38e00e49aaba8c293e917"
+                "reference": "696c9a80d3eb63e1ba64bbc079ea8ec057d0d0e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/7fa1472b0fbd5851e7f38e00e49aaba8c293e917",
-                "reference": "7fa1472b0fbd5851e7f38e00e49aaba8c293e917",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/696c9a80d3eb63e1ba64bbc079ea8ec057d0d0e1",
+                "reference": "696c9a80d3eb63e1ba64bbc079ea8ec057d0d0e1",
                 "shasum": ""
             },
             "require": {
                 "aeon-php/calendar": ">=0.14.0",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": "^7.4.2 | ^8.0"
+                "php": ">=7.4.2"
             },
             "require-dev": {
-                "flow-php/etl": "1.x@dev",
-                "flow-php/etl-adapter-json": "1.x@dev",
-                "flow-php/etl-adapter-memory": "1.x@dev",
-                "flow-php/etl-transformer": "1.x@dev",
-                "google/apiclient": "^2.0",
-                "halaxa/json-machine": "^0.6.1"
+                "google/apiclient": "^2.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-latest": "1.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Aeon\\": [
@@ -109,9 +109,15 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar-holidays/issues",
-                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.8.0"
+                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.7.0"
             },
-            "time": "2021-09-11T16:06:46+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/norberttech",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-01-25T20:03:39+00:00"
         },
         {
             "name": "azuyalabs/yasumi",
