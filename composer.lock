@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4c2e311978a7d67a9c80577c35607a2",
+    "content-hash": "b626ce650a84a4f3b13048be2089202b",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -194,7 +194,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4.2"
+        "php": "^7.4.2 | ^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
