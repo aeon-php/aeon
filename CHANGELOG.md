@@ -1,3 +1,8 @@
+## [Unreleased] - 2021-09-29
+
+### Removed
+- [d854d2](https://github.com/aeon-php/retry/commit/d854d2a53d6c03e50d7808c2d82afb2cacdfa535) - **phive, updated dependencies** - [@norberttech](https://github.com/norberttech)
+
 ## [0.6.0] - 2021-01-25
 
 ### Added
