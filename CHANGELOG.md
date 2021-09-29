@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-09-14
+## [Unreleased] - 2021-09-29
 
 ### Added
 - [#29](https://github.com/aeon-php/symfony-bundle/pull/29) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
@@ -8,6 +8,7 @@
 - [1a874e](https://github.com/aeon-php/symfony-bundle/commit/1a874ef13537e683a646e228db5e33b223d44bb7) - **mutation score to README** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [75689f](https://github.com/aeon-php/symfony-bundle/commit/75689f2c1bc741050b78fdf143c202ee832492df) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [afb969](https://github.com/aeon-php/symfony-bundle/commit/afb969c36c340fa09ffa8a3f55b83475c4746986) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **updated dependencies** - [@norberttech](https://github.com/norberttech)
 - [#69](https://github.com/aeon-php/symfony-bundle/pull/69) - **dependency constraint: aeon-php/calendar >=0.16.3** - [@norberttech](https://github.com/norberttech)
