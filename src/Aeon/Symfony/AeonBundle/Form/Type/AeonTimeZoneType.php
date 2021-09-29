@@ -27,9 +27,6 @@ final class AeonTimeZoneType extends AbstractType
         return 'aeon_timezone';
     }
 
-    /**
-     * @phpstan-ignore-next-line
-     */
     public function buildForm(FormBuilderInterface $builder, array $options) : void
     {
         parent::buildForm($builder, $options);

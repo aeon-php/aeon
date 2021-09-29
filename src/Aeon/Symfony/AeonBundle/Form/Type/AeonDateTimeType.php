@@ -27,9 +27,6 @@ final class AeonDateTimeType extends AbstractType
         return 'aeon_datetime';
     }
 
-    /**
-     * @phpstan-ignore-next-line
-     */
     public function buildForm(FormBuilderInterface $builder, array $options) : void
     {
         parent::buildForm($builder, $options);

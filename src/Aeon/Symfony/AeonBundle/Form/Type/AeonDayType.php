@@ -27,9 +27,6 @@ final class AeonDayType extends AbstractType
         return 'aeon_day';
     }
 
-    /**
-     * @phpstan-ignore-next-line
-     */
     public function buildForm(FormBuilderInterface $builder, array $options) : void
     {
         parent::buildForm($builder, $options);
