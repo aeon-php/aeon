@@ -193,7 +193,7 @@ final class DayValueSet implements \Countable
             $days[] = $dayValue->day();
         }
 
-        return new Days(...$days);
+        return Days::fromArray(...$days);
     }
 
     /**

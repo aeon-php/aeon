@@ -40,12 +40,6 @@
         "Aeon\\Calendar\\RelativeTimeUnit::year"
       ]
     },
-    "OneZeroInteger": {
-      "ignore": [
-        "Aeon\\Calendar\\RelativeTimeUnit::month",
-        "Aeon\\Calendar\\RelativeTimeUnit::year"
-      ]
-    },
     "Ternary": {
       "ignore": [
         "Aeon\\Calendar\\RelativeTimeUnit::toDateInterval"
@@ -80,7 +74,7 @@
   "testFramework": "phpunit",
   "bootstrap": "./vendor/autoload.php",
   "phpUnit": {
-    "customPath": "tools\/phpunit.phar"
+    "customPath": "tools/vendor/bin/phpunit"
   },
   "minMsi": 100,
   "minCoveredMsi": 100

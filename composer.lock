@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad3446f3f01eeedb22e4426e41fe4bab",
+    "content-hash": "585a63f39e2d83ce75462357ddef1a1b",
     "packages": [
         {
             "name": "aeon-php/calendar",
-            "version": "0.16.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar.git",
-                "reference": "fa27dc4852eb5e471abeff965185db5cb1d5f8cc"
+                "reference": "5899c465ac30e8bf9d7dd324d1d711bccef694f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/fa27dc4852eb5e471abeff965185db5cb1d5f8cc",
-                "reference": "fa27dc4852eb5e471abeff965185db5cb1d5f8cc",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/5899c465ac30e8bf9d7dd324d1d711bccef694f1",
+                "reference": "5899c465ac30e8bf9d7dd324d1d711bccef694f1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4.2"
+                "php": "^7.4.2 || ^8.0"
             },
             "require-dev": {
                 "ext-bcmath": "*"
@@ -51,7 +51,7 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar/issues",
-                "source": "https://github.com/aeon-php/calendar/tree/0.16.0"
+                "source": "https://github.com/aeon-php/calendar/tree/1.0.1"
             },
             "funding": [
                 {
@@ -59,7 +59,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-18T23:08:21+00:00"
+            "time": "2021-06-25T17:04:43+00:00"
         }
     ],
     "packages-dev": [],
@@ -69,10 +69,10 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4.2"
+        "php": "^7.4.2 || ^8.0"
     },
     "platform-dev": {
         "ext-bcmath": "*"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
