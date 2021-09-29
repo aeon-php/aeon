@@ -1,3 +1,9 @@
+## [Unreleased] - 2021-09-29
+
+### Changed
+- [22c8bf](https://github.com/aeon-php/calendar-holidays-yasumi/commit/22c8bfc5866663035bac9e6af1dc3937968cc591) - **Locked calendar-holidays library** - [@norberttech](https://github.com/norberttech)
+- [713ba1](https://github.com/aeon-php/calendar-holidays-yasumi/commit/713ba1355eefbda632135a09dcce33b3617aaf18) - **dependencies** - [@norberttech](https://github.com/norberttech)
+
 ## [0.7.0] - 2021-01-25
 
 ### Added
