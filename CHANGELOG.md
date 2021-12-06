@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-12-05
+## [0.5.0] - 2021-12-06
 
 ### Added
 - [#107](https://github.com/aeon-php/calendar-doctrine/pull/107) - **php 8.1 in test suite** - [@norberttech](https://github.com/norberttech)
