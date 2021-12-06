@@ -19,6 +19,8 @@ use Yasumi\Yasumi;
 final class YasumiHolidays implements Holidays
 {
     /**
+     * @phpstan-ignore-next-line
+     *
      * @var array<int, AbstractProvider>
      */
     private array $yasumi;
@@ -61,10 +63,17 @@ final class YasumiHolidays implements Holidays
         );
     }
 
-    /** @phpstan-ignore-next-line */
+    /**
+     * @param int $year
+     *
+     * @throws HolidayException
+     *
+     * @return AbstractProvider
+     * @phpstan-ignore-next-line
+     */
     private function yasumi(int $year) : AbstractProvider
     {
-        if (isset($this->yasumi[$year])) {
+        if (\array_key_exists($year, $this->yasumi)) {
             return $this->yasumi[$year];
         }
 
@@ -76,7 +85,7 @@ final class YasumiHolidays implements Holidays
             $this->yasumi[$year] = Yasumi::create($this->providerClass, $year, 'en_US');
 
             return $this->yasumi[$year];
-        } catch (ProviderNotFoundException $providerNotFoundException) {
+        } catch (ProviderNotFoundException | \ReflectionException $providerNotFoundException) {
             throw new HolidayException('Yasumi provider ' . $this->providerClass . ' does not exists', 0, $providerNotFoundException);
         }
     }
