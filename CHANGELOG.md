@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-12-06
+## [0.8.0] - 2021-12-06
 
 ### Added
 - [#29](https://github.com/aeon-php/calendar-holidays-yasumi/pull/29) - **php 8.1 runtime in testsuite** - [@norberttech](https://github.com/norberttech)
