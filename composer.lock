@@ -57,23 +57,23 @@
         },
         {
             "name": "aeon-php/calendar-holidays",
-            "version": "0.8.0",
+            "version": "0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays.git",
-                "reference": "7fa1472b0fbd5851e7f38e00e49aaba8c293e917"
+                "reference": "212f78c2f55d87d277e472603a71bf2125f128a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/7fa1472b0fbd5851e7f38e00e49aaba8c293e917",
-                "reference": "7fa1472b0fbd5851e7f38e00e49aaba8c293e917",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/212f78c2f55d87d277e472603a71bf2125f128a2",
+                "reference": "212f78c2f55d87d277e472603a71bf2125f128a2",
                 "shasum": ""
             },
             "require": {
                 "aeon-php/calendar": ">=0.14.0",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": "^7.4.2 | ^8.0"
+                "php": "^7.4.2 || ^8.0 || ^8.1"
             },
             "require-dev": {
                 "flow-php/etl": "1.x@dev",
@@ -103,9 +103,9 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar-holidays/issues",
-                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.8.0"
+                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.9.0"
             },
-            "time": "2021-09-11T16:06:46+00:00"
+            "time": "2021-12-06T10:38:07+00:00"
         },
         {
             "name": "aeon-php/calendar-twig",
