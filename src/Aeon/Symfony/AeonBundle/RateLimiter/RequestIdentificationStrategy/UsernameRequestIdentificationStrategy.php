@@ -31,8 +31,8 @@ final class UsernameRequestIdentificationStrategy implements RequestIdentificati
 
         $user = $token->getUser();
 
-        if (\is_string($user)) {
-            return $user;
+        if ($user === null) {
+            throw new RequestIdentificationStrategyException('Request doest not have user.');
         }
 
         if ($user instanceof \Stringable) {

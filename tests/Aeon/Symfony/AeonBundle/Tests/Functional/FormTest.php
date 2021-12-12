@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Symfony\AeonBundle\Tests\Functional;
 
-use Aeon\Symfony\AeonBundle\Tests\Functional\App\TestAppKernel;
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
-final class FormTest extends WebTestCase
+final class FormTest extends TestSuite
 {
     public function test_not_holiday_validator_for_holiday() : void
     {
@@ -26,10 +23,5 @@ final class FormTest extends WebTestCase
         $client->request('POST', '/holiday', ['holidays' => ['not_holiday' => '2020-01-02', 'holiday' => '2020-01-01']]);
 
         $this->assertSame(200, $client->getResponse()->getStatusCode(), $client->getResponse()->getContent());
-    }
-
-    protected static function getKernelClass()
-    {
-        return TestAppKernel::class;
     }
 }

@@ -18,9 +18,8 @@ use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
-use Symfony\Component\Routing\RouteCollectionBuilder;
 
-final class TestAppKernel extends BaseKernel
+abstract class TestAppKernel extends BaseKernel
 {
     use MicroKernelTrait;
 
@@ -105,18 +104,14 @@ final class TestAppKernel extends BaseKernel
                         'rate_limiter_id' => 'throttled_feature',
                         'methods' => ['POST'],
                         'request_identification_strategy' => [
-                            'type' => 'session_id',
+                            'type' => 'header',
+                            'configuration' => [
+                                'header' => 'throttling-id',
+                            ],
                         ],
                     ],
                 ],
             ],
         ]);
-    }
-
-    protected function configureRoutes(RouteCollectionBuilder $routes) : void
-    {
-        $routes->add('/holiday', 'kernel::holiday', 'holiday');
-        $routes->add('/throttle', 'kernel::throttle', 'throttle');
-        $routes->add('/manual-throttle', 'kernel::manualThrottle', 'manual-throttle');
     }
 }
