@@ -1,6 +1,7 @@
-## [Unreleased] - 2021-09-29
+## [Unreleased] - 2021-12-12
 
 ### Added
+- [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **Enabled testsuite at php 8.1** - [@norberttech](https://github.com/norberttech)
 - [#29](https://github.com/aeon-php/symfony-bundle/pull/29) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
 - [#11](https://github.com/aeon-php/symfony-bundle/pull/11) - **possibilit to validate if given day is not a holiday** - [@norberttech](https://github.com/norberttech)
 - [#8](https://github.com/aeon-php/symfony-bundle/pull/8) - **comparison validators** - [@norberttech](https://github.com/norberttech)
@@ -8,23 +9,18 @@
 - [1a874e](https://github.com/aeon-php/symfony-bundle/commit/1a874ef13537e683a646e228db5e33b223d44bb7) - **mutation score to README** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
-- [75689f](https://github.com/aeon-php/symfony-bundle/commit/75689f2c1bc741050b78fdf143c202ee832492df) - **dependencies** - [@norberttech](https://github.com/norberttech)
-- [afb969](https://github.com/aeon-php/symfony-bundle/commit/afb969c36c340fa09ffa8a3f55b83475c4746986) - **dependencies** - [@norberttech](https://github.com/norberttech)
+- [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **request identification setting from session to header in testsuite** - [@norberttech](https://github.com/norberttech)
 - [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **updated dependencies** - [@norberttech](https://github.com/norberttech)
 - [#69](https://github.com/aeon-php/symfony-bundle/pull/69) - **dependency constraint: aeon-php/calendar >=0.16.3** - [@norberttech](https://github.com/norberttech)
 - [#53](https://github.com/aeon-php/symfony-bundle/pull/53) - **Bump aeon-php/rate-limiter** - [@DawidSajdak](https://github.com/DawidSajdak)
 - [#51](https://github.com/aeon-php/symfony-bundle/pull/51) - **Bump aeon-php/rate-limiter** - [@DawidSajdak](https://github.com/DawidSajdak)
 - [#31](https://github.com/aeon-php/symfony-bundle/pull/31) - **Updated aeon-php dependencies** - [@norberttech](https://github.com/norberttech)
 - [#31](https://github.com/aeon-php/symfony-bundle/pull/31) - **Updated phive dependencies** - [@norberttech](https://github.com/norberttech)
-- [#25](https://github.com/aeon-php/symfony-bundle/pull/25) - **dependencies, fixed aeon-php/calendar BC breaks** - [@norberttech](https://github.com/norberttech)
 - [#24](https://github.com/aeon-php/symfony-bundle/pull/24) - **Moved phpunit to tools & updated tools** - [@norberttech](https://github.com/norberttech)
 - [#16](https://github.com/aeon-php/symfony-bundle/pull/16) - **Make tests less fragile by increasing limit reset and using EqualsWithDelta** - [@norberttech](https://github.com/norberttech)
 - [#15](https://github.com/aeon-php/symfony-bundle/pull/15) - **Integration with rate limiter component** - [@norberttech](https://github.com/norberttech)
-- [600f8f](https://github.com/aeon-php/symfony-bundle/commit/600f8f521c29f72e3d72be13ce6b5668b0b23bb4) - **Update README.md** - [@norberttech](https://github.com/norberttech)
-- [14d881](https://github.com/aeon-php/symfony-bundle/commit/14d881fb274b53e584664482a86812c3ff2e20f9) - **Update README.md** - [@norberttech](https://github.com/norberttech)
 - [#9](https://github.com/aeon-php/symfony-bundle/pull/9) - **Renamed options, added option to use different timezone in calendar and twig** - [@norberttech](https://github.com/norberttech)
 - [55f157](https://github.com/aeon-php/symfony-bundle/commit/55f1573f60b20922482ae508961241e3e1ab34a1) - **Create dependabot.yml** - [@norberttech](https://github.com/norberttech)
-- [b134c5](https://github.com/aeon-php/symfony-bundle/commit/b134c56e70b37f2f3d2094b84d46e43df69cbfb4) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [3da4e0](https://github.com/aeon-php/symfony-bundle/commit/3da4e05b34ec042c22dc3f8c913a163c2223ea03) - **Reduced MSI coverage requirements** - [@norberttech](https://github.com/norberttech)
 - [fd90cd](https://github.com/aeon-php/symfony-bundle/commit/fd90cd87a206e7885162d0c5d0b236b78e27a8f6) - **Excluded Resources/config from static analyze** - [@norberttech](https://github.com/norberttech)
 - [4606da](https://github.com/aeon-php/symfony-bundle/commit/4606daf0e77bd210a56d134367ca1aa41a46d656) - **Initial commit** - [@norberttech](https://github.com/norberttech)
@@ -35,6 +31,14 @@
 - [#52](https://github.com/aeon-php/symfony-bundle/pull/52) - **form data transformers empty value handling** - [@norberttech](https://github.com/norberttech)
 - [#12](https://github.com/aeon-php/symfony-bundle/pull/12) - **FormTypes block prefixes** - [@norberttech](https://github.com/norberttech)
 - [78cf87](https://github.com/aeon-php/symfony-bundle/commit/78cf878e836577b2b434f1c969ffe6afd90be2e1) - **failing tests** - [@norberttech](https://github.com/norberttech)
+
+### Updated
+- [75689f](https://github.com/aeon-php/symfony-bundle/commit/75689f2c1bc741050b78fdf143c202ee832492df) - **dependencies** - [@norberttech](https://github.com/norberttech)
+- [afb969](https://github.com/aeon-php/symfony-bundle/commit/afb969c36c340fa09ffa8a3f55b83475c4746986) - **dependencies** - [@norberttech](https://github.com/norberttech)
+- [#25](https://github.com/aeon-php/symfony-bundle/pull/25) - **dependencies, fixed aeon-php/calendar BC breaks** - [@norberttech](https://github.com/norberttech)
+- [600f8f](https://github.com/aeon-php/symfony-bundle/commit/600f8f521c29f72e3d72be13ce6b5668b0b23bb4) - **README.md** - [@norberttech](https://github.com/norberttech)
+- [14d881](https://github.com/aeon-php/symfony-bundle/commit/14d881fb274b53e584664482a86812c3ff2e20f9) - **README.md** - [@norberttech](https://github.com/norberttech)
+- [b134c5](https://github.com/aeon-php/symfony-bundle/commit/b134c56e70b37f2f3d2094b84d46e43df69cbfb4) - **dependencies** - [@norberttech](https://github.com/norberttech)
 
 ### Removed
 - [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **phive** - [@norberttech](https://github.com/norberttech)
