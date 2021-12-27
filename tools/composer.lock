@@ -1833,16 +1833,16 @@
         },
         {
             "name": "phpbench/phpbench",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpbench/phpbench.git",
-                "reference": "ac12203f1733493a0611333b81ac3f47f517d850"
+                "reference": "31750c45791a3e0bb7311aebfd1a4ed6f8f3fc86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpbench/phpbench/zipball/ac12203f1733493a0611333b81ac3f47f517d850",
-                "reference": "ac12203f1733493a0611333b81ac3f47f517d850",
+                "url": "https://api.github.com/repos/phpbench/phpbench/zipball/31750c45791a3e0bb7311aebfd1a4ed6f8f3fc86",
+                "reference": "31750c45791a3e0bb7311aebfd1a4ed6f8f3fc86",
                 "shasum": ""
             },
             "require": {
@@ -1856,7 +1856,7 @@
                 "php": "^7.3 || ^8.0",
                 "phpbench/container": "^2.1",
                 "phpbench/dom": "~0.3.1",
-                "psr/log": "^1.1",
+                "psr/log": "^1.1 || ^2.0 || ^3.0",
                 "seld/jsonlint": "^1.1",
                 "symfony/console": "^4.2 || ^5.0  || ^6.0",
                 "symfony/filesystem": "^4.2 || ^5.0 || ^6.0",
@@ -1893,8 +1893,7 @@
                 ],
                 "psr-4": {
                     "PhpBench\\": "lib/",
-                    "PhpBench\\Extensions\\XDebug\\": "extensions/xdebug/lib/",
-                    "PhpBench\\Extensions\\Reports\\": "extensions/reports/lib/"
+                    "PhpBench\\Extensions\\XDebug\\": "extensions/xdebug/lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1910,7 +1909,7 @@
             "description": "PHP Benchmarking Framework",
             "support": {
                 "issues": "https://github.com/phpbench/phpbench/issues",
-                "source": "https://github.com/phpbench/phpbench/tree/1.2.1"
+                "source": "https://github.com/phpbench/phpbench/tree/1.2.3"
             },
             "funding": [
                 {
@@ -1918,7 +1917,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-04T12:25:52+00:00"
+            "time": "2021-12-24T10:09:29+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
