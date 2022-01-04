@@ -31,7 +31,7 @@ final class AeonTimeZoneTypeTest extends TypeTestCase
 
         $timeZone = TimeZone::europeWarsaw();
 
-        $this->assertEquals($timeZone, $form->getData());
+        $this->assertEquals($timeZone->name(), $form->getData()->name());
     }
 
     public function test_submit_intltimezone() : void
@@ -42,7 +42,7 @@ final class AeonTimeZoneTypeTest extends TypeTestCase
 
         $timeZone = TimeZone::europeWarsaw();
 
-        $this->assertEquals($timeZone, $form->getData());
+        $this->assertEquals($timeZone->name(), $form->getData()->name());
     }
 
     public function test_submit_single_text_widget_with_set_data() : void

@@ -65,7 +65,7 @@ final class AeonDayTimeTypeTest extends TypeTestCase
 
         $dateTime = Day::fromString('2010-06-02');
 
-        $this->assertEquals($dateTime, $form->getData());
+        $this->assertObjectEquals($dateTime, $form->getData(), 'isEqual');
     }
 
     public function test_submit_single_text_widget_input_timestamp() : void

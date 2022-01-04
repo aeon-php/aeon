@@ -37,7 +37,7 @@ final class AeonTimeTypeTest extends TypeTestCase
 
         $dateTime = Time::fromString('13:00');
 
-        $this->assertEquals($dateTime, $form->getData());
+        $this->assertObjectEquals($dateTime, $form->getData(), 'isEqual');
     }
 
     public function test_submit_single_text_widget_input_datetime_immutable() : void
@@ -51,7 +51,7 @@ final class AeonTimeTypeTest extends TypeTestCase
 
         $dateTime = Time::fromString('13:00');
 
-        $this->assertEquals($dateTime, $form->getData());
+        $this->assertObjectEquals($dateTime, $form->getData(), 'isEqual');
     }
 
     public function test_submit_single_text_widget_input_array() : void
@@ -65,7 +65,7 @@ final class AeonTimeTypeTest extends TypeTestCase
 
         $dateTime = Time::fromString('13:00');
 
-        $this->assertEquals($dateTime, $form->getData());
+        $this->assertObjectEquals($dateTime, $form->getData(), 'isEqual');
     }
 
     public function test_submit_single_text_widget_input_timestamp() : void
@@ -79,7 +79,7 @@ final class AeonTimeTypeTest extends TypeTestCase
 
         $dateTime = Time::fromString('13:00');
 
-        $this->assertEquals($dateTime, $form->getData());
+        $this->assertObjectEquals($dateTime, $form->getData(), 'isEqual');
     }
 
     public function test_submit_single_text_widget_with_set_data() : void
@@ -94,7 +94,7 @@ final class AeonTimeTypeTest extends TypeTestCase
 
         $dateTime = Time::fromString('18:00');
 
-        $this->assertEquals($dateTime, $form->getData());
+        $this->assertObjectEquals($dateTime, $form->getData(), 'isEqual');
     }
 
     public function test_submit_single_text_widget_with_empty_value() : void
@@ -120,7 +120,7 @@ final class AeonTimeTypeTest extends TypeTestCase
 
         $dateTime = Time::fromString('13:00');
 
-        $this->assertEquals($dateTime, $form->getData());
+        $this->assertObjectEquals($dateTime, $form->getData(), 'isEqual');
     }
 
     protected function getTestedType() : string

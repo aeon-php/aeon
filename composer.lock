@@ -2750,22 +2750,22 @@
     "packages-dev": [
         {
             "name": "aeon-php/calendar-holidays-yasumi",
-            "version": "0.7.0",
+            "version": "0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/calendar-holidays-yasumi.git",
-                "reference": "cb2dcf55d32fb11409972740761c6380835df5f7"
+                "reference": "9326bef5bb46d2c47b7dace749e302376c1e36ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/calendar-holidays-yasumi/zipball/cb2dcf55d32fb11409972740761c6380835df5f7",
-                "reference": "cb2dcf55d32fb11409972740761c6380835df5f7",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays-yasumi/zipball/9326bef5bb46d2c47b7dace749e302376c1e36ad",
+                "reference": "9326bef5bb46d2c47b7dace749e302376c1e36ad",
                 "shasum": ""
             },
             "require": {
-                "aeon-php/calendar-holidays": ">=0.7.0",
+                "aeon-php/calendar-holidays": ">=0.8.0 ^0",
                 "azuyalabs/yasumi": "^2.0",
-                "php": ">=7.4.2"
+                "php": "^7.4.2 || ^8.0 || ^8.1"
             },
             "type": "library",
             "autoload": {
@@ -2789,15 +2789,9 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/calendar-holidays-yasumi/issues",
-                "source": "https://github.com/aeon-php/calendar-holidays-yasumi/tree/0.7.0"
+                "source": "https://github.com/aeon-php/calendar-holidays-yasumi/tree/0.9.0"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/norberttech",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-01-25T20:09:59+00:00"
+            "time": "2022-01-04T09:18:43+00:00"
         },
         {
             "name": "azuyalabs/yasumi",
@@ -4077,5 +4071,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
