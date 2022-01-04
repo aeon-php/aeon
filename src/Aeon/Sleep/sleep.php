@@ -7,6 +7,9 @@ namespace Aeon\Sleep;
 use Aeon\Calendar\Exception\Exception;
 use Aeon\Calendar\TimeUnit;
 
+/**
+ * @psalm-suppress ArgumentTypeCoercion
+ */
 function sleep(TimeUnit $timeUnit) : void
 {
     if ($timeUnit->isNegative()) {
