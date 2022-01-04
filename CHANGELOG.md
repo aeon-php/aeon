@@ -1,7 +1,8 @@
-## [Unreleased] - 2021-10-04
+## [Unreleased] - 2022-01-04
 
-### Changed
-- [518a63](https://github.com/aeon-php/retry/commit/518a63b0853187a920ed2448f2552af6b56c2e7d) - **Update dependabot.yml** - [@norberttech](https://github.com/norberttech)
+### Updated
+- [15f40f](https://github.com/aeon-php/retry/commit/15f40f0cb18c11452c0bf20c56079af0aac79cf6) - **dependencies** - [@norberttech](https://github.com/norberttech)
+- [518a63](https://github.com/aeon-php/retry/commit/518a63b0853187a920ed2448f2552af6b56c2e7d) - **dependabot.yml** - [@norberttech](https://github.com/norberttech)
 
 ### Removed
 - [d854d2](https://github.com/aeon-php/retry/commit/d854d2a53d6c03e50d7808c2d82afb2cacdfa535) - **phive, updated dependencies** - [@norberttech](https://github.com/norberttech)
