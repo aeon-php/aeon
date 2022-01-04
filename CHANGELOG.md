@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-01-04
+## [0.11.0] - 2022-01-04
 
 ### Updated
 - [7ac5b2](https://github.com/aeon-php/calendar-twig/commit/7ac5b2146da5e4eee394565724837f70cc88ba88) - **dependencies** - [@norberttech](https://github.com/norberttech)
