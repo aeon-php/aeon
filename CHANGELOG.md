@@ -1,3 +1,8 @@
+## [Unreleased] - 2022-01-04
+
+### Updated
+- [1c7a45](https://github.com/aeon-php/calendar-holidays-yasumi/commit/1c7a456445b51097eb65f55c8b5bfdf29f212583) - **dependencies** - [@norberttech](https://github.com/norberttech)
+
 ## [0.8.0] - 2021-12-06
 
 ### Added
