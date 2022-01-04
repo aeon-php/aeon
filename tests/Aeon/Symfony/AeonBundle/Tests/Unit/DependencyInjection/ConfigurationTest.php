@@ -25,6 +25,17 @@ final class ConfigurationTest extends TestCase
         $this->assertEquals(GoogleRegionalHolidaysFactory::class, $config['calendar_holidays_factory_service']);
     }
 
+    public function test_configuration_with_yasumi_holidays_provider() : void
+    {
+        $config = $this->process([
+            'aeon' => [
+                'calendar_holidays_factory_service' => 'calendar.holidays.factory.yasumi',
+            ],
+        ]);
+
+        $this->assertEquals('calendar.holidays.factory.yasumi', $config['calendar_holidays_factory_service']);
+    }
+
     public function test_changed_configuration() : void
     {
         $config = $this->process([

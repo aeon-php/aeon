@@ -6,6 +6,7 @@ namespace Aeon\Symfony\AeonBundle\Tests\Unit\DependencyInjection;
 
 use Aeon\Calendar\Gregorian\Calendar;
 use Aeon\Calendar\Gregorian\GregorianCalendar;
+use Aeon\Calendar\Holidays\YasumiHolidaysFactory;
 use Aeon\RateLimiter\RateLimiter;
 use Aeon\RateLimiter\Storage\PSRCacheStorage;
 use Aeon\Symfony\AeonBundle\DependencyInjection\AeonExtension;
@@ -65,6 +66,22 @@ final class AeonExtensionTest extends TestCase
         $this->assertTrue($this->container->hasDefinition('rate_limiter.twig'));
         $this->assertInstanceOf(RateLimiterExtension::class, $this->container->get('rate_limiter.twig'));
         $this->assertTrue($this->container->getDefinition('rate_limiter.twig')->hasTag('twig.extension'));
+    }
+
+    public function test_yasumi_holidays_provider_configuration() : void
+    {
+        $extension = new AeonExtension();
+        $extension->load(
+            [
+                [
+                    'calendar_holidays_factory_service' => 'calendar.holidays.factory.yasumi',
+                ],
+            ],
+            $this->container
+        );
+
+        $this->assertTrue($this->container->hasAlias('aeon.calendar.holidays.factory'));
+        $this->assertInstanceOf(YasumiHolidaysFactory::class, $this->container->get('aeon.calendar.holidays.factory'));
     }
 
     public function test_rate_limiters_leaky_bucket() : void
