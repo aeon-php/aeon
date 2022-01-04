@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-01-04
+## [0.7.0] - 2022-01-04
 
 ### Updated
 - [15f40f](https://github.com/aeon-php/retry/commit/15f40f0cb18c11452c0bf20c56079af0aac79cf6) - **dependencies** - [@norberttech](https://github.com/norberttech)
