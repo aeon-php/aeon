@@ -6,6 +6,8 @@ namespace Aeon\Calendar\Holidays;
 
 use Aeon\Calendar\Exception\HolidayException;
 use Aeon\Calendar\Gregorian\Day;
+use Aeon\Calendar\Gregorian\Interval;
+use Aeon\Calendar\Gregorian\TimePeriod;
 use Aeon\Calendar\Holidays;
 use Aeon\Calendar\Holidays\Holiday as AeonHoliday;
 use Yasumi\Exception\ProviderNotFoundException;
@@ -37,6 +39,36 @@ final class YasumiHolidays implements Holidays
     {
         /** @psalm-suppress ImpureMethodCall */
         return $this->yasumi($day->year()->number())->isHoliday($day->toDateTimeImmutable());
+    }
+
+    /**
+     * @throws HolidayException
+     * @throws \Aeon\Calendar\Exception\InvalidArgumentException
+     * @throws \Yasumi\Exception\MissingTranslationException
+     *
+     * @return AeonHoliday[]
+     */
+    public function in(TimePeriod $period) : array
+    {
+        $holidays = [];
+
+        foreach ($period->start()->year()->until($period->end()->year(), Interval::closed()) as $year) {
+            foreach ($this->yasumi($year->number())->getHolidays() as $yasumiHoliday) {
+                /** @psalm-suppress ImpureMethodCall */
+                $holiday = new AeonHoliday(
+                    Day::fromDateTime($yasumiHoliday),
+                    new HolidayName(
+                        new HolidayLocaleName('us', $yasumiHoliday->getName())
+                    )
+                );
+
+                if ($holiday->day()->isAfterOrEqual($period->start()->day()) && $holiday->day()->isBeforeOrEqual($period->end()->day())) {
+                    $holidays[] = $holiday;
+                }
+            }
+        }
+
+        return $holidays;
     }
 
     public function holidaysAt(Day $day) : array

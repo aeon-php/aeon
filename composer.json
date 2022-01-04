@@ -7,7 +7,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.4.2 || ^8.0 || ^8.1",
-        "aeon-php/calendar-holidays": "0.7.0",
+        "aeon-php/calendar-holidays": ">=0.8.0 ^0",
         "azuyalabs/yasumi": "^2.0"
     },
     "license": "MIT",
