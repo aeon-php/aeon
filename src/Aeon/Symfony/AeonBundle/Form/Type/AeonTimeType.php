@@ -31,6 +31,7 @@ final class AeonTimeType extends AbstractType
     {
         parent::buildForm($builder, $options);
 
+        $builder->resetModelTransformers();
         $builder->addModelTransformer(new AeonTimeToDateTimeTransformer());
     }
 }
