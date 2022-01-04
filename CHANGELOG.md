@@ -1,5 +1,8 @@
 ## [Unreleased] - 2022-01-04
 
+### Fixed
+- [#31](https://github.com/aeon-php/calendar-holidays-yasumi/pull/31) - **calendar-holiday dependency constraint** - [@norberttech](https://github.com/norberttech)
+
 ### Updated
 - [1c7a45](https://github.com/aeon-php/calendar-holidays-yasumi/commit/1c7a456445b51097eb65f55c8b5bfdf29f212583) - **dependencies** - [@norberttech](https://github.com/norberttech)
 
