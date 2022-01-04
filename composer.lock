@@ -272,16 +272,16 @@
         },
         {
             "name": "aeon-php/sleep",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/sleep.git",
-                "reference": "289d6513bdddc950fec97273d50a3b2939b75ca6"
+                "reference": "ea868e56c813dcfb56b83700d8014ec6b06329ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/sleep/zipball/289d6513bdddc950fec97273d50a3b2939b75ca6",
-                "reference": "289d6513bdddc950fec97273d50a3b2939b75ca6",
+                "url": "https://api.github.com/repos/aeon-php/sleep/zipball/ea868e56c813dcfb56b83700d8014ec6b06329ce",
+                "reference": "ea868e56c813dcfb56b83700d8014ec6b06329ce",
                 "shasum": ""
             },
             "require": {
@@ -312,15 +312,9 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/sleep/issues",
-                "source": "https://github.com/aeon-php/sleep/tree/1.0.1"
+                "source": "https://github.com/aeon-php/sleep/tree/1.0.2"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/norberttech",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-06-20T14:25:59+00:00"
+            "time": "2022-01-04T08:45:32+00:00"
         },
         {
             "name": "psr/cache",
