@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-12-12
+## [Unreleased] - 2022-01-04
 
 ### Added
 - [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **Enabled testsuite at php 8.1** - [@norberttech](https://github.com/norberttech)
@@ -26,6 +26,7 @@
 - [4606da](https://github.com/aeon-php/symfony-bundle/commit/4606daf0e77bd210a56d134367ca1aa41a46d656) - **Initial commit** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [f1c00a](https://github.com/aeon-php/symfony-bundle/commit/f1c00aa92ad45ffb705b245c3a78892710460ebc) - **failing tests** - [@norberttech](https://github.com/norberttech)
 - [cf4d43](https://github.com/aeon-php/symfony-bundle/commit/cf4d430ee4229455999ecad9336d089f31297bc7) - **symfony deprecated methods usage** - [@norberttech](https://github.com/norberttech)
 - [#90](https://github.com/aeon-php/symfony-bundle/pull/90) - **Transformers failing when data provided as a string** - [@norberttech](https://github.com/norberttech)
 - [#52](https://github.com/aeon-php/symfony-bundle/pull/52) - **form data transformers empty value handling** - [@norberttech](https://github.com/norberttech)
