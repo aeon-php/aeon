@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-01-04
+## [1.0.2] - 2022-01-04
 
 ### Updated
 - [5c73de](https://github.com/aeon-php/sleep/commit/5c73de858f18c633247433b1db3cccc6b8ac8020) - **dependencies** - [@norberttech](https://github.com/norberttech)
