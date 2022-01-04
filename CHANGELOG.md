@@ -1,6 +1,7 @@
-## [Unreleased] - 2021-10-04
+## [Unreleased] - 2022-01-04
 
-### Changed
+### Updated
+- [5c73de](https://github.com/aeon-php/sleep/commit/5c73de858f18c633247433b1db3cccc6b8ac8020) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [62d123](https://github.com/aeon-php/sleep/commit/62d12394d72a9376750cf891e3509d15cef93cb9) - **dependencies** - [@norberttech](https://github.com/norberttech)
 
 ## [1.0.1] - 2021-06-20
