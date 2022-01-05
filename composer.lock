@@ -209,29 +209,24 @@
         },
         {
             "name": "aeon-php/retry",
-            "version": "0.6.0",
+            "version": "0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/retry.git",
-                "reference": "be8d0fddfbb374c83b72769c9eb9ce7de398c3c4"
+                "reference": "52b29703a5b91f7a263712b5b39a281542e0f6eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/retry/zipball/be8d0fddfbb374c83b72769c9eb9ce7de398c3c4",
-                "reference": "be8d0fddfbb374c83b72769c9eb9ce7de398c3c4",
+                "url": "https://api.github.com/repos/aeon-php/retry/zipball/52b29703a5b91f7a263712b5b39a281542e0f6eb",
+                "reference": "52b29703a5b91f7a263712b5b39a281542e0f6eb",
                 "shasum": ""
             },
             "require": {
                 "aeon-php/calendar": ">=0.14.0",
                 "aeon-php/sleep": ">=0.6.0",
-                "php": ">=7.4.2"
+                "php": "^7.4.2 || ^8.0 || ^8.1"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-latest": "1.0-dev"
-                }
-            },
             "autoload": {
                 "files": [
                     "src/Aeon/Retry/retry_helper.php"
@@ -254,15 +249,9 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/retry/issues",
-                "source": "https://github.com/aeon-php/retry/tree/0.6.0"
+                "source": "https://github.com/aeon-php/retry/tree/0.7.0"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/norberttech",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-01-25T19:46:37+00:00"
+            "time": "2022-01-04T11:42:15+00:00"
         },
         {
             "name": "aeon-php/sleep",
@@ -4071,5 +4060,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
