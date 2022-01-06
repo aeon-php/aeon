@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-01-06
+## [1.0.3] - 2022-01-06
 
 ### Changed
 - [237510](https://github.com/aeon-php/sleep/commit/2375106adcabc8473a7174177ac4d3a39aa1a53e) - **Use reusable aeon automation workflows** - [@norberttech](https://github.com/norberttech)
