@@ -1,3 +1,8 @@
+## [Unreleased] - 2022-01-06
+
+### Changed
+- [61222b](https://github.com/aeon-php/sleep/commit/61222b91408ed150cd91dec5f35c1fb57fc414f6) - **Merge test suite into single workflow file & use reusable workflow** - [@norberttech](https://github.com/norberttech)
+
 ## [1.0.2] - 2022-01-04
 
 ### Updated
