@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ade4fa4f8f4d5d10fddd41c9724430c",
+    "content-hash": "620f51c1d933246de5bc507c5b7e65fd",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -57,16 +57,16 @@
         },
         {
             "name": "aeon-php/sleep",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/sleep.git",
-                "reference": "ea868e56c813dcfb56b83700d8014ec6b06329ce"
+                "reference": "8070b7f08f99d5af1d52f0d7e127b094cfa38a29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/sleep/zipball/ea868e56c813dcfb56b83700d8014ec6b06329ce",
-                "reference": "ea868e56c813dcfb56b83700d8014ec6b06329ce",
+                "url": "https://api.github.com/repos/aeon-php/sleep/zipball/8070b7f08f99d5af1d52f0d7e127b094cfa38a29",
+                "reference": "8070b7f08f99d5af1d52f0d7e127b094cfa38a29",
                 "shasum": ""
             },
             "require": {
@@ -97,9 +97,9 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/sleep/issues",
-                "source": "https://github.com/aeon-php/sleep/tree/1.0.2"
+                "source": "https://github.com/aeon-php/sleep/tree/1.0.3"
             },
-            "time": "2022-01-04T08:45:32+00:00"
+            "time": "2022-01-06T11:14:18+00:00"
         }
     ],
     "packages-dev": [],
@@ -109,8 +109,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4.2"
+        "php": "^7.4.2 || ^8.0 || ^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
