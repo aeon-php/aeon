@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-01-04
+## [Unreleased] - 2022-01-06
 
 ### Added
 - [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **Enabled testsuite at php 8.1** - [@norberttech](https://github.com/norberttech)
@@ -9,6 +9,7 @@
 - [1a874e](https://github.com/aeon-php/symfony-bundle/commit/1a874ef13537e683a646e228db5e33b223d44bb7) - **mutation score to README** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [b95254](https://github.com/aeon-php/symfony-bundle/commit/b95254175e6557979770d983c3578196edcb1165) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
 - [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **request identification setting from session to header in testsuite** - [@norberttech](https://github.com/norberttech)
 - [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **updated dependencies** - [@norberttech](https://github.com/norberttech)
 - [#69](https://github.com/aeon-php/symfony-bundle/pull/69) - **dependency constraint: aeon-php/calendar >=0.16.3** - [@norberttech](https://github.com/norberttech)
