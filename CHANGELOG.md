@@ -1,3 +1,8 @@
+## [Unreleased] - 2022-01-06
+
+### Changed
+- [58e21d](https://github.com/aeon-php/calendar-holidays-yasumi/commit/58e21db4994f5919edc4fa1fd8292b3e194012c1) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
+
 ## [0.9.0] - 2022-01-04
 
 ### Fixed
