@@ -1,6 +1,7 @@
 ## [Unreleased] - 2022-01-06
 
 ### Changed
+- [e123b8](https://github.com/aeon-php/sleep/commit/e123b80b3e6e8a928994da115cc49ce2627890a1) - **Use reusable workflows from aeon-php/actions repository** - [@norberttech](https://github.com/norberttech)
 - [61222b](https://github.com/aeon-php/sleep/commit/61222b91408ed150cd91dec5f35c1fb57fc414f6) - **Merge test suite into single workflow file & use reusable workflow** - [@norberttech](https://github.com/norberttech)
 
 ## [1.0.2] - 2022-01-04
