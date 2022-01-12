@@ -7,6 +7,7 @@
 - [d02108](https://github.com/aeon-php/calendar-doctrine/commit/d02108695e2f0eef995cfaebabd396f2f469604c) - **infection.json badge setup** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [13f5cb](https://github.com/aeon-php/calendar-doctrine/commit/13f5cb394b672da064a5fef0036fa8f1ddf420a5) - **infection to ^0.26.1** - [@norberttech](https://github.com/norberttech)
 - [f6d861](https://github.com/aeon-php/calendar-doctrine/commit/f6d86121680c09fce1be887b6d46b170e64f34a9) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [511369](https://github.com/aeon-php/calendar-doctrine/commit/5113690fafec165fc9302294aaf977a1ea8e1dbe) - **dependencies** - [@norberttech](https://github.com/norberttech)
 
