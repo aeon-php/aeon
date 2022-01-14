@@ -36,8 +36,8 @@ final class CalendarExtensionTest extends TestCase
         $extension = new CalendarExtension($calendar = new GregorianCalendarStub(TimeZone::UTC()));
 
         $this->assertEquals(
-            DateTime::fromString('2001-12-31 16:00:00 America/Los_Angeles'),
-            $extension->aeon_datetime_create('2002-01-01 00:00:00 UTC', 'America/Los_Angeles')
+            DateTime::fromString('2001-12-31 16:00:00 America/Los_Angeles')->timeZone()->name(),
+            $extension->aeon_datetime_create('2002-01-01 00:00:00 UTC', 'America/Los_Angeles')->timeZone()->name()
         );
     }
 
