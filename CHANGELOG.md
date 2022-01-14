@@ -1,3 +1,8 @@
+## [Unreleased] - 2022-01-14
+
+### Updated
+- [c53a05](https://github.com/aeon-php/sleep/commit/c53a0598cc72dc3dada250080387b8afd942daf2) - **infection** - [@norberttech](https://github.com/norberttech)
+
 ## [1.0.3] - 2022-01-06
 
 ### Changed
