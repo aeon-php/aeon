@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-01-06
+## [Unreleased] - 2022-01-14
 
 ### Added
 - [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **Enabled testsuite at php 8.1** - [@norberttech](https://github.com/norberttech)
@@ -37,6 +37,7 @@
 - [78cf87](https://github.com/aeon-php/symfony-bundle/commit/78cf878e836577b2b434f1c969ffe6afd90be2e1) - **failing tests** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [50726f](https://github.com/aeon-php/symfony-bundle/commit/50726ff47b6e99745304c3c29515bafec0d1ee19) - **infection** - [@norberttech](https://github.com/norberttech)
 - [75689f](https://github.com/aeon-php/symfony-bundle/commit/75689f2c1bc741050b78fdf143c202ee832492df) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [afb969](https://github.com/aeon-php/symfony-bundle/commit/afb969c36c340fa09ffa8a3f55b83475c4746986) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [#25](https://github.com/aeon-php/symfony-bundle/pull/25) - **dependencies, fixed aeon-php/calendar BC breaks** - [@norberttech](https://github.com/norberttech)
