@@ -1,9 +1,10 @@
-## [Unreleased] - 2022-01-12
+## [Unreleased] - 2022-01-17
 
 ### Changed
 - [7acd33](https://github.com/aeon-php/calendar-doctrine/commit/7acd33e4bd61d0288583dc3e19b4836e7074bb08) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [fa2ff0](https://github.com/aeon-php/calendar-doctrine/commit/fa2ff0f76ba210ae8a41531a86dc7a5d8410f7ca) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 - [d02108](https://github.com/aeon-php/calendar-doctrine/commit/d02108695e2f0eef995cfaebabd396f2f469604c) - **infection.json badge setup** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
