@@ -27,6 +27,7 @@
 - [4606da](https://github.com/aeon-php/symfony-bundle/commit/4606daf0e77bd210a56d134367ca1aa41a46d656) - **Initial commit** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [e69135](https://github.com/aeon-php/symfony-bundle/commit/e6913518e8f770f439f6c944cf47056695d429c6) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 - [f88c47](https://github.com/aeon-php/symfony-bundle/commit/f88c474b2c70008752a02950a72862c63b334743) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 - [#242](https://github.com/aeon-php/symfony-bundle/pull/242) - **added resseting model transformers in aeon form types** - [@norberttech](https://github.com/norberttech)
 - [#241](https://github.com/aeon-php/symfony-bundle/pull/241) - **yasumi holidays factory registration** - [@norberttech](https://github.com/norberttech)
