@@ -1,6 +1,7 @@
 ## [Unreleased] - 2022-01-17
 
 ### Fixed
+- [2d941a](https://github.com/aeon-php/sleep/commit/2d941a9674557d82ea52655367dd60138ea03b5c) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 - [89e007](https://github.com/aeon-php/sleep/commit/89e007964b1c129b8ee7c963a609634dc5e7e395) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
