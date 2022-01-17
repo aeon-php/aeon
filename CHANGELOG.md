@@ -1,7 +1,10 @@
-## [Unreleased] - 2022-01-14
+## [Unreleased] - 2022-01-17
 
 ### Changed
 - [3b54bb](https://github.com/aeon-php/retry/commit/3b54bbc40c5e84a8cfdd9a6d9b98c0eb22e23747) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
+
+### Fixed
+- [ff1618](https://github.com/aeon-php/retry/commit/ff16189143a35fbc528019a5cd99f35387ca9d52) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
 - [96daa6](https://github.com/aeon-php/retry/commit/96daa65d563203008de146c1a1c07bcd31c6db7f) - **infction** - [@norberttech](https://github.com/norberttech)
