@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-01-14
+## [Unreleased] - 2022-01-17
 
 ### Added
 - [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **Enabled testsuite at php 8.1** - [@norberttech](https://github.com/norberttech)
@@ -27,6 +27,7 @@
 - [4606da](https://github.com/aeon-php/symfony-bundle/commit/4606daf0e77bd210a56d134367ca1aa41a46d656) - **Initial commit** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [f88c47](https://github.com/aeon-php/symfony-bundle/commit/f88c474b2c70008752a02950a72862c63b334743) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 - [#242](https://github.com/aeon-php/symfony-bundle/pull/242) - **added resseting model transformers in aeon form types** - [@norberttech](https://github.com/norberttech)
 - [#241](https://github.com/aeon-php/symfony-bundle/pull/241) - **yasumi holidays factory registration** - [@norberttech](https://github.com/norberttech)
 - [f1c00a](https://github.com/aeon-php/symfony-bundle/commit/f1c00aa92ad45ffb705b245c3a78892710460ebc) - **failing tests** - [@norberttech](https://github.com/norberttech)
