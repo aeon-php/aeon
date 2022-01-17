@@ -4,6 +4,7 @@
 - [a8975e](https://github.com/aeon-php/calendar-twig/commit/a8975eddc89b13b9525d6a86fae37eb4c446af9c) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [25f053](https://github.com/aeon-php/calendar-twig/commit/25f0538e444b5fe80c1521b7eb1a31ccca4acc99) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 - [4c38c8](https://github.com/aeon-php/calendar-twig/commit/4c38c841eb707c3d843d4b9d94b44b94fb0c4f34) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
