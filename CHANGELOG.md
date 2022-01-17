@@ -1,7 +1,10 @@
-## [Unreleased] - 2022-01-14
+## [Unreleased] - 2022-01-17
 
 ### Changed
 - [a8975e](https://github.com/aeon-php/calendar-twig/commit/a8975eddc89b13b9525d6a86fae37eb4c446af9c) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
+
+### Fixed
+- [4c38c8](https://github.com/aeon-php/calendar-twig/commit/4c38c841eb707c3d843d4b9d94b44b94fb0c4f34) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
 - [545e0d](https://github.com/aeon-php/calendar-twig/commit/545e0d2313e7a2670091dbaff5eb0757ce06c86a) - **infection** - [@norberttech](https://github.com/norberttech)
