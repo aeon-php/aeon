@@ -1,4 +1,7 @@
-## [Unreleased] - 2022-01-17
+## [Unreleased] - 2022-02-23
+
+### Added
+- [#149](https://github.com/aeon-php/calendar-doctrine/pull/149) - **Accept DateTimeInterface as a entry value to aeon doctrine types** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
 - [7acd33](https://github.com/aeon-php/calendar-doctrine/commit/7acd33e4bd61d0288583dc3e19b4836e7074bb08) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
