@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-02-23
+## [0.7.0] - 2022-02-23
 
 ### Fixed
 - [#150](https://github.com/aeon-php/calendar-doctrine/pull/150) - **wrong base type for aeon day type** - [@norberttech](https://github.com/norberttech)
