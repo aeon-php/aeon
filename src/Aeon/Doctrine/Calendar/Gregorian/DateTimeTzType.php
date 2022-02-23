@@ -7,8 +7,9 @@ namespace Aeon\Doctrine\Calendar\Gregorian;
 use Aeon\Calendar\Gregorian\DateTime;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
+use Doctrine\DBAL\Types\DateTimeTzImmutableType;
 
-final class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
+final class DateTimeTzType extends DateTimeTzImmutableType
 {
     public const NAME = 'aeon_datetime_tz';
 
@@ -33,7 +34,7 @@ final class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
             return $value->format($platform->getDateTimeTzFormatString());
         }
 
-        throw ConversionException::conversionFailedInvalidType($value, $this->getName(), ['null', 'DateTime']);
+        throw ConversionException::conversionFailedInvalidType($value, $this->getName(), ['null', 'DateTime', '\DateTimeInterface']);
     }
 
     /**

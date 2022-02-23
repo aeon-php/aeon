@@ -7,8 +7,9 @@ namespace Aeon\Doctrine\Calendar\Gregorian;
 use Aeon\Calendar\Gregorian\Day;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\ConversionException;
+use Doctrine\DBAL\Types\DateImmutableType;
 
-final class DayType extends \Doctrine\DBAL\Types\DateTimeType
+final class DayType extends DateImmutableType
 {
     public const NAME = 'aeon_day';
 
@@ -33,7 +34,7 @@ final class DayType extends \Doctrine\DBAL\Types\DateTimeType
             return $value->format($platform->getDateFormatString());
         }
 
-        throw ConversionException::conversionFailedInvalidType($value, $this->getName(), ['null', 'Day']);
+        throw ConversionException::conversionFailedInvalidType($value, $this->getName(), ['null', 'Day', '\DateTimeInterface']);
     }
 
     /**
