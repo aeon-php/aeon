@@ -29,7 +29,7 @@ final class DateTimeType extends \Doctrine\DBAL\Types\DateTimeType
             return $value;
         }
 
-        if ($value instanceof DateTime) {
+        if ($value instanceof DateTime || $value instanceof \DateTimeInterface) {
             return $value->format($platform->getDateTimeFormatString());
         }
 

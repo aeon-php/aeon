@@ -31,6 +31,17 @@ final class DateTimeTypeTest extends TestCase
         $this->assertObjectEquals($dateTime, $dateTimeConverted, 'isEqual');
     }
 
+    public function test_converting_valid_date_time_interface_values() : void
+    {
+        $type = Type::getType(DateTimeType::NAME);
+
+        $stringDate = $type->convertToDatabaseValue($dateTime = new \DateTimeImmutable('2020-01-01 01:00:00'), $this->createPlatformMock());
+        $dateTimeConverted = $type->convertToPHPValue($stringDate, $this->createPlatformMock());
+
+        $this->assertSame('2020-01-01 01:00:00', $stringDate);
+        $this->assertObjectEquals(DateTime::fromDateTime($dateTime), $dateTimeConverted, 'isEqual');
+    }
+
     public function test_converting_null() : void
     {
         $type = Type::getType(DateTimeType::NAME);

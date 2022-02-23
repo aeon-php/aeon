@@ -29,7 +29,7 @@ final class DateTimeTzType extends \Doctrine\DBAL\Types\DateTimeTzType
             return $value;
         }
 
-        if ($value instanceof DateTime) {
+        if ($value instanceof DateTime || $value instanceof \DateTimeInterface) {
             return $value->format($platform->getDateTimeTzFormatString());
         }
 

@@ -24,11 +24,22 @@ final class DayTypeTest extends TestCase
     {
         $type = Type::getType(DayType::NAME);
 
-        $stringDate = $type->convertToDatabaseValue($dateTime = Day::fromString('2020-01-01'), $this->createPlatformMock());
+        $stringDate = $type->convertToDatabaseValue($day = Day::fromString('2020-01-01'), $this->createPlatformMock());
         $dateTimeConverted = $type->convertToPHPValue($stringDate, $this->createPlatformMock());
 
         $this->assertSame('2020-01-01', $stringDate);
-        $this->assertObjectEquals($dateTime, $dateTimeConverted, 'isEqual');
+        $this->assertObjectEquals($day, $dateTimeConverted, 'isEqual');
+    }
+
+    public function test_converting_valid_values_from_date_time_interface() : void
+    {
+        $type = Type::getType(DayType::NAME);
+
+        $stringDate = $type->convertToDatabaseValue($day = new \DateTimeImmutable('2020-01-01'), $this->createPlatformMock());
+        $dateTimeConverted = $type->convertToPHPValue($stringDate, $this->createPlatformMock());
+
+        $this->assertSame('2020-01-01', $stringDate);
+        $this->assertObjectEquals(Day::fromDateTime($day), $dateTimeConverted, 'isEqual');
     }
 
     public function test_converting_null() : void
