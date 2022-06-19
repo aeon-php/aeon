@@ -15,6 +15,7 @@ use Symfony\Component\Cache\Adapter\ArrayAdapter;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
+use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;
@@ -23,7 +24,7 @@ abstract class TestAppKernel extends BaseKernel
 {
     use MicroKernelTrait;
 
-    public function registerBundles()
+    public function registerBundles() : array
     {
         return [
             new FrameworkBundle(),
@@ -31,19 +32,20 @@ abstract class TestAppKernel extends BaseKernel
         ];
     }
 
-    public function getCacheDir()
+    public function getCacheDir() : string
     {
         return \sys_get_temp_dir() . '/AeonBundle/cache';
     }
 
-    public function getLogDir()
+    public function getLogDir() : string
     {
         return \sys_get_temp_dir() . '/AeonBundle/logs';
     }
 
-    public function holiday(Request $request) : Response
+    public function holiday(Request $request, FormFactoryInterface $formFactory = null) : Response
     {
-        $form = $this->getContainer()->get('form.factory')->create(NotHolidaysFormType::class);
+        $formFactory = $formFactory ?: $this->getContainer()->get('form.factory');
+        $form = $formFactory->create(NotHolidaysFormType::class);
 
         $form->handleRequest($request);
 
@@ -77,13 +79,17 @@ abstract class TestAppKernel extends BaseKernel
         $c->register('cache.psr.array', PSRCacheStorage::class)
             ->setArguments([new Reference('cache.psr.array.adapter'), new Reference(Calendar::class)]);
 
+        $session = ['enabled' => true];
+
+        if (BaseKernel::VERSION_ID > 50300) {
+            $session['storage_factory_id'] = 'session.storage.factory.mock_file';
+        } else {
+            $session['storage_id'] = 'session.storage.filesystem';
+        }
         $c->loadFromExtension('framework', [
             'secret' => 'S0ME_SECRET',
             'test' => $this->environment === 'test',
-            'session' => [
-                'enabled' => true,
-                'storage_id' => 'session.storage.filesystem',
-            ],
+            'session' => $session,
         ]);
         $c->loadFromExtension('aeon', [
             'rate_limiter' => [

@@ -11,7 +11,7 @@ use Symfony\Component\HttpKernel\Kernel;
 
 abstract class TestSuite extends WebTestCase
 {
-    protected static function getKernelClass()
+    protected static function getKernelClass() : string
     {
         if (\version_compare(Kernel::VERSION, '5.1.0') == -1) {
             return TestAppRouteCollectionKernel::class;

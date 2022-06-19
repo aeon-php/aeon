@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
+use function Aeon\Symfony\AeonBundle\DependencyInjection\Loader\Configurator\service;
 use Aeon\Symfony\AeonBundle\EventListener\RateLimitRequestListener;
 use Aeon\Symfony\AeonBundle\EventListener\RateLimitResponseListener;
 use Aeon\Symfony\AeonBundle\RateLimiter\RateLimiters;
@@ -22,10 +22,10 @@ return static function (ContainerConfigurator $containerConfigurator) : void {
         ->public();
 
     $services->set('request.listener.rate_limit', RateLimitRequestListener::class)
-        ->args([ref(RateLimitHttpProtocol::class), ref(RequestThrottling::class)])
+        ->args([service(RateLimitHttpProtocol::class), service(RequestThrottling::class)])
         ->tag('kernel.event_listener', ['event' => 'kernel.request']);
 
     $services->set('response.listener.rate_limit', RateLimitResponseListener::class)
-        ->args([ref(RateLimitHttpProtocol::class), ref(RequestThrottling::class)])
+        ->args([service(RateLimitHttpProtocol::class), service(RequestThrottling::class)])
         ->tag('kernel.event_listener', ['event' => 'kernel.response']);
 };

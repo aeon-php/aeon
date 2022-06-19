@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
+use function Aeon\Symfony\AeonBundle\DependencyInjection\Loader\Configurator\service;
 use Aeon\Calendar\Gregorian\Calendar;
 use Aeon\Calendar\Gregorian\GregorianCalendar;
 use Aeon\Calendar\Gregorian\TimeZone;
@@ -18,7 +18,7 @@ return static function (ContainerConfigurator $containerConfigurator) : void {
         ->public();
 
     $services->set('calendar', GregorianCalendar::class)
-        ->args([ref('calendar_timezone')])
+        ->args([service('calendar_timezone')])
         ->public()
         ->alias(Calendar::class, 'calendar')
         ->public();
