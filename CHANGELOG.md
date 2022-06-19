@@ -1,6 +1,8 @@
-## [Unreleased] - 2022-01-17
+## [Unreleased] - 2022-06-19
 
 ### Added
+- [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **Symfony 6 constraints** - [@GwendolenLynch](https://github.com/GwendolenLynch)
+- [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **Interfaced type hints** - [@GwendolenLynch](https://github.com/GwendolenLynch)
 - [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **Enabled testsuite at php 8.1** - [@norberttech](https://github.com/norberttech)
 - [#29](https://github.com/aeon-php/symfony-bundle/pull/29) - **Integration with Automation** - [@norberttech](https://github.com/norberttech)
 - [#11](https://github.com/aeon-php/symfony-bundle/pull/11) - **possibilit to validate if given day is not a holiday** - [@norberttech](https://github.com/norberttech)
@@ -9,6 +11,10 @@
 - [1a874e](https://github.com/aeon-php/symfony-bundle/commit/1a874ef13537e683a646e228db5e33b223d44bb7) - **mutation score to README** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **Change ref() to service()** - [@GwendolenLynch](https://github.com/GwendolenLynch)
+- [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **symfony/dependency-injection minimum version ^5.1** - [@GwendolenLynch](https://github.com/GwendolenLynch)
+- [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **symfony/framework-bundle (dev) minimum version ^5.3** - [@GwendolenLynch](https://github.com/GwendolenLynch)
+- [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **symfony/form minimum version ^5.3** - [@GwendolenLynch](https://github.com/GwendolenLynch)
 - [b95254](https://github.com/aeon-php/symfony-bundle/commit/b95254175e6557979770d983c3578196edcb1165) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
 - [#223](https://github.com/aeon-php/symfony-bundle/pull/223) - **request identification setting from session to header in testsuite** - [@norberttech](https://github.com/norberttech)
 - [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **updated dependencies** - [@norberttech](https://github.com/norberttech)
@@ -39,6 +45,7 @@
 - [78cf87](https://github.com/aeon-php/symfony-bundle/commit/78cf878e836577b2b434f1c969ffe6afd90be2e1) - **failing tests** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **Pass FormFactoryInterface to holiday controller & remove container access** - [@GwendolenLynch](https://github.com/GwendolenLynch)
 - [50726f](https://github.com/aeon-php/symfony-bundle/commit/50726ff47b6e99745304c3c29515bafec0d1ee19) - **infection** - [@norberttech](https://github.com/norberttech)
 - [75689f](https://github.com/aeon-php/symfony-bundle/commit/75689f2c1bc741050b78fdf143c202ee832492df) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [afb969](https://github.com/aeon-php/symfony-bundle/commit/afb969c36c340fa09ffa8a3f55b83475c4746986) - **dependencies** - [@norberttech](https://github.com/norberttech)
@@ -48,6 +55,7 @@
 - [b134c5](https://github.com/aeon-php/symfony-bundle/commit/b134c56e70b37f2f3d2094b84d46e43df69cbfb4) - **dependencies** - [@norberttech](https://github.com/norberttech)
 
 ### Removed
+- [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **Symfony 4 support** - [@GwendolenLynch](https://github.com/GwendolenLynch)
 - [#78](https://github.com/aeon-php/symfony-bundle/pull/78) - **phive** - [@norberttech](https://github.com/norberttech)
 - [70e932](https://github.com/aeon-php/symfony-bundle/commit/70e9321b2ceda4c1895e8e1f8496a9b6fdc5fdb9) - **redundant |^5.1 constraint from symfony dependencies** - [@norberttech](https://github.com/norberttech)
 - [30a14d](https://github.com/aeon-php/symfony-bundle/commit/30a14db1e6b5bdb4a971d09215eb3d7be2cad319) - **not used dependency** - [@norberttech](https://github.com/norberttech)
