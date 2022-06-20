@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11097a80bc819fe98ace3184f0e4735e",
+    "content-hash": "98041e5147c73c05aa504adfce1a5ba5",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -153,24 +153,24 @@
         },
         {
             "name": "aeon-php/rate-limiter",
-            "version": "0.7.0",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aeon-php/rate-limiter.git",
-                "reference": "6ca6a2625d14a3484ff2432acbfee526fe52ab3c"
+                "reference": "b783010640e6b9afe24346429667beb12547ba6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aeon-php/rate-limiter/zipball/6ca6a2625d14a3484ff2432acbfee526fe52ab3c",
-                "reference": "6ca6a2625d14a3484ff2432acbfee526fe52ab3c",
+                "url": "https://api.github.com/repos/aeon-php/rate-limiter/zipball/b783010640e6b9afe24346429667beb12547ba6b",
+                "reference": "b783010640e6b9afe24346429667beb12547ba6b",
                 "shasum": ""
             },
             "require": {
-                "aeon-php/calendar": ">=0.14.0",
+                "aeon-php/calendar": "^1.0",
                 "aeon-php/sleep": ">=0.6.0",
                 "ext-json": "*",
-                "php": ">=7.4.2",
-                "psr/cache": "^1.0",
+                "php": "^7.4.2 || ~8.0 || ~8.1",
+                "psr/cache": "^1.0|^2.0|^3.0",
                 "symfony/polyfill-mbstring": "^1.0"
             },
             "require-dev": {
@@ -197,15 +197,9 @@
             ],
             "support": {
                 "issues": "https://github.com/aeon-php/rate-limiter/issues",
-                "source": "https://github.com/aeon-php/rate-limiter/tree/0.7.0"
+                "source": "https://github.com/aeon-php/rate-limiter/tree/0.8.0"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/norberttech",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-02-25T11:43:27+00:00"
+            "time": "2022-06-19T05:44:48+00:00"
         },
         {
             "name": "aeon-php/retry",
@@ -1723,16 +1717,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825"
+                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/0abb51d2f102e00a4eefcf46ba7fec406d245825",
-                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
+                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
                 "shasum": ""
             },
             "require": {
@@ -1747,7 +1741,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1786,7 +1780,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -1802,7 +1796,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-30T18:21:41+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
