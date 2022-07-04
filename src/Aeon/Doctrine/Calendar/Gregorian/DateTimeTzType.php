@@ -16,7 +16,7 @@ final class DateTimeTzType extends DateTimeTzImmutableType
     /**
      * {@inheritdoc}
      */
-    public function getName()
+    public function getName() : string
     {
         return self::NAME;
     }
@@ -24,7 +24,7 @@ final class DateTimeTzType extends DateTimeTzImmutableType
     /**
      * {@inheritdoc}
      */
-    public function convertToDatabaseValue($value, AbstractPlatform $platform)
+    public function convertToDatabaseValue($value, AbstractPlatform $platform) : ?string
     {
         if ($value === null) {
             return $value;
@@ -40,7 +40,7 @@ final class DateTimeTzType extends DateTimeTzImmutableType
     /**
      * {@inheritdoc}
      */
-    public function convertToPHPValue($value, AbstractPlatform $platform)
+    public function convertToPHPValue($value, AbstractPlatform $platform) : ?DateTime
     {
         if ($value === null || $value instanceof DateTime) {
             return $value;
@@ -59,7 +59,7 @@ final class DateTimeTzType extends DateTimeTzImmutableType
         return $val;
     }
 
-    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    public function requiresSQLCommentHint(AbstractPlatform $platform) : bool
     {
         return true;
     }
