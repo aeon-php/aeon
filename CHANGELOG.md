@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-07-04
+## [0.7.1] - 2022-07-04
 
 ### Changed
 - [#201](https://github.com/aeon-php/calendar-doctrine/pull/201) - **Added return types to Doctrine types to fix deprecation** - [@christian-kolb](https://github.com/christian-kolb)
