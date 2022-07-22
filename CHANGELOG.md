@@ -5,6 +5,7 @@
 - [89e007](https://github.com/aeon-php/sleep/commit/89e007964b1c129b8ee7c963a609634dc5e7e395) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [b9315b](https://github.com/aeon-php/sleep/commit/b9315bf1bfd1a10108f4802b5e60b03f2ed8e07e) - **README.md** - [@norberttech](https://github.com/norberttech)
 - [3b1a3a](https://github.com/aeon-php/sleep/commit/3b1a3a8265b875442bed7e3a23a5832405bab4ef) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [c53a05](https://github.com/aeon-php/sleep/commit/c53a0598cc72dc3dada250080387b8afd942daf2) - **infection** - [@norberttech](https://github.com/norberttech)
 
