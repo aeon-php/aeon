@@ -2,7 +2,7 @@ parameters:
     level: 8
     paths:
         - src
-    excludes_analyse:
+    excludePaths:
         - 'src/Aeon/Symfony/AeonBundle/Resources/config/*'
         - 'src/Aeon/Symfony/AeonBundle/Validator/Constraints/*'
         - 'src/Aeon/Symfony/AeonBundle/DependencyInjection/AeonExtension.php'
