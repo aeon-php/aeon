@@ -8,6 +8,7 @@
 - [4c38c8](https://github.com/aeon-php/calendar-twig/commit/4c38c841eb707c3d843d4b9d94b44b94fb0c4f34) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [d582d6](https://github.com/aeon-php/calendar-twig/commit/d582d64154f6449611579c3f207507b68ee3ac6e) - **README.md** - [@norberttech](https://github.com/norberttech)
 - [916427](https://github.com/aeon-php/calendar-twig/commit/9164274990c78067b2d1cce17ae67b381d297074) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [545e0d](https://github.com/aeon-php/calendar-twig/commit/545e0d2313e7a2670091dbaff5eb0757ce06c86a) - **infection** - [@norberttech](https://github.com/norberttech)
 
