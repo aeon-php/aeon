@@ -1,3 +1,8 @@
+## [Unreleased] - 2022-07-22
+
+### Updated
+- [463e1b](https://github.com/aeon-php/calendar-doctrine/commit/463e1b8cb20c083a218ae581622c9a30d9f9fa8f) - **dependencies** - [@norberttech](https://github.com/norberttech)
+
 ## [0.7.1] - 2022-07-04
 
 ### Changed
