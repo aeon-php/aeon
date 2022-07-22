@@ -1,10 +1,11 @@
-## [Unreleased] - 2022-01-17
+## [Unreleased] - 2022-07-22
 
 ### Fixed
 - [2d941a](https://github.com/aeon-php/sleep/commit/2d941a9674557d82ea52655367dd60138ea03b5c) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 - [89e007](https://github.com/aeon-php/sleep/commit/89e007964b1c129b8ee7c963a609634dc5e7e395) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [3b1a3a](https://github.com/aeon-php/sleep/commit/3b1a3a8265b875442bed7e3a23a5832405bab4ef) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [c53a05](https://github.com/aeon-php/sleep/commit/c53a0598cc72dc3dada250080387b8afd942daf2) - **infection** - [@norberttech](https://github.com/norberttech)
 
 ## [1.0.3] - 2022-01-06
