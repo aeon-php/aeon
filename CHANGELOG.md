@@ -7,6 +7,7 @@
 - [ff1618](https://github.com/aeon-php/retry/commit/ff16189143a35fbc528019a5cd99f35387ca9d52) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [68c523](https://github.com/aeon-php/retry/commit/68c5238698374bbe7e091170cb947fb26d739b58) - **README.md** - [@norberttech](https://github.com/norberttech)
 - [71f6a3](https://github.com/aeon-php/retry/commit/71f6a3abc939dcdf40b81dd77fd432f15241ea46) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [96daa6](https://github.com/aeon-php/retry/commit/96daa65d563203008de146c1a1c07bcd31c6db7f) - **infction** - [@norberttech](https://github.com/norberttech)
 
