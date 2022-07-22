@@ -19,3 +19,4 @@ Aeon is a set of libraries that makes easier to work with PHP Date & Time in ele
 
 * [Documentation & Examples](https://aeon-php.org/docs/sleep/)
 * [Contributing & Development](https://github.com/aeon-php/.github/blob/master/CONTRIBUTING.md)
+* [Community](https://github.com/orgs/aeon-php/discussions)
