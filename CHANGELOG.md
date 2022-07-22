@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-06-19
+## [Unreleased] - 2022-07-22
 
 ### Added
 - [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **Symfony 6 constraints** - [@GwendolenLynch](https://github.com/GwendolenLynch)
@@ -45,6 +45,7 @@
 - [78cf87](https://github.com/aeon-php/symfony-bundle/commit/78cf878e836577b2b434f1c969ffe6afd90be2e1) - **failing tests** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [ba6428](https://github.com/aeon-php/symfony-bundle/commit/ba642841eccad3720ec6cf2fe196d2083ec4ee8c) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **Pass FormFactoryInterface to holiday controller & remove container access** - [@GwendolenLynch](https://github.com/GwendolenLynch)
 - [50726f](https://github.com/aeon-php/symfony-bundle/commit/50726ff47b6e99745304c3c29515bafec0d1ee19) - **infection** - [@norberttech](https://github.com/norberttech)
 - [75689f](https://github.com/aeon-php/symfony-bundle/commit/75689f2c1bc741050b78fdf143c202ee832492df) - **dependencies** - [@norberttech](https://github.com/norberttech)
