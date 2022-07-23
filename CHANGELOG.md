@@ -1,9 +1,10 @@
-## [Unreleased] - 2022-07-22
+## [Unreleased] - 2022-07-23
 
 ### Changed
 - [df3314](https://github.com/aeon-php/collection/commit/df3314f551cd22c71bc619d7d8a7ca325eb4aa67) - **Initial commit** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [085641](https://github.com/aeon-php/collection/commit/0856413afe329c50a42a2b2a715bc8fb27921e66) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [92d4c7](https://github.com/aeon-php/collection/commit/92d4c73875fec83e66c8d3f0ddf8909ae7bae9fc) - **README.md** - [@norberttech](https://github.com/norberttech)
 - [00f51a](https://github.com/aeon-php/collection/commit/00f51a1153874dfe59c82bcdd59b3be1b731c206) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [7a6b52](https://github.com/aeon-php/collection/commit/7a6b521797b4bd92d224ade1065644db3848eb7f) - **dependencies** - [@norberttech](https://github.com/norberttech)
