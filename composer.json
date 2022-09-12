@@ -15,7 +15,7 @@
     "require": {
         "php": "^7.4.2 || ~8.0 || ~8.1",
         "ext-json": "*",
-        "aeon-php/calendar": "^1.0",
+        "aeon-php/calendar": ">=1.0.7",
         "aeon-php/calendar-holidays": ">=0.8.0",
         "aeon-php/calendar-twig": ">=0.9.0",
         "aeon-php/rate-limiter": ">=0.7.0",
