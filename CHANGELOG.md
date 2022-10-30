@@ -1,6 +1,7 @@
-## [Unreleased] - 2022-07-22
+## [Unreleased] - 2022-10-30
 
 ### Updated
+- [07a290](https://github.com/aeon-php/calendar-doctrine/commit/07a29071487d3e653c200c009ccabef8bd8d0727) - **dependabot-auto-merge.yaml** - [@norberttech](https://github.com/norberttech)
 - [f7292f](https://github.com/aeon-php/calendar-doctrine/commit/f7292f3127d9a4b91c28c60018e71b545af503c7) - **README.md** - [@norberttech](https://github.com/norberttech)
 - [463e1b](https://github.com/aeon-php/calendar-doctrine/commit/463e1b8cb20c083a218ae581622c9a30d9f9fa8f) - **dependencies** - [@norberttech](https://github.com/norberttech)
 
