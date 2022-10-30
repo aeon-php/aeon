@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-07-22
+## [Unreleased] - 2022-10-30
 
 ### Changed
 - [a8975e](https://github.com/aeon-php/calendar-twig/commit/a8975eddc89b13b9525d6a86fae37eb4c446af9c) - **custom workflows into aeon-php reusable workflows** - [@norberttech](https://github.com/norberttech)
@@ -8,6 +8,7 @@
 - [4c38c8](https://github.com/aeon-php/calendar-twig/commit/4c38c841eb707c3d843d4b9d94b44b94fb0c4f34) - **PHP versions scope** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
+- [07b126](https://github.com/aeon-php/calendar-twig/commit/07b1261f72c9678ed4bd2b3930762af18884b07a) - **dependabot-auto-merge.yaml** - [@norberttech](https://github.com/norberttech)
 - [d582d6](https://github.com/aeon-php/calendar-twig/commit/d582d64154f6449611579c3f207507b68ee3ac6e) - **README.md** - [@norberttech](https://github.com/norberttech)
 - [916427](https://github.com/aeon-php/calendar-twig/commit/9164274990c78067b2d1cce17ae67b381d297074) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [545e0d](https://github.com/aeon-php/calendar-twig/commit/545e0d2313e7a2670091dbaff5eb0757ce06c86a) - **infection** - [@norberttech](https://github.com/norberttech)
