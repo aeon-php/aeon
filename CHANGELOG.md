@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-11-04
+## [Unreleased] - 2022-11-08
 
 ### Changed
 - [df3314](https://github.com/aeon-php/collection/commit/df3314f551cd22c71bc619d7d8a7ca325eb4aa67) - **Initial commit** - [@norberttech](https://github.com/norberttech)
