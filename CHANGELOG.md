@@ -1,4 +1,4 @@
-## [Unreleased] - 2022-12-20
+## [Unreleased] - 2022-12-30
 
 ### Added
 - [#355](https://github.com/aeon-php/symfony-bundle/pull/355) - **Symfony 6 constraints** - [@GwendolenLynch](https://github.com/GwendolenLynch)
