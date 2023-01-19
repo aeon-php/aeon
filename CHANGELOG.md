@@ -1,4 +1,4 @@
-## [Unreleased] - 2023-01-18
+## [Unreleased] - 2023-01-19
 
 ### Updated
 - [07a290](https://github.com/aeon-php/calendar-doctrine/commit/07a29071487d3e653c200c009ccabef8bd8d0727) - **dependabot-auto-merge.yaml** - [@norberttech](https://github.com/norberttech)
