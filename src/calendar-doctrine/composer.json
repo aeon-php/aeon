@@ -1,0 +1,56 @@
+{
+    "name": "aeon-php/calendar-doctrine",
+    "type": "library",
+    "description": "Aeaon PHP Framework integration with Doctrine",
+    "keywords": ["calendar", "immutable", "doctrine"],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4.2 || ~8.0 || ~8.1",
+        "aeon-php/calendar": ">=0.14.0",
+        "doctrine/dbal": "^2.6 || ^3.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aeon\\Doctrine\\": [
+                "src/Aeon/Doctrine"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aeon\\Doctrine\\Tests\\": "tests/Aeon/Doctrine/Tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "build": [
+            "@static:analyze",
+            "@test",
+            "@test:mutation"
+        ],
+        "test": [
+            "tools\/vendor\/bin\/phpunit"
+        ],
+        "test:mutation": [
+            "tools\/vendor\/bin\/infection --threads=2"
+        ],
+        "static:analyze": [
+            "tools\/vendor\/bin\/psalm --output-format=compact",
+            "tools\/vendor\/bin\/phpstan analyze -c phpstan.neon",
+            "tools\/vendor\/bin\/php-cs-fixer fix --dry-run"
+        ],
+        "cs:php:fix": "tools\/vendor\/bin\/php-cs-fixer fix",
+        "tools:install": "composer install --working-dir=./tools",
+        "post-install-cmd": [
+            "@tools:install"
+        ],
+        "post-update-cmd": [
+            "@tools:install"
+        ]
+    }
+}

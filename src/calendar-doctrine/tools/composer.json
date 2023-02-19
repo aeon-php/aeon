@@ -1,0 +1,14 @@
+{
+    "name": "aeon-php/calendar-doctrine-tools",
+    "description": "Aeon PHP Calendar Doctrine - Tools",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^5.0",
+        "phpstan/phpstan": "^1.0.0",
+        "infection/infection": "^0.26.1",
+        "friendsofphp/php-cs-fixer": "^3.1"
+    },
+    "config": {
+        "allow-plugins": false
+    }
+}
