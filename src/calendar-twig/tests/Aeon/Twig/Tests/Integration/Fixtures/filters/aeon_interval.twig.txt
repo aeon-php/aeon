@@ -1,0 +1,15 @@
+{% for day in aeon_current_day().until(aeon_current_day().plusDays(10), 'right_open' | aeon_interval).all() %}
+    {{ day | aeon_day_format }}
+{% endfor %}
+
+{% for day in aeon_current_day().until(aeon_current_day().plusDays(10), 'left_open' | aeon_interval).all() %}
+    {{ day | aeon_day_format }}
+{% endfor %}
+
+{% for day in aeon_current_day().until(aeon_current_day().plusDays(10), 'open' | aeon_interval).all() %}
+    {{ day | aeon_day_format }}
+{% endfor %}
+
+{% for day in aeon_current_day().until(aeon_current_day().plusDays(10), 'closed' | aeon_interval).all() %}
+    {{ day | aeon_day_format }}
+{% endfor %}
