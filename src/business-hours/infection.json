@@ -1,0 +1,57 @@
+{
+  "timeout": 5,
+  "source": {
+    "directories": [
+      "src\/Aeon"
+    ],
+    "excludes": [
+      "/\\.phpt/"
+    ]
+  },
+  "logs": {
+    "text": "./var/infection/infection.log",
+    "summary": "./var/infection/infection_summary.log",
+    "debug": "./var/infection/infection_summary.log",
+    "stryker": {
+      "badge": "1.x"
+    }
+  },
+  "mutators": {
+    "@default": true,
+    "IncrementInteger": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours\\WorkingHours\\ShiftsWorkingHours::__construct"
+      ]
+    },
+    "LogicalAnd": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    },
+    "DecrementInteger": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    },
+    "Assignment": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    },
+    "PlusEqual": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    },
+    "Throw_": {
+      "ignore": [
+        "Aeon\\Calendar\\Gregorian\\BusinessHours::nextBusinessDay"
+      ]
+    }
+  },
+  "testFramework": "phpunit",
+  "phpUnit": {
+    "customPath": "tools\/vendor\/bin\/phpunit"
+  },
+  "bootstrap": "./vendor/autoload.php"
+}

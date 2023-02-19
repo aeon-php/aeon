@@ -1,0 +1,123 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d09dd06765ed049db9b35334ac041541",
+    "packages": [
+        {
+            "name": "aeon-php/calendar",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aeon-php/calendar.git",
+                "reference": "49e3167815ca6af1f4215eed0719c3d83d749571"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aeon-php/calendar/zipball/49e3167815ca6af1f4215eed0719c3d83d749571",
+                "reference": "49e3167815ca6af1f4215eed0719c3d83d749571",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4.2 || ~8.0 || ~8.1.10"
+            },
+            "require-dev": {
+                "ext-bcmath": "*"
+            },
+            "suggest": {
+                "ext-bcmath": "Compare time units with high precision"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aeon\\": [
+                        "src/Aeon"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP type safe, immutable calendar library",
+            "keywords": [
+                "calendar",
+                "date",
+                "datetime",
+                "immutable",
+                "time"
+            ],
+            "support": {
+                "issues": "https://github.com/aeon-php/calendar/issues",
+                "source": "https://github.com/aeon-php/calendar/tree/1.0.7"
+            },
+            "time": "2022-09-10T13:11:14+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "aeon-php/calendar-holidays",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aeon-php/calendar-holidays.git",
+                "reference": "212f78c2f55d87d277e472603a71bf2125f128a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aeon-php/calendar-holidays/zipball/212f78c2f55d87d277e472603a71bf2125f128a2",
+                "reference": "212f78c2f55d87d277e472603a71bf2125f128a2",
+                "shasum": ""
+            },
+            "require": {
+                "aeon-php/calendar": ">=0.14.0",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.4.2 || ^8.0 || ^8.1"
+            },
+            "require-dev": {
+                "flow-php/etl": "1.x@dev",
+                "flow-php/etl-adapter-json": "1.x@dev",
+                "flow-php/etl-adapter-memory": "1.x@dev",
+                "flow-php/etl-transformer": "1.x@dev",
+                "google/apiclient": "^2.0",
+                "halaxa/json-machine": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aeon\\": [
+                        "src/Aeon"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Holidays calendar abstraction layer for Aeon Time management framework",
+            "keywords": [
+                "calendar",
+                "holidays",
+                "immutable"
+            ],
+            "support": {
+                "issues": "https://github.com/aeon-php/calendar-holidays/issues",
+                "source": "https://github.com/aeon-php/calendar-holidays/tree/0.9.0"
+            },
+            "time": "2021-12-06T10:38:07+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.4.2 || ~8.0 || ~8.1"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
