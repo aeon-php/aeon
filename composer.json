@@ -33,7 +33,7 @@
         "google/apiclient": "^2.0",
         "phpbench/phpbench": "^1.2.6",
         "symfony/browser-kit": "^4.4||^5.0||^6.0",
-        "symfony/cache": "^5.1",
+        "symfony/cache": "^5.1||^6.0",
         "symfony/dom-crawler": "^4.4.12||^5.0||^6.0",
         "symfony/framework-bundle": "^4.4||^5.3||^6.0",
         "symfony/security-bundle": "^4.4||^5.0||^6.0"
