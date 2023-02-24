@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+         colors="true" bootstrap="vendor/autoload.php"
+         cacheResultFile="var/phpunit/.result.cache"
+         executionOrder="random"
+>
+  <coverage>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+    <report>
+      <html outputDirectory="var/phpunit/coverage/html" lowUpperBound="95" highLowerBound="100"/>
+    </report>
+  </coverage>
+  <logging/>
+  <testsuites>
+    <testsuite name="functional">
+      <directory>src/business-hours/tests/Aeon/**/*/Functional</directory>
+      <directory>src/calendar/tests/Aeon/Calendar/Tests/Functional</directory>
+      <directory>src/calendar-holidays/tests/Aeon/Calendar/Tests/Functional</directory>
+      <directory>src/calendar-holidays-yasumi/tests/Aeon/Calendar/Tests/Functional</directory>
+      <directory>src/sleep/tests/Aeon/Sleep/Tests/Functional</directory>
+      <directory>src/symfony-bundle/tests/Aeon/Symfony/AeonBundle/Tests/Functional</directory>
+    </testsuite>
+    <testsuite name="integration">
+      <directory>src/calendar-twig/tests/Aeon/Twig/Tests/Integration</directory>
+    </testsuite>
+    <testsuite name="unit">
+      <directory>src/business-hours/tests/Aeon/**/*/Unit</directory>
+      <directory>src/calendar/tests/Aeon/Calendar/Tests/Unit</directory>
+      <directory>src/calendar/tests/Aeon/Calculator/Tests/Unit</directory>
+      <directory>src/calendar-doctrine/tests/Aeon/Doctrine/Tests/Unit</directory>
+      <directory>src/calendar-holidays/tests/Aeon/Calendar/Tests/Unit</directory>
+      <directory>src/calendar-twig/tests/Aeon/Twig/Tests/Unit</directory>
+      <directory>src/collection/tests/Aeon/Collection/Tests/Unit</directory>
+      <directory>src/rate-limiter/tests/Aeon/RateLimiter/Tests/Unit</directory>
+      <directory>src/retry/tests/Aeon/Retry/Tests/Unit</directory>
+      <directory>src/sleep/tests/Aeon/Sleep/Tests/Unit</directory>
+      <directory>src/symfony-bundle/tests/Aeon/Symfony/AeonBundle/Tests/Unit</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

@@ -8,14 +8,12 @@
         "holidays",
         "business hours"
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
-        "php": "^7.4.2 || ~8.0 || ~8.1",
-        "aeon-php/calendar": ">=1.0.7"
+        "php": "~8.1.10 || ~8.2",
+        "aeon-php/calendar": "^1.0"
     },
     "require-dev": {
-        "aeon-php/calendar-holidays": ">=0.7.0"
+        "aeon-php/calendar-holidays": "^1.0"
     },
     "license": "MIT",
     "autoload": {
@@ -37,17 +35,17 @@
             "@test:mutation"
         ],
         "test": [
-            "tools\/vendor\/bin\/phpunit"
+            "tools/vendor/bin/phpunit"
         ],
         "test:mutation": [
-            "tools\/vendor\/bin\/infection --threads=2"
+            "tools/vendor/bin/infection --threads=2"
         ],
         "static:analyze": [
-            "tools\/vendor\/bin\/psalm --output-format=compact",
-            "tools\/vendor\/bin\/phpstan analyze -c phpstan.neon",
-            "tools\/vendor\/bin\/php-cs-fixer fix --dry-run"
+            "tools/vendor/bin/psalm --output-format=compact",
+            "tools/vendor/bin/phpstan analyze -c phpstan.neon",
+            "tools/vendor/bin/php-cs-fixer fix --dry-run"
         ],
-        "cs:php:fix": "tools\/vendor\/bin\/php-cs-fixer fix",
+        "cs:php:fix": "tools/vendor/bin/php-cs-fixer fix",
         "tools:install": "composer install --working-dir=./tools",
         "post-install-cmd": [
             "@tools:install"
@@ -55,5 +53,7 @@
         "post-update-cmd": [
             "@tools:install"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

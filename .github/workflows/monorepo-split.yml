@@ -1,0 +1,76 @@
+name: 'Packages Split'
+
+on:
+  push:
+    branches:
+      - 1.x
+    tags:
+      - '*'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+jobs:
+  packages_split:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # define package to repository map
+        package:
+          - local_path: 'src/business-hours'
+            split_repository: 'business-hours'
+          - local_path: 'src/calendar'
+            split_repository: 'calendar'
+          - local_path: 'src/calendar-doctrine'
+            split_repository: 'calendar-doctrine'
+          - local_path: 'src/calendar-holidays'
+            split_repository: 'calendar-holidays'
+          - local_path: 'src/calendar-holidays-yasumi'
+            split_repository: 'calendar-holidays-yasumi'
+          - local_path: 'src/calendar-twig'
+            split_repository: 'calendar-twig'
+          - local_path: 'src/collection'
+            split_repository: 'collection'
+          - local_path: 'src/rate-limiter'
+            split_repository: 'rate-limiter'
+          - local_path: 'src/retry'
+            split_repository: 'retry'
+          - local_path: 'src/sleep'
+            split_repository: 'sleep'
+          - local_path: 'src/symfony-bundle'
+            split_repository: 'symfony-bundle'
+
+    steps:
+      -   uses: actions/checkout@v2
+
+      # no tag
+      -
+        if: "!startsWith(github.ref, 'refs/tags/')"
+        uses: "symplify/monorepo-split-github-action@2.1"
+        with:
+          package_directory: '${{ matrix.package.local_path }}'
+
+          branch: 1.x
+          repository_organization: 'aeon-php'
+          repository_name: '${{ matrix.package.split_repository }}'
+
+          user_name: "norberttech"
+          user_email: "norbert@orzechowicz.pl"
+
+      # with tag
+      -
+        if: "startsWith(github.ref, 'refs/tags/')"
+        uses: "symplify/monorepo-split-github-action@2.1"
+        with:
+          tag: ${GITHUB_REF#refs/tags/}
+
+          package_directory: '${{ matrix.package.local_path }}'
+
+          branch: 1.x
+          repository_organization: 'aeon-php'
+          repository_name: '${{ matrix.package.split_repository }}'
+
+          user_name: "norberttech"
+          user_email: "norbert@orzechowicz.pl"

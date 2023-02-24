@@ -26,5 +26,6 @@ function service(string $id) : ReferenceConfigurator
         return Symfony\service($id);
     }
 
+    /** @phpstan-ignore-next-line */
     return Symfony\ref($id);
 }

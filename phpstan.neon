@@ -1,0 +1,21 @@
+parameters:
+    checkGenericClassInNonGenericObjectType: false
+    level: max
+    paths:
+        - src/business-hours/src
+        - src/calendar/src
+        - src/calendar-doctrine/src
+        - src/calendar-holidays/src
+        - src/calendar-holidays-yasumi/src
+        - src/calendar-twig/src
+        - src/collection/src
+        - src/rate-limiter/src
+        - src/retry/src
+        - src/sleep/src
+        - src/symfony-bundle/src
+
+    excludePaths:
+        - src/calendar-holidays/src/Aeon/GoogleCalendar/ETL/*
+        - src/symfony-bundle/src/Aeon/Symfony/AeonBundle/Resources/config/*
+        - src/symfony-bundle/src/Aeon/Symfony/AeonBundle/Validator/Constraints/*
+        - src/symfony-bundle/src/Aeon/Symfony/AeonBundle/DependencyInjection/AeonExtension.php

@@ -27,7 +27,12 @@ final class RateLimitResponseListener
                 return;
             }
         } else {
-            /** @psalm-suppress DeprecatedMethod */
+            /**
+             * @psalm-suppress DeprecatedMethod
+             * @psalm-suppress UndefinedMethod
+             *
+             * @phpstan-ignore-next-line
+             */
             if (!$event->isMasterRequest()) {
                 return;
             }

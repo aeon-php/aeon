@@ -23,6 +23,8 @@ final class DayType extends DateImmutableType
 
     /**
      * {@inheritdoc}
+     *
+     * @phpstan-ignore-next-line
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform) : ?string
     {
