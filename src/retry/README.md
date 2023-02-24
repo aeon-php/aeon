@@ -1,9 +1,9 @@
 # Aeon 
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg)](https://php.net/)
-[![Latest Stable Version](https://poser.pugx.org/aeon-php/retry/v)]((https://packagist.org/packages/aeon-php/retry)
-[![Latest Unstable Version](https://poser.pugx.org/aeon-php/retry/v/unstable)]((https://packagist.org/packages/aeon-php/retry)
-[![License](https://poser.pugx.org/aeon-php/retry/license)]((https://packagist.org/packages/aeon-php/retry)
+[![Latest Stable Version](https://poser.pugx.org/aeon-php/retry/v)](https://packagist.org/packages/aeon-php/retry)
+[![Latest Unstable Version](https://poser.pugx.org/aeon-php/retry/v/unstable)](https://packagist.org/packages/aeon-php/retry)
+[![License](https://poser.pugx.org/aeon-php/retry/license)](https://packagist.org/packages/aeon-php/retry)
 ![Tests](https://github.com/aeon-php/retry/workflows/Tests/badge.svg?branch=1.x) 
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Faeon-php%2Fretry%2F1.x)](https://dashboard.stryker-mutator.io/reports/github.com/aeon-php/retry/1.x)
 

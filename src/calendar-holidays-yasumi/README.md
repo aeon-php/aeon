@@ -1,7 +1,7 @@
 # Aeon 
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg)](https://php.net/)
-[![License](https://poser.pugx.org/aeon-php/calendar-holidays-yasumi/license)]((https://packagist.org/packages/aeon-php/calendar-holidays-yasumi)
+[![License](https://poser.pugx.org/aeon-php/calendar-holidays-yasumi/license)](https://packagist.org/packages/aeon-php/calendar-holidays-yasumi)
 ![Tests](https://github.com/aeon-php/calendar-holidays-yasumi/workflows/Tests/badge.svg?branch=1.x) 
 
 Time Management Framework for PHP

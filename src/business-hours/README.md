@@ -1,7 +1,7 @@
 # Aeon 
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg)](https://php.net/)
-[![License](https://poser.pugx.org/aeon-php/business-hours/license)]((https://packagist.org/packages/aeon-php/business-hours)
+[![License](https://poser.pugx.org/aeon-php/business-hours/license)](https://packagist.org/packages/aeon-php/business-hours)
 ![Tests](https://github.com/aeon-php/business-hours/workflows/Tests/badge.svg?branch=1.x)
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Faeon-php%2Fbusiness-hours%2F1.x)](https://dashboard.stryker-mutator.io/reports/github.com/aeon-php/business-hours/1.x)
 
