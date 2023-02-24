@@ -1,8 +1,4 @@
-# Aeon 
-
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-8892BF.svg)](https://php.net/)
-[![License](https://poser.pugx.org/aeon-php/calendar-holidays-yasumi/license)]((https://packagist.org/packages/aeon-php/calendar-holidays-yasumi)
-![Tests](https://github.com/aeon-php/calendar-holidays-yasumi/workflows/Tests/badge.svg?branch=1.x) 
+# Aeon
 
 Time Management Framework for PHP
 
@@ -14,6 +10,15 @@ Time Management Framework for PHP
 
 Aeon is a set of libraries that makes easier to work with PHP Date & Time in elegant Object Oriented way.
 
-* [Documentation & Examples](https://aeon-php.org/docs/calendar-holidays-yasumi/)
+This repo is a space where all pieces of Aeon are developed and maintained. 
+It should not be used directly as your project dependency as it comes with all possible dependencies that your 
+project might not need. 
+
+Please install packages based on your needs: 
+
+- [Aeon - Packages](https://packagist.org/packages/aeon-php/)
+
+* [Documentation & Examples](https://aeon-php.org/docs/calendar/)
 * [Contributing & Development](https://github.com/aeon-php/.github/blob/master/CONTRIBUTING.md)
 * [Community](https://github.com/orgs/aeon-php/discussions)
+
