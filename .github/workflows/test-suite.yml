@@ -2,6 +2,7 @@ name: Test Suite
 
 on:
   pull_request:
+  workflow_dispatch:
   push:
     branches: [ 1.x ]
   schedule: [ { cron: '0 8 * * *' } ]
