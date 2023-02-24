@@ -1,0 +1,149 @@
+{
+    "name": "aeon-php/calendar",
+    "type": "library",
+    "description": "PHP type safe, immutable calendar library",
+    "keywords": [
+        "calendar",
+        "immutable",
+        "date",
+        "time",
+        "datetime"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "~8.1.10 || ~8.2",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "azuyalabs/yasumi": "^2.0",
+        "doctrine/dbal": "^2.6 || ^3.0",
+        "psr/cache": "^1.0|^2.0|^3.0",
+        "symfony/config": "^4.4.12||^5.0||^6.0",
+        "symfony/dependency-injection": "^4.4.12||^5.1||^6.0",
+        "symfony/form": "^4.4.12||^5.3||^6.0",
+        "symfony/http-kernel": "^4.4||^5.0||^6.0",
+        "symfony/polyfill-mbstring": "^1.0",
+        "symfony/validator": "^4.4||^5.0||^6.0",
+        "twig/twig": "^1.43|^2.10|^3"
+    },
+    "require-dev": {
+        "ext-bcmath": "*",
+        "ext-pcov": "*",
+        "flow-php/etl": "1.x-dev",
+        "flow-php/etl-adapter-http": "1.x-dev",
+        "google/apiclient": "^2.0",
+        "phpbench/phpbench": "^1.2.6",
+        "symfony/browser-kit": "^4.4||^5.0||^6.0",
+        "symfony/cache": "^5.1",
+        "symfony/dom-crawler": "^4.4.12||^5.0||^6.0",
+        "symfony/framework-bundle": "^4.4||^5.3||^6.0",
+        "symfony/security-bundle": "^4.4||^5.0||^6.0"
+    },
+    "suggest": {
+        "ext-bcmath": "Compare time units with high precision"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "files": [
+            "src/retry/src/Aeon/Retry/retry_helper.php",
+            "src/sleep/src/Aeon/Sleep/sleep.php"
+        ],
+        "psr-4": {
+            "Aeon\\": [
+                "src/business-hours/src/Aeon",
+                "src/calendar-doctrine/src/Aeon",
+                "src/calendar-holidays-yasumi/src/Aeon",
+                "src/calendar-holidays/src/Aeon",
+                "src/calendar-twig/src/Aeon",
+                "src/calendar/src/Aeon",
+                "src/collection/src/Aeon",
+                "src/rate-limiter/src/Aeon",
+                "src/retry/src/Aeon",
+                "src/sleep/src/Aeon",
+                "src/symfony-bundle/src/Aeon"
+            ],
+            "Aeon\\Doctrine\\": [
+                "src/calendar-doctrine/src/Aeon/Doctrine"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aeon\\Calculator\\Tests\\": [
+                "src/calendar/tests/Aeon/Calculator/Tests/",
+                "tests/Aeon/Calculator/Tests/"
+            ],
+            "Aeon\\Calendar\\Benchmark\\": [
+                "benchmark/Aeon/Calendar/Benchmark/",
+                "src/calendar/benchmark/Aeon/Calendar/Benchmark/"
+            ],
+            "Aeon\\Calendar\\Tests\\": [
+                "src/business-hours/tests/Aeon/Calendar/Tests/",
+                "src/calendar-holidays-yasumi/tests/Aeon/Calendar/Tests/",
+                "src/calendar-holidays/tests/Aeon/Calendar/Tests/",
+                "src/calendar/tests/Aeon/Calendar/Tests/",
+                "tests/Aeon/Calendar/Tests/"
+            ],
+            "Aeon\\Collection\\Tests\\": "src/collection/tests/Aeon/Collection/Tests/",
+            "Aeon\\Doctrine\\Tests\\": "src/calendar-doctrine/tests/Aeon/Doctrine/Tests/",
+            "Aeon\\RateLimiter\\Tests\\": "src/rate-limiter/tests/Aeon/RateLimiter/Tests/",
+            "Aeon\\Retry\\Tests\\": "src/retry/tests/Aeon/Retry/Tests/",
+            "Aeon\\Sleep\\Tests\\": "src/sleep/tests/Aeon/Sleep/Tests/",
+            "Aeon\\Symfony\\AeonBundle\\Tests\\": "src/symfony-bundle/tests/Aeon/Symfony/AeonBundle/Tests/",
+            "Aeon\\Twig\\Tests\\": "src/calendar-twig/tests/Aeon/Twig/Tests/"
+        }
+    },
+    "scripts": {
+        "benchmark": [
+            "Composer\\Config::disableProcessTimeout",
+            "tools/vendor/bin/phpbench run --report=aeon"
+        ],
+        "build": [
+            "@static:analyze",
+            "@test",
+            "@test:mutation"
+        ],
+        "test": [
+            "tools/vendor/bin/phpunit"
+        ],
+        "test:mutation": [
+            "Composer\\Config::disableProcessTimeout",
+            "tools/vendor/bin/infection -j2"
+        ],
+        "static:analyze": [
+            "tools/vendor/bin/psalm --output-format=compact",
+            "tools/vendor/bin/phpstan analyze -c phpstan.neon",
+            "tools/vendor/bin/php-cs-fixer fix --dry-run"
+        ],
+        "cs:php:fix": "tools/vendor/bin/php-cs-fixer fix",
+        "tools:install": "composer install --working-dir=./tools",
+        "post-install-cmd": [
+            "@tools:install"
+        ],
+        "post-update-cmd": [
+            "@tools:install"
+        ]
+    },
+    "replace": {
+        "aeon-php/business-hours": "self.version",
+        "aeon-php/business-hours-tools": "self.version",
+        "aeon-php/calendar": "self.version",
+        "aeon-php/calendar-doctrine": "self.version",
+        "aeon-php/calendar-doctrine-tools": "self.version",
+        "aeon-php/calendar-holidays": "self.version",
+        "aeon-php/calendar-holidays-yasumi": "self.version",
+        "aeon-php/calendar-tools": "self.version",
+        "aeon-php/calendar-twig": "self.version",
+        "aeon-php/calendar-twig-tools": "self.version",
+        "aeon-php/collection": "self.version",
+        "aeon-php/rate-limiter": "self.version",
+        "aeon-php/retry": "self.version",
+        "aeon-php/sleep": "self.version",
+        "aeon-php/symfony-bundle": "self.version",
+        "aeon-php/symfony-bundle-tools": "self.version"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

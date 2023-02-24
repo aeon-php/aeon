@@ -2,11 +2,14 @@
     "name": "aeon-php/calendar-twig",
     "type": "library",
     "description": "PHP type safe, immutable calendar library",
-    "keywords": ["calendar", "immutable", "twig", "extension"],
-    "prefer-stable": true,
-    "minimum-stability": "dev",
+    "keywords": [
+        "calendar",
+        "immutable",
+        "twig",
+        "extension"
+    ],
     "require": {
-        "php": "^7.4.2 || ~8.0 || ~8.1",
+        "php": "~8.1.10 || ~8.2",
         "aeon-php/calendar": "^1.0",
         "twig/twig": "^1.43|^2.10|^3"
     },
@@ -34,17 +37,17 @@
             "@test:mutation"
         ],
         "test": [
-            "tools\/vendor\/bin\/phpunit"
+            "tools/vendor/bin/phpunit"
         ],
         "test:mutation": [
-            "tools\/vendor\/bin\/infection -j2"
+            "tools/vendor/bin/infection -j2"
         ],
         "static:analyze": [
-            "tools\/vendor\/bin\/psalm --output-format=compact",
-            "tools\/vendor\/bin\/phpstan analyze -c phpstan.neon",
-            "tools\/vendor\/bin\/php-cs-fixer fix --dry-run"
+            "tools/vendor/bin/psalm --output-format=compact",
+            "tools/vendor/bin/phpstan analyze -c phpstan.neon",
+            "tools/vendor/bin/php-cs-fixer fix --dry-run"
         ],
-        "cs:php:fix": "tools\/vendor\/bin\/php-cs-fixer fix",
+        "cs:php:fix": "tools/vendor/bin/php-cs-fixer fix",
         "tools:install": "composer install --working-dir=./tools",
         "post-install-cmd": [
             "@tools:install"
@@ -52,5 +55,7 @@
         "post-update-cmd": [
             "@tools:install"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

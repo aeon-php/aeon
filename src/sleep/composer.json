@@ -2,16 +2,21 @@
     "name": "aeon-php/sleep",
     "type": "library",
     "description": "Improved sleep function that uses simple TimeUnit and decides between \\sleep and \\usleep",
-    "keywords": ["calendar", "immutable", "holidays", "sleep"],
-    "prefer-stable": true,
-    "minimum-stability": "dev",
+    "keywords": [
+        "calendar",
+        "immutable",
+        "holidays",
+        "sleep"
+    ],
     "require": {
-        "php": "^7.4.2 || ~8.0 || ~8.1",
+        "php": "~8.1.10 || ~8.2",
         "aeon-php/calendar": "^1.0"
     },
     "license": "MIT",
     "autoload": {
-        "files": ["src/Aeon/Sleep/sleep.php"],
+        "files": [
+            "src/Aeon/Sleep/sleep.php"
+        ],
         "psr-4": {
             "Aeon\\": [
                 "src/Aeon"
@@ -52,5 +57,7 @@
         "post-update-cmd": [
             "@tools:install"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

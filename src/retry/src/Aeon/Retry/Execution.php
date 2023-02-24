@@ -22,6 +22,7 @@ final class Execution
     /**
      * @param int $retry
      * @param array<\Throwable> $exceptions
+     *
      * @psalm-suppress DocblockTypeContradiction
      */
     public function __construct(int $retry, array $exceptions = [])

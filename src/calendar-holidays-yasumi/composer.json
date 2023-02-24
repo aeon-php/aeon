@@ -2,12 +2,16 @@
     "name": "aeon-php/calendar-holidays-yasumi",
     "type": "library",
     "description": "Bridge for Aeon Calendar Holidays library and Yasumi",
-    "keywords": ["calendar", "immutable", "holidays", "yasumi", "bridge"],
-    "prefer-stable": true,
-    "minimum-stability": "dev",
+    "keywords": [
+        "calendar",
+        "immutable",
+        "holidays",
+        "yasumi",
+        "bridge"
+    ],
     "require": {
-        "php": "^7.4.2 || ~8.0 || ~8.1",
-        "aeon-php/calendar-holidays": ">=0.8.0 ^0",
+        "php": "~8.1.10 || ~8.2",
+        "aeon-php/calendar-holidays": "^1.0",
         "azuyalabs/yasumi": "^2.0"
     },
     "license": "MIT",
@@ -48,5 +52,7 @@
         "post-update-cmd": [
             "@tools:install"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

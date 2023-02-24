@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<psalm
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <directory name="src/business-hours/src"/>
+        <directory name="src/calendar/src"/>
+        <directory name="src/calendar-doctrine/src"/>
+        <directory name="src/calendar-holidays/src"/>
+        <directory name="src/calendar-holidays-yasumi/src"/>
+        <directory name="src/calendar-twig/src"/>
+        <directory name="src/collection/src"/>
+        <directory name="src/rate-limiter/src"/>
+        <directory name="src/retry/src"/>
+        <directory name="src/sleep/src"/>
+        <directory name="src/symfony-bundle/src"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+            <directory name="src/symfony-bundle/src/Aeon/Symfony/AeonBundle/Resources/config"/>
+            <directory name="src/symfony-bundle/src/Aeon/Symfony/AeonBundle/Validator/Constraints"/>
+            <file name="src/symfony-bundle/src/Aeon/Symfony/AeonBundle/DependencyInjection/AeonExtension.php"/>
+        </ignoreFiles>
+    </projectFiles>
+</psalm>

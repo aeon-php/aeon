@@ -2,17 +2,21 @@
     "name": "aeon-php/retry",
     "type": "library",
     "description": "Retry fragile operations in case of failure with different delay strategies and possibility to skip/terminate execution",
-    "keywords": ["calendar", "fail", "retry"],
-    "prefer-stable": true,
-    "minimum-stability": "dev",
+    "keywords": [
+        "calendar",
+        "fail",
+        "retry"
+    ],
     "require": {
-        "php": "^7.4.2 || ~8.0 || ~8.1",
-        "aeon-php/calendar": ">=0.14.0",
-        "aeon-php/sleep": ">=0.6.0"
+        "php": "~8.1.10 || ~8.2",
+        "aeon-php/calendar": "^1.0",
+        "aeon-php/sleep": "^1.0"
     },
     "license": "MIT",
     "autoload": {
-        "files": ["src/Aeon/Retry/retry_helper.php"],
+        "files": [
+            "src/Aeon/Retry/retry_helper.php"
+        ],
         "psr-4": {
             "Aeon\\": [
                 "src/Aeon"
@@ -53,5 +57,7 @@
         "post-update-cmd": [
             "@tools:install"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

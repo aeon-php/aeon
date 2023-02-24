@@ -23,6 +23,8 @@ final class DateTimeType extends DateTimeImmutableType
 
     /**
      * {@inheritdoc}
+     *
+     * @phpstan-ignore-next-line
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform) : ?string
     {

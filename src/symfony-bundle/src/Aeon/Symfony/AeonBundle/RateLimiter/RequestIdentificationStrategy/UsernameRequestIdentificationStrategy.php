@@ -39,10 +39,10 @@ final class UsernameRequestIdentificationStrategy implements RequestIdentificati
             return (string) $user;
         }
 
-        if (\method_exists($user, 'getUserIdentifier')) {
-            return $user->getUserIdentifier();
+        if (\method_exists($user, 'getUsername')) {
+            return $user->getUsername();
         }
-        /** @psalm-suppress DeprecatedMethod */
-        return $user->getUsername();
+
+        return $user->getUserIdentifier();
     }
 }

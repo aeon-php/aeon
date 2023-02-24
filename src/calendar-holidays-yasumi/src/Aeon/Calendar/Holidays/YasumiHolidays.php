@@ -12,7 +12,7 @@ use Aeon\Calendar\Holidays;
 use Aeon\Calendar\Holidays\Holiday as AeonHoliday;
 use Yasumi\Exception\ProviderNotFoundException;
 use Yasumi\Holiday;
-use Yasumi\Provider\AbstractProvider;
+use Yasumi\ProviderInterface;
 use Yasumi\Yasumi;
 
 /**
@@ -21,9 +21,7 @@ use Yasumi\Yasumi;
 final class YasumiHolidays implements Holidays
 {
     /**
-     * @phpstan-ignore-next-line
-     *
-     * @var array<int, AbstractProvider>
+     * @var array<int, ProviderInterface>
      */
     private array $yasumi;
 
@@ -37,7 +35,12 @@ final class YasumiHolidays implements Holidays
 
     public function isHoliday(Day $day) : bool
     {
-        /** @psalm-suppress ImpureMethodCall */
+        /**
+         * @psalm-suppress ImpureMethodCall
+         * @psalm-suppress UndefinedInterfaceMethod
+         *
+         * @phpstan-ignore-next-line
+         */
         return $this->yasumi($day->year()->number())->isHoliday($day->toDateTimeImmutable());
     }
 
@@ -53,6 +56,11 @@ final class YasumiHolidays implements Holidays
         $holidays = [];
 
         foreach ($period->start()->year()->until($period->end()->year(), Interval::closed()) as $year) {
+            /**
+             * @psalm-suppress UndefinedInterfaceMethod
+             *
+             * @phpstan-ignore-next-line
+             */
             foreach ($this->yasumi($year->number())->getHolidays() as $yasumiHoliday) {
                 /** @psalm-suppress ImpureMethodCall */
                 $holiday = new AeonHoliday(
@@ -62,7 +70,7 @@ final class YasumiHolidays implements Holidays
                     )
                 );
 
-                if ($holiday->day()->isAfterOrEqual($period->start()->day()) && $holiday->day()->isBeforeOrEqual($period->end()->day())) {
+                if ($holiday->day()->isAfterOrEqualTo($period->start()->day()) && $holiday->day()->isBeforeOrEqualTo($period->end()->day())) {
                     $holidays[] = $holiday;
                 }
             }
@@ -73,7 +81,10 @@ final class YasumiHolidays implements Holidays
 
     public function holidaysAt(Day $day) : array
     {
-        /** @psalm-suppress ImpureFunctionCall */
+        /**
+         * @psalm-suppress ImpureFunctionCall
+         * @psalm-suppress UndefinedInterfaceMethod
+         */
         return \array_values(
             \array_map(
                 function (Holiday $holiday) : AeonHoliday {
@@ -86,9 +97,10 @@ final class YasumiHolidays implements Holidays
                     );
                 },
                 \array_filter(
+                    /** @phpstan-ignore-next-line */
                     $this->yasumi($day->year()->number())->getHolidays(),
                     function (Holiday $holiday) use ($day) : bool {
-                        return Day::fromDateTime($holiday)->isEqual($day);
+                        return Day::fromDateTime($holiday)->isEqualTo($day);
                     }
                 )
             )
@@ -100,10 +112,9 @@ final class YasumiHolidays implements Holidays
      *
      * @throws HolidayException
      *
-     * @return AbstractProvider
-     * @phpstan-ignore-next-line
+     * @return ProviderInterface
      */
-    private function yasumi(int $year) : AbstractProvider
+    private function yasumi(int $year) : ProviderInterface
     {
         if (\array_key_exists($year, $this->yasumi)) {
             return $this->yasumi[$year];

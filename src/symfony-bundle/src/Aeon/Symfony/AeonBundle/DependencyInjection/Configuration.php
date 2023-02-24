@@ -15,6 +15,7 @@ final class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder('aeon');
         /**
          * @psalm-suppress MixedAssignment
+         *
          * @phpstan-ignore-next-line
          */
         $rootNode = \method_exists(TreeBuilder::class, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('aeon');

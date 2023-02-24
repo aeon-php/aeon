@@ -64,6 +64,7 @@ final class DayValueSet implements \Countable
 
     /**
      * @param mixed $value
+     *
      * @psalm-suppress PossiblyNullReference
      */
     public function fillMissingWith($value) : self

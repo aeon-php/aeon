@@ -1,61 +1,66 @@
 {
-  "name": "aeon-php/rate-limiter",
-  "type": "library",
-  "description": "Aeon rate limiter (throttling) library",
-  "keywords": ["ratelimiter", "throttling", "rate", "limiter"],
-  "prefer-stable": true,
-  "require": {
-    "php": "^7.4.2 || ~8.0 || ~8.1.10",
-    "ext-json": "*",
-    "aeon-php/calendar": "^1.0.7",
-    "aeon-php/sleep": ">=0.6.0",
-    "psr/cache": "^1.0|^2.0|^3.0",
-    "symfony/polyfill-mbstring": "^1.0"
-  },
-  "require-dev": {
-    "symfony/cache": "^5.1"
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "sort-packages": true
-  },
-  "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "Aeon\\": [
-        "src/Aeon"
-      ]
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Aeon\\RateLimiter\\Tests\\": "tests/Aeon/RateLimiter/Tests/"
-    }
-  },
-  "scripts": {
-    "build": [
-      "@static:analyze",
-      "@test",
-      "@test:mutation"
+    "name": "aeon-php/rate-limiter",
+    "type": "library",
+    "description": "Aeon rate limiter (throttling) library",
+    "keywords": [
+        "ratelimiter",
+        "throttling",
+        "rate",
+        "limiter"
     ],
-    "test": [
-      "tools/vendor/bin/phpunit"
-    ],
-    "test:mutation": [
-      "tools/vendor/bin/infection -j2"
-    ],
-    "static:analyze": [
-      "tools/vendor/bin/psalm --output-format=compact",
-      "tools/vendor/bin/phpstan analyze -c phpstan.neon",
-      "tools/vendor/bin/php-cs-fixer fix --dry-run"
-    ],
-    "cs:php:fix": "tools/vendor/bin/php-cs-fixer fix",
-    "tools:install": "composer install --working-dir=./tools",
-    "post-install-cmd": [
-      "@tools:install"
-    ],
-    "post-update-cmd": [
-      "@tools:install"
-    ]
-  }
+    "require": {
+        "php": "~8.1.10 || ~8.2",
+        "ext-json": "*",
+        "aeon-php/calendar": "^1.0",
+        "aeon-php/sleep": "^1.0",
+        "psr/cache": "^1.0|^2.0|^3.0",
+        "symfony/polyfill-mbstring": "^1.0"
+    },
+    "require-dev": {
+        "symfony/cache": "^5.1"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aeon\\": [
+                "src/Aeon"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aeon\\RateLimiter\\Tests\\": "tests/Aeon/RateLimiter/Tests/"
+        }
+    },
+    "scripts": {
+        "build": [
+            "@static:analyze",
+            "@test",
+            "@test:mutation"
+        ],
+        "test": [
+            "tools/vendor/bin/phpunit"
+        ],
+        "test:mutation": [
+            "tools/vendor/bin/infection -j2"
+        ],
+        "static:analyze": [
+            "tools/vendor/bin/psalm --output-format=compact",
+            "tools/vendor/bin/phpstan analyze -c phpstan.neon",
+            "tools/vendor/bin/php-cs-fixer fix --dry-run"
+        ],
+        "cs:php:fix": "tools/vendor/bin/php-cs-fixer fix",
+        "tools:install": "composer install --working-dir=./tools",
+        "post-install-cmd": [
+            "@tools:install"
+        ],
+        "post-update-cmd": [
+            "@tools:install"
+        ]
+    },
+    "prefer-stable": true
 }
