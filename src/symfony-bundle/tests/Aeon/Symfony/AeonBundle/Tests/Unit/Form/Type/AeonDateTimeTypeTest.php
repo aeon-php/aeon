@@ -15,6 +15,7 @@ final class AeonDateTimeTypeTest extends TypeTestCase
     public function test_submit_single_text_widget_input_string() : void
     {
         $form = $this->factory->create(self::TESTED_TYPE, null, [
+            'model_timezone' => 'UTC',
             'widget' => 'single_text',
             'input' => 'string',
         ]);
@@ -29,6 +30,7 @@ final class AeonDateTimeTypeTest extends TypeTestCase
     public function test_submit_single_text_widget_input_string_with_default_data() : void
     {
         $form = $this->factory->create(self::TESTED_TYPE, null, [
+            'model_timezone' => 'UTC',
             'widget' => 'single_text',
             'input' => 'string',
             'data' => '2010-01-01 00:00:00',
@@ -44,6 +46,7 @@ final class AeonDateTimeTypeTest extends TypeTestCase
     public function test_submit_single_text_widget_input_datetime() : void
     {
         $form = $this->factory->create(self::TESTED_TYPE, null, [
+            'model_timezone' => 'UTC',
             'widget' => 'single_text',
             'input' => 'datetime',
         ]);
@@ -58,6 +61,7 @@ final class AeonDateTimeTypeTest extends TypeTestCase
     public function test_submit_single_text_widget_input_datetime_immutable() : void
     {
         $form = $this->factory->create(self::TESTED_TYPE, null, [
+            'model_timezone' => 'UTC',
             'widget' => 'single_text',
             'input' => 'datetime_immutable',
         ]);
@@ -72,6 +76,7 @@ final class AeonDateTimeTypeTest extends TypeTestCase
     public function test_submit_single_text_widget_input_array() : void
     {
         $form = $this->factory->create(self::TESTED_TYPE, null, [
+            'model_timezone' => 'UTC',
             'widget' => 'single_text',
             'input' => 'array',
         ]);
@@ -86,6 +91,7 @@ final class AeonDateTimeTypeTest extends TypeTestCase
     public function test_submit_single_text_widget_input_timestamp() : void
     {
         $form = $this->factory->create(self::TESTED_TYPE, null, [
+            'model_timezone' => 'UTC',
             'widget' => 'single_text',
             'input' => 'timestamp',
         ]);
@@ -130,6 +136,7 @@ final class AeonDateTimeTypeTest extends TypeTestCase
     public function test_submit_single_text_widget_with_not_empty_data_string() : void
     {
         $form = $this->factory->create(self::TESTED_TYPE, '2010-06-02 03:00:00 UTC', [
+            'model_timezone' => 'UTC',
             'widget' => 'single_text',
         ]);
 
