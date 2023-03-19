@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62d68a2be391c9776093b179b1dbb493",
+    "content-hash": "ef249f75f85de249a25898977766b9b5",
     "packages": [
         {
             "name": "azuyalabs/yasumi",
@@ -2911,7 +2911,7 @@
         },
         {
             "name": "flow-php/array-dot",
-            "version": "1.x-dev",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flow-php/array-dot.git",
@@ -2926,7 +2926,6 @@
             "require": {
                 "php": "~8.1 || ~8.2"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -2954,28 +2953,28 @@
             ],
             "support": {
                 "issues": "https://github.com/flow-php/array-dot/issues",
-                "source": "https://github.com/flow-php/array-dot/tree/1.x"
+                "source": "https://github.com/flow-php/array-dot/tree/0.1.1"
             },
             "time": "2023-01-19T12:41:56+00:00"
         },
         {
             "name": "flow-php/etl",
-            "version": "1.x-dev",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flow-php/etl.git",
-                "reference": "40d11e8b673f132927ae6de54c39f599b656811a"
+                "reference": "d362d139e9403d20a183d15edc049d301cad6852"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flow-php/etl/zipball/40d11e8b673f132927ae6de54c39f599b656811a",
-                "reference": "40d11e8b673f132927ae6de54c39f599b656811a",
+                "url": "https://api.github.com/repos/flow-php/etl/zipball/d362d139e9403d20a183d15edc049d301cad6852",
+                "reference": "d362d139e9403d20a183d15edc049d301cad6852",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "flow-php/array-dot": "^1.0@dev",
+                "flow-php/array-dot": "^0.1",
                 "league/flysystem": "^3.0",
                 "php": "~8.1 || ~8.2",
                 "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
@@ -2993,7 +2992,6 @@
                 "laminas/laminas-hydrator": "Help converting ObjectEntry into ArrayEntry that can be later unpack into standalone Entries",
                 "ocramius/generated-hydrator": "Provieds generated hydrator that implemenets Laminas\\Hydrator\\HydratorInterface"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -3015,27 +3013,27 @@
             ],
             "support": {
                 "issues": "https://github.com/flow-php/etl/issues",
-                "source": "https://github.com/flow-php/etl/tree/1.x"
+                "source": "https://github.com/flow-php/etl/tree/0.1.1"
             },
-            "time": "2023-02-27T11:56:38+00:00"
+            "time": "2023-03-13T15:12:48+00:00"
         },
         {
             "name": "flow-php/etl-adapter-http",
-            "version": "1.x-dev",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flow-php/etl-adapter-http.git",
-                "reference": "a026995d83fe608ff84a5c9d1b6a3caecf0aaeb3"
+                "reference": "5be963a4906b254bd842009f3be494e9a4ef8687"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flow-php/etl-adapter-http/zipball/a026995d83fe608ff84a5c9d1b6a3caecf0aaeb3",
-                "reference": "a026995d83fe608ff84a5c9d1b6a3caecf0aaeb3",
+                "url": "https://api.github.com/repos/flow-php/etl-adapter-http/zipball/5be963a4906b254bd842009f3be494e9a4ef8687",
+                "reference": "5be963a4906b254bd842009f3be494e9a4ef8687",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "flow-php/etl": "^1.0@dev",
+                "flow-php/etl": "^0.1",
                 "php": "~8.1 || ~8.2",
                 "psr/http-client": "^1.0"
             },
@@ -3043,7 +3041,6 @@
                 "nyholm/psr7": "^1.4",
                 "php-http/curl-client": "^2.2"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -3066,22 +3063,22 @@
             ],
             "support": {
                 "issues": "https://github.com/flow-php/etl-adapter-http/issues",
-                "source": "https://github.com/flow-php/etl-adapter-http/tree/1.x"
+                "source": "https://github.com/flow-php/etl-adapter-http/tree/0.1.1"
             },
-            "time": "2023-02-24T10:15:18+00:00"
+            "time": "2023-03-13T15:12:28+00:00"
         },
         {
             "name": "google/apiclient",
-            "version": "v2.13.0",
+            "version": "v2.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client.git",
-                "reference": "b653a338c5a658adf6df4bb2f44c2cc02fe7eb1d"
+                "reference": "895749dd4f14c349ca0b4aad020ff973f961e519"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/b653a338c5a658adf6df4bb2f44c2cc02fe7eb1d",
-                "reference": "b653a338c5a658adf6df4bb2f44c2cc02fe7eb1d",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/895749dd4f14c349ca0b4aad020ff973f961e519",
+                "reference": "895749dd4f14c349ca0b4aad020ff973f961e519",
                 "shasum": ""
             },
             "require": {
@@ -3136,22 +3133,22 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client/issues",
-                "source": "https://github.com/googleapis/google-api-php-client/tree/v2.13.0"
+                "source": "https://github.com/googleapis/google-api-php-client/tree/v2.13.1"
             },
-            "time": "2022-12-19T22:17:11+00:00"
+            "time": "2023-03-13T20:38:21+00:00"
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.290.0",
+            "version": "v0.290.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "df7e6cbab08f60509b3f360d8286c194ad2930e2"
+                "reference": "6f79073f022686461af2d1a95b4fe91caaf947ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/df7e6cbab08f60509b3f360d8286c194ad2930e2",
-                "reference": "df7e6cbab08f60509b3f360d8286c194ad2930e2",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/6f79073f022686461af2d1a95b4fe91caaf947ec",
+                "reference": "6f79073f022686461af2d1a95b4fe91caaf947ec",
                 "shasum": ""
             },
             "require": {
@@ -3180,9 +3177,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.290.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.290.1"
             },
-            "time": "2023-03-01T17:20:18+00:00"
+            "time": "2023-03-13T21:05:11+00:00"
         },
         {
             "name": "google/auth",
@@ -5875,10 +5872,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "flow-php/etl": 20,
-        "flow-php/etl-adapter-http": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
