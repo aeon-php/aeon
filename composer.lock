@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef249f75f85de249a25898977766b9b5",
+    "content-hash": "ddbacde161e2acad3447eb3c3c3ab2ed",
     "packages": [
         {
             "name": "azuyalabs/yasumi",
@@ -3019,16 +3019,16 @@
         },
         {
             "name": "flow-php/etl-adapter-http",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flow-php/etl-adapter-http.git",
-                "reference": "5be963a4906b254bd842009f3be494e9a4ef8687"
+                "reference": "0403abf6afbef0317f4df4dd722e980410a51fa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flow-php/etl-adapter-http/zipball/5be963a4906b254bd842009f3be494e9a4ef8687",
-                "reference": "5be963a4906b254bd842009f3be494e9a4ef8687",
+                "url": "https://api.github.com/repos/flow-php/etl-adapter-http/zipball/0403abf6afbef0317f4df4dd722e980410a51fa7",
+                "reference": "0403abf6afbef0317f4df4dd722e980410a51fa7",
                 "shasum": ""
             },
             "require": {
@@ -3063,9 +3063,9 @@
             ],
             "support": {
                 "issues": "https://github.com/flow-php/etl-adapter-http/issues",
-                "source": "https://github.com/flow-php/etl-adapter-http/tree/0.1.1"
+                "source": "https://github.com/flow-php/etl-adapter-http/tree/0.2.0"
             },
-            "time": "2023-03-13T15:12:28+00:00"
+            "time": "2023-03-19T16:42:25+00:00"
         },
         {
             "name": "google/apiclient",
