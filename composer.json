@@ -29,7 +29,7 @@
         "ext-bcmath": "*",
         "ext-pcov": "*",
         "flow-php/etl": "^0.1",
-        "flow-php/etl-adapter-http": "^0.1",
+        "flow-php/etl-adapter-http": "^0.1 || ^0.2",
         "google/apiclient": "^2.0",
         "phpbench/phpbench": "^1.2.6",
         "symfony/browser-kit": "~4.4.44||~5.4.21||~6",
