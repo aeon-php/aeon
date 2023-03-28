@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "~8.1.10 || ~8.2",
-        "aeon-php/calendar-holidays": "^1.0",
+        "aeon-php/calendar-holidays": "~1.0",
         "azuyalabs/yasumi": "^2.0"
     },
     "license": "MIT",

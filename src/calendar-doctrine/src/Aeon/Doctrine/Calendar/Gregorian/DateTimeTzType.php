@@ -23,8 +23,6 @@ final class DateTimeTzType extends DateTimeTzImmutableType
 
     /**
      * {@inheritdoc}
-     *
-     * @phpstan-ignore-next-line
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform) : ?string
     {

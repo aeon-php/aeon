@@ -13,12 +13,12 @@
     "require": {
         "php": "~8.1.10 || ~8.2",
         "ext-json": "*",
-        "aeon-php/calendar": "^1.0",
-        "aeon-php/calendar-holidays": "^1.0",
-        "aeon-php/calendar-twig": ">=0.9.0",
-        "aeon-php/rate-limiter": ">=0.7.0",
-        "aeon-php/retry": ">=0.6.0",
-        "aeon-php/sleep": "^1.0",
+        "aeon-php/calendar": "~1.0",
+        "aeon-php/calendar-holidays": "~1.0",
+        "aeon-php/calendar-twig": "~1.0",
+        "aeon-php/rate-limiter": "~1.0",
+        "aeon-php/retry": "~1.0",
+        "aeon-php/sleep": "~1.0",
         "symfony/config": "^4.4.12||^5.0||^6.0",
         "symfony/dependency-injection": "^4.4.12||^5.1||^6.0",
         "symfony/form": "^4.4.12||^5.3||^6.0",
@@ -26,7 +26,7 @@
         "symfony/validator": "^4.4||^5.0||^6.0"
     },
     "require-dev": {
-        "aeon-php/calendar-holidays-yasumi": ">=0.7.0",
+        "aeon-php/calendar-holidays-yasumi": "~1.0",
         "symfony/browser-kit": "^4.4||^5.0||^6.0",
         "symfony/dom-crawler": "^4.4.12||^5.0||^6.0",
         "symfony/framework-bundle": "^4.4||^5.3||^6.0",
