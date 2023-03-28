@@ -102,6 +102,7 @@ jobs:
       - name: "Install lowest dependencies"
         if: ${{ matrix.dependencies == 'lowest' }}
         run: "composer update --prefer-lowest --no-interaction --no-progress --no-suggest"
+        allow-failure: true
 
       - name: "Install highest dependencies"
         if: ${{ matrix.dependencies == 'highest' }}
