@@ -38,8 +38,6 @@ final class YasumiHolidays implements Holidays
         /**
          * @psalm-suppress ImpureMethodCall
          * @psalm-suppress UndefinedInterfaceMethod
-         *
-         * @phpstan-ignore-next-line
          */
         return $this->yasumi($day->year()->number())->isHoliday($day->toDateTimeImmutable());
     }
@@ -58,8 +56,7 @@ final class YasumiHolidays implements Holidays
         foreach ($period->start()->year()->until($period->end()->year(), Interval::closed()) as $year) {
             /**
              * @psalm-suppress UndefinedInterfaceMethod
-             *
-             * @phpstan-ignore-next-line
+             * @psalm-suppress ImpureMethodCall
              */
             foreach ($this->yasumi($year->number())->getHolidays() as $yasumiHoliday) {
                 /** @psalm-suppress ImpureMethodCall */
@@ -79,6 +76,9 @@ final class YasumiHolidays implements Holidays
         return $holidays;
     }
 
+    /**
+     * @psalm-suppress ImpureMethodCall
+     */
     public function holidaysAt(Day $day) : array
     {
         /**
@@ -97,7 +97,6 @@ final class YasumiHolidays implements Holidays
                     );
                 },
                 \array_filter(
-                    /** @phpstan-ignore-next-line */
                     $this->yasumi($day->year()->number())->getHolidays(),
                     function (Holiday $holiday) use ($day) : bool {
                         return Day::fromDateTime($holiday)->isEqualTo($day);
