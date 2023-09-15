@@ -127,7 +127,9 @@ final class Retry
                 }
             }
 
-            $this->wait();
+            if (false === $this->isLastRetry($retry)) {
+                $this->wait();
+            }
         }
 
         if ($this->lastExecution) {
@@ -153,5 +155,10 @@ final class Retry
         }
 
         return $this->lastExecution;
+    }
+
+    private function isLastRetry(int $retry) : bool
+    {
+        return $retry === $this->retries - 1;
     }
 }
