@@ -226,4 +226,27 @@ final class RetryTest extends TestCase
         ))->modifyDelay(new ConstantDelay())
             ->lastExecution();
     }
+
+    public function test_throws_the_last_exception() : void
+    {
+        $this->expectExceptionMessage('fifth');
+        $queue = [
+            new \RuntimeException('first'),
+            new \RuntimeException('second'),
+            new \RuntimeException('third'),
+            new \RuntimeException('fourth'),
+            new \RuntimeException('fifth'),
+        ];
+
+        $callable = function () use (&$queue) : void {
+            throw \array_shift($queue);
+        };
+
+        (new Retry(
+            new DummyProcess(),
+            5,
+            TimeUnit::seconds(3)
+        ))->modifyDelay(new ConstantDelay())
+            ->execute($callable);
+    }
 }
