@@ -198,8 +198,9 @@ final class RetryTest extends TestCase
     public function test_process_waits_only_between_the_executions() : void
     {
         $calls = 0;
-        $callable = function () use (&$calls) {
+        $callable = function () use (&$calls) : void {
             $calls++;
+
             throw new \RuntimeException('bork!');
         };
         $spy = new SpyProcess();
