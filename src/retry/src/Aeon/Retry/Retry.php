@@ -85,21 +85,15 @@ final class Retry
         $exceptions = [];
 
         if ($this->retries === 0) {
-            try {
-                $lastReturn = $function($this->lastExecution = new Execution(0));
+            $lastReturn = $function($this->lastExecution = new Execution(0));
 
-                $terminationException = $this->lastExecution->terminationException();
+            $terminationException = $this->lastExecution->terminationException();
 
-                if ($terminationException) {
-                    throw $terminationException;
-                }
-
-                return $lastReturn;
-            } catch (\Throwable $throwable) {
-                $exceptions[] = $throwable;
-
-                throw $throwable;
+            if ($terminationException) {
+                throw $terminationException;
             }
+
+            return $lastReturn;
         }
 
         for ($retry = 0; $retry < $this->retries; $retry++) {
@@ -130,12 +124,9 @@ final class Retry
             $this->wait();
         }
 
-        if ($this->lastExecution) {
-            $lastException = $this->lastExecution()->lasException();
-
-            if ($lastException instanceof \Throwable) {
-                throw $lastException;
-            }
+        $lastException = end($exceptions);
+        if ($lastException instanceof \Throwable) {
+            throw $lastException;
         }
 
         throw new RetryException(\sprintf('Retry failed to execute function and return value in %d attempts', $this->retries));
