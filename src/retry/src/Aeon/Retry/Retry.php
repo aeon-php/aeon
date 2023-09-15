@@ -124,7 +124,8 @@ final class Retry
             $this->wait();
         }
 
-        $lastException = end($exceptions);
+        $lastException = \end($exceptions);
+
         if ($lastException instanceof \Throwable) {
             throw $lastException;
         }

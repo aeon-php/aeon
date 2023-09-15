@@ -218,8 +218,8 @@ final class RetryTest extends TestCase
             new \RuntimeException('fifth'),
         ];
 
-        $callable = function () use (&$queue) {
-            throw array_shift($queue);
+        $callable = function () use (&$queue) : void {
+            throw \array_shift($queue);
         };
 
         (new Retry(
