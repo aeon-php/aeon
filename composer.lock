@@ -5733,16 +5733,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v6.3.5",
+            "version": "v6.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "2df460eacceb11b9287cfafddda4d27023dd9001"
+                "reference": "0b07f3820370aba96e1633993c5c561364f88f30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/2df460eacceb11b9287cfafddda4d27023dd9001",
-                "reference": "2df460eacceb11b9287cfafddda4d27023dd9001",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/0b07f3820370aba96e1633993c5c561364f88f30",
+                "reference": "0b07f3820370aba96e1633993c5c561364f88f30",
                 "shasum": ""
             },
             "require": {
@@ -5759,7 +5759,8 @@
                 "symfony/password-hasher": "^5.4|^6.0",
                 "symfony/security-core": "^6.2",
                 "symfony/security-csrf": "^5.4|^6.0",
-                "symfony/security-http": "^6.3.4"
+                "symfony/security-http": "^6.3.6",
+                "symfony/service-contracts": "^2.5|^3"
             },
             "conflict": {
                 "symfony/browser-kit": "<5.4",
@@ -5823,7 +5824,7 @@
             "description": "Provides a tight integration of the Security component into the Symfony full-stack framework",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-bundle/tree/v6.3.5"
+                "source": "https://github.com/symfony/security-bundle/tree/v6.3.6"
             },
             "funding": [
                 {
@@ -5839,7 +5840,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-09-25T17:05:55+00:00"
+            "time": "2023-10-12T16:11:32+00:00"
         },
         {
             "name": "symfony/security-core",
@@ -5996,16 +5997,16 @@
         },
         {
             "name": "symfony/security-http",
-            "version": "v6.3.5",
+            "version": "v6.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-http.git",
-                "reference": "47058ea557a4c64ba86e9249651222842bd52e2a"
+                "reference": "573ef96ab62d509ac953362fa61f9d1bd283f3a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-http/zipball/47058ea557a4c64ba86e9249651222842bd52e2a",
-                "reference": "47058ea557a4c64ba86e9249651222842bd52e2a",
+                "url": "https://api.github.com/repos/symfony/security-http/zipball/573ef96ab62d509ac953362fa61f9d1bd283f3a7",
+                "reference": "573ef96ab62d509ac953362fa61f9d1bd283f3a7",
                 "shasum": ""
             },
             "require": {
@@ -6015,7 +6016,8 @@
                 "symfony/http-kernel": "^6.3",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/property-access": "^5.4|^6.0",
-                "symfony/security-core": "^6.3"
+                "symfony/security-core": "^6.3",
+                "symfony/service-contracts": "^2.5|^3"
             },
             "conflict": {
                 "symfony/clock": "<6.3",
@@ -6063,7 +6065,7 @@
             "description": "Symfony Security Component - HTTP Integration",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-http/tree/v6.3.5"
+                "source": "https://github.com/symfony/security-http/tree/v6.3.6"
             },
             "funding": [
                 {
@@ -6079,7 +6081,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-30T06:30:46+00:00"
+            "time": "2023-10-13T10:26:24+00:00"
         },
         {
             "name": "webmozart/glob",
