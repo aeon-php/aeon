@@ -5373,16 +5373,16 @@
         },
         {
             "name": "symfony/framework-bundle",
-            "version": "v6.3.7",
+            "version": "v6.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/framework-bundle.git",
-                "reference": "dba20792c726c30d455626eddfb2db008f64085f"
+                "reference": "e88be137ea0652ee2caf2eacb21283820904be4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/dba20792c726c30d455626eddfb2db008f64085f",
-                "reference": "dba20792c726c30d455626eddfb2db008f64085f",
+                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/e88be137ea0652ee2caf2eacb21283820904be4f",
+                "reference": "e88be137ea0652ee2caf2eacb21283820904be4f",
                 "shasum": ""
             },
             "require": {
@@ -5497,7 +5497,7 @@
             "description": "Provides a tight integration between Symfony components and the Symfony full-stack framework",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/framework-bundle/tree/v6.3.7"
+                "source": "https://github.com/symfony/framework-bundle/tree/v6.3.8"
             },
             "funding": [
                 {
@@ -5513,7 +5513,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-26T18:15:14+00:00"
+            "time": "2023-11-09T14:35:42+00:00"
         },
         {
             "name": "symfony/password-hasher",
