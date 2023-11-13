@@ -5733,16 +5733,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v6.3.7",
+            "version": "v6.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "8ece4fd6e242acbabad4461feae7c52fe1982c48"
+                "reference": "57889ebb1ac3403d550c787c4fde127261abacb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/8ece4fd6e242acbabad4461feae7c52fe1982c48",
-                "reference": "8ece4fd6e242acbabad4461feae7c52fe1982c48",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/57889ebb1ac3403d550c787c4fde127261abacb6",
+                "reference": "57889ebb1ac3403d550c787c4fde127261abacb6",
                 "shasum": ""
             },
             "require": {
@@ -5824,7 +5824,7 @@
             "description": "Provides a tight integration of the Security component into the Symfony full-stack framework",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-bundle/tree/v6.3.7"
+                "source": "https://github.com/symfony/security-bundle/tree/v6.3.8"
             },
             "funding": [
                 {
@@ -5840,7 +5840,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-26T18:15:14+00:00"
+            "time": "2023-11-09T09:33:10+00:00"
         },
         {
             "name": "symfony/security-core",
