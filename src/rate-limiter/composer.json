@@ -17,7 +17,7 @@
         "symfony/polyfill-mbstring": "^1.0"
     },
     "require-dev": {
-        "symfony/cache": "^5.1||^6.0"
+        "symfony/cache": "^5.4||^6.3||^7.0"
     },
     "config": {
         "optimize-autoloader": true,
