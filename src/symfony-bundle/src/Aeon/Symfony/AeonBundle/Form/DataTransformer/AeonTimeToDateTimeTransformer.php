@@ -14,7 +14,7 @@ final class AeonTimeToDateTimeTransformer implements DataTransformerInterface
     /**
      * @psalm-suppress MissingReturnType
      */
-    public function transform($value)
+    public function transform($value) : mixed
     {
         if ($value instanceof Time) {
             return new \DateTimeImmutable($value->toString());
