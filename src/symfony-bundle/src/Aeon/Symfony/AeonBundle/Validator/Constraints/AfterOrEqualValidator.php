@@ -14,7 +14,7 @@ final class AfterOrEqualValidator extends AbstractComparisonValidator
 {
     /**
      * @param DateTime|Day|Month|Year $value1
-     * @param ?DateTime|?Day|?Month|?Year $value2
+     * @param null|DateTime|Day|Month|Year $value2
      *
      * @return bool
      */
@@ -28,7 +28,7 @@ final class AfterOrEqualValidator extends AbstractComparisonValidator
             return false;
         }
 
-        return $value1->isAfterOrEqual($value2);
+        return $value1->isAfterOrEqualTo($value2);
     }
 
     /**
