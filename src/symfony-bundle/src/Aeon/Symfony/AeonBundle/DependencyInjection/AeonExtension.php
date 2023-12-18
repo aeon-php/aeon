@@ -10,6 +10,7 @@ use Aeon\Calendar\TimeUnit;
 use Aeon\RateLimiter\Algorithm\LeakyBucketAlgorithm;
 use Aeon\RateLimiter\Algorithm\SlidingWindowAlgorithm;
 use Aeon\RateLimiter\RateLimiter;
+use Aeon\Symfony\AeonBundle\DependencyInjection\Loader\Configurator\LegacyConfigurator;
 use Aeon\Symfony\AeonBundle\EventListener\RateLimitExceptionListener;
 use Aeon\Symfony\AeonBundle\RateLimiter\RateLimitHttpProtocol;
 use Aeon\Symfony\AeonBundle\RateLimiter\RequestIdentificationStrategy\HeaderRequestIdentificationStrategy;
@@ -28,6 +29,9 @@ final class AeonExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container) : void
     {
+        // Trigger autoloading of legacy service function
+        \class_exists(LegacyConfigurator::class);
+
         $config = $this->processConfiguration($this->getConfiguration($configs, $container), $configs);
 
         $loader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
