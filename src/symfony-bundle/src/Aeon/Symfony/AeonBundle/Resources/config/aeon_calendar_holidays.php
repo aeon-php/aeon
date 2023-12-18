@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use function Aeon\Symfony\AeonBundle\DependencyInjection\Loader\Configurator\service;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 use Aeon\Symfony\AeonBundle\Validator\Constraints\HolidayValidator;
 use Aeon\Symfony\AeonBundle\Validator\Constraints\NotHolidayValidator;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;

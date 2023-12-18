@@ -14,7 +14,7 @@ final class BeforeValidator extends AbstractComparisonValidator
 {
     /**
      * @param DateTime|Day|Month|Year $value1
-     * @param ?DateTime|?Day|?Month|?Year $value2
+     * @param null|DateTime|Day|Month|Year $value2
      *
      * @return bool
      */

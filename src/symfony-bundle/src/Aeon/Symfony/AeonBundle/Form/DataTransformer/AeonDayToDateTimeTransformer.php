@@ -13,7 +13,7 @@ final class AeonDayToDateTimeTransformer implements DataTransformerInterface
     /**
      * @psalm-suppress MissingReturnType
      */
-    public function transform($value)
+    public function transform($value) : mixed
     {
         if ($value instanceof Day) {
             return $value->toDateTimeImmutable();
