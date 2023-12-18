@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use function Aeon\Symfony\AeonBundle\DependencyInjection\Loader\Configurator\service;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 use Aeon\Symfony\AeonBundle\EventListener\RateLimitRequestListener;
 use Aeon\Symfony\AeonBundle\EventListener\RateLimitResponseListener;
 use Aeon\Symfony\AeonBundle\RateLimiter\RateLimiters;
