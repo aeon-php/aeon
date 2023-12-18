@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
+use function Aeon\Symfony\AeonBundle\DependencyInjection\Loader\Configurator\service;
 use Aeon\Calendar\Gregorian\Calendar;
 use Aeon\Calendar\Gregorian\GregorianCalendar;
 use Aeon\Calendar\Gregorian\TimeZone;

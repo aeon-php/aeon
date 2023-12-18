@@ -13,7 +13,7 @@ final class AeonTimeZoneToDateTimeTransformer implements DataTransformerInterfac
     /**
      * @psalm-suppress MissingReturnType
      */
-    public function transform($value) : mixed
+    public function transform($value)
     {
         if ($value instanceof TimeZone) {
             return $value->toDateTimeZone();

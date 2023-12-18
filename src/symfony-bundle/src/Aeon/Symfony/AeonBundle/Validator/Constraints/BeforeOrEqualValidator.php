@@ -14,7 +14,7 @@ final class BeforeOrEqualValidator extends AbstractComparisonValidator
 {
     /**
      * @param DateTime|Day|Month|Year $value1
-     * @param null|DateTime|Day|Month|Year $value2
+     * @param ?DateTime|?Day|?Month|?Year $value2
      *
      * @return bool
      */
@@ -28,7 +28,7 @@ final class BeforeOrEqualValidator extends AbstractComparisonValidator
             return false;
         }
 
-        return $value1->isBeforeOrEqualTo($value2);
+        return $value1->isBeforeOrEqual($value2);
     }
 
     /**
