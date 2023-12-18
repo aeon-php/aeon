@@ -14,13 +14,13 @@ final class EqualValidator extends AbstractComparisonValidator
 {
     /**
      * @param DateTime|Day|Month|Year $value1
-     * @param null|DateTime|Day|Month|Year $value2
+     * @param ?DateTime|?Day|?Month|?Year $value2
      *
      * @return bool
      */
     protected function compareValues($value1, $value2) : bool
     {
-        if (!$value2 instanceof DateTime && !$value2 instanceof Day && !$value2 instanceof Month && !$value2 instanceof Year) {
+        if (!$value2 instanceof DateTime && !$value2 instanceof Day && !$value2 instanceof Month  && !$value2 instanceof Year) {
             return false;
         }
 
@@ -28,7 +28,7 @@ final class EqualValidator extends AbstractComparisonValidator
             return false;
         }
 
-        return $value1->isEqualTo($value2);
+        return $value1->isEqual($value2);
     }
 
     /**

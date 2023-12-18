@@ -21,7 +21,7 @@ final class HolidayValidator extends ConstraintValidator
     }
 
     /**
-     * @param mixed $value
+     * {@inheritdoc}
      */
     public function validate($value, Constraint $constraint) : void
     {
