@@ -72,19 +72,16 @@
     "autoload-dev": {
         "psr-4": {
             "Aeon\\Calculator\\Tests\\": [
-                "src/calendar/tests/Aeon/Calculator/Tests/",
-                "tests/Aeon/Calculator/Tests/"
+                "src/calendar/tests/Aeon/Calculator/Tests/"
             ],
             "Aeon\\Calendar\\Benchmark\\": [
-                "benchmark/Aeon/Calendar/Benchmark/",
                 "src/calendar/benchmark/Aeon/Calendar/Benchmark/"
             ],
             "Aeon\\Calendar\\Tests\\": [
                 "src/business-hours/tests/Aeon/Calendar/Tests/",
                 "src/calendar-holidays-yasumi/tests/Aeon/Calendar/Tests/",
                 "src/calendar-holidays/tests/Aeon/Calendar/Tests/",
-                "src/calendar/tests/Aeon/Calendar/Tests/",
-                "tests/Aeon/Calendar/Tests/"
+                "src/calendar/tests/Aeon/Calendar/Tests/"
             ],
             "Aeon\\Collection\\Tests\\": "src/collection/tests/Aeon/Collection/Tests/",
             "Aeon\\Doctrine\\Tests\\": "src/calendar-doctrine/tests/Aeon/Doctrine/Tests/",
@@ -129,21 +126,16 @@
     },
     "replace": {
         "aeon-php/business-hours": "self.version",
-        "aeon-php/business-hours-tools": "self.version",
         "aeon-php/calendar": "self.version",
         "aeon-php/calendar-doctrine": "self.version",
-        "aeon-php/calendar-doctrine-tools": "self.version",
         "aeon-php/calendar-holidays": "self.version",
         "aeon-php/calendar-holidays-yasumi": "self.version",
-        "aeon-php/calendar-tools": "self.version",
         "aeon-php/calendar-twig": "self.version",
-        "aeon-php/calendar-twig-tools": "self.version",
         "aeon-php/collection": "self.version",
         "aeon-php/rate-limiter": "self.version",
         "aeon-php/retry": "self.version",
         "aeon-php/sleep": "self.version",
-        "aeon-php/symfony-bundle": "self.version",
-        "aeon-php/symfony-bundle-tools": "self.version"
+        "aeon-php/symfony-bundle": "self.version"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
