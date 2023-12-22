@@ -44,7 +44,7 @@ jobs:
             split_repository: 'symfony-bundle'
 
     steps:
-      -   uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # no tag
       -
