@@ -15,7 +15,7 @@
         "ext-json": "*",
         "ext-mbstring": "*",
         "azuyalabs/yasumi": "~2.0",
-        "doctrine/dbal": "~2.6 || ~3.0",
+        "doctrine/dbal": "~3.0",
         "psr/cache": "~1.0|~2.0|~3.0",
         "symfony/config": "~5.4.21||~6.3||~7.0",
         "symfony/dependency-injection": "~5.4.21||~6.3||~7.0",
@@ -23,7 +23,7 @@
         "symfony/http-kernel": "~5.4.21||~6.3||~7.0",
         "symfony/polyfill-mbstring": "~1.0",
         "symfony/validator": "~5.4.21||~6.3||~7.0",
-        "twig/twig": "~1.43||~2.10||~3"
+        "twig/twig": "~2.10||~3"
     },
     "require-dev": {
         "ext-bcmath": "*",
