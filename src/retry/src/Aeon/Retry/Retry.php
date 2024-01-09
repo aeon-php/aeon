@@ -84,19 +84,7 @@ final class Retry
          */
         $exceptions = [];
 
-        if ($this->retries === 0) {
-            $lastReturn = $function($this->lastExecution = new Execution(0));
-
-            $terminationException = $this->lastExecution->terminationException();
-
-            if ($terminationException) {
-                throw $terminationException;
-            }
-
-            return $lastReturn;
-        }
-
-        for ($retry = 0; $retry < $this->retries; $retry++) {
+        for ($retry = 0; $retry < ($this->retries + 1); $retry++) {
             try {
                 $lastReturn = $function($this->lastExecution = new Execution($retry, $exceptions));
 
