@@ -249,4 +249,37 @@ final class RetryTest extends TestCase
         ))->modifyDelay(new ConstantDelay())
             ->execute($callable);
     }
+
+    /**
+     * @dataProvider retryExceptionDataProvider
+     */
+    public function test_throws_the_last_exception_for_given_retries($retries, $expectedException) : void
+    {
+        $this->expectExceptionMessage($expectedException);
+        $queue = [
+            new \RuntimeException('first'),
+            new \RuntimeException('second'),
+            new \RuntimeException('third'),
+        ];
+
+        $callable = function () use (&$queue) : void {
+            throw \array_shift($queue);
+        };
+
+        (new Retry(
+            new DummyProcess(),
+            $retries,
+            TimeUnit::seconds(3)
+        ))->modifyDelay(new ConstantDelay())
+            ->execute($callable);
+    }
+
+    public function retryExceptionDataProvider() : array
+    {
+        return [
+            [0, 'first'],
+            [1, 'second'],
+            [2, 'third'],
+        ];
+    }
 }
