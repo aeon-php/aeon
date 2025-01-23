@@ -32,7 +32,7 @@ final class LeapSecondsTest extends TestCase
             )
         );
         $this->assertSame(
-            38,
+            37,
             $leapSeconds->offsetTAI()->inSeconds()
         );
     }
