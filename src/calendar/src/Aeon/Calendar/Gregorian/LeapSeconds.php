@@ -43,7 +43,7 @@ final class LeapSeconds
         }
 
         self::$instance = new self(
-            DateTime::fromString('2024-12-31 00:00:00 UTC'),
+            DateTime::fromString('2025-12-28 00:00:00 UTC'),
             new LeapSecond(DateTime::fromString('1972-01-01 00:00:00 UTC'), TimeUnit::seconds(10)),
             new LeapSecond(DateTime::fromString('1972-07-01 00:00:00 UTC'), TimeUnit::seconds(11)),
             new LeapSecond(DateTime::fromString('1973-01-01 00:00:00 UTC'), TimeUnit::seconds(12)),
@@ -72,7 +72,6 @@ final class LeapSeconds
             new LeapSecond(DateTime::fromString('2012-07-01 00:00:00 UTC'), TimeUnit::seconds(34)),
             new LeapSecond(DateTime::fromString('2015-07-01 00:00:00 UTC'), TimeUnit::seconds(36)),
             new LeapSecond(DateTime::fromString('2017-01-01 00:00:00 UTC'), TimeUnit::seconds(37)),
-            new LeapSecond(DateTime::fromString('2025-01-07 00:00:00 UTC'), TimeUnit::seconds(37)),
         );
 
         return self::$instance;
