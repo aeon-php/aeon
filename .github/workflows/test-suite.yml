@@ -18,7 +18,7 @@ jobs:
         dependencies:
           - "locked"
         php-version:
-          - "8.1"
+          - "8.2"
         operating-system:
           - "ubuntu-latest"
 
@@ -65,7 +65,7 @@ jobs:
         dependencies:
           - "locked"
         php-version:
-          - "8.1"
+          - "8.2"
         operating-system:
           - "ubuntu-latest"
 
@@ -114,9 +114,9 @@ jobs:
           - "lowest"
           - "highest"
         php-version:
-          - "8.1"
           - "8.2"
           - "8.3"
+          - "8.4"
         operating-system:
           - "ubuntu-latest"
 
@@ -173,7 +173,7 @@ jobs:
         dependencies:
           - "locked"
         php-version:
-          - "8.1"
+          - "8.2"
         operating-system:
           - "ubuntu-latest"
 

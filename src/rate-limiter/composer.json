@@ -9,7 +9,7 @@
         "limiter"
     ],
     "require": {
-        "php": "~8.1.10 || ~8.2.0 || ~8.3.0",
+        "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
         "ext-json": "*",
         "aeon-php/calendar": "~1.0",
         "aeon-php/sleep": "~1.0",
