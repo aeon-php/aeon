@@ -72,7 +72,7 @@ final class LeapSeconds
             new LeapSecond(DateTime::fromString('2012-07-01 00:00:00 UTC'), TimeUnit::seconds(34)),
             new LeapSecond(DateTime::fromString('2015-07-01 00:00:00 UTC'), TimeUnit::seconds(36)),
             new LeapSecond(DateTime::fromString('2017-01-01 00:00:00 UTC'), TimeUnit::seconds(37)),
-            new LeapSecond(DateTime::fromString('2025-01-07 00:00:00 UTC'), TimeUnit::seconds(38)),
+            new LeapSecond(DateTime::fromString('2025-01-07 00:00:00 UTC'), TimeUnit::seconds(37)),
         );
 
         return self::$instance;

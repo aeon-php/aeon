@@ -32,7 +32,7 @@ final class LeapSecondsTest extends TestCase
             )
         );
         $this->assertSame(
-            37,
+            38,
             $leapSeconds->offsetTAI()->inSeconds()
         );
     }
@@ -67,7 +67,7 @@ final class LeapSecondsTest extends TestCase
         $leapSeconds = LeapSeconds::load();
 
         $this->assertSame(
-            28,
+            29,
             $leapSeconds->since(
                 DateTime::fromString('1970-01-01 00:00:00 UTC')
             )->count()
@@ -94,7 +94,7 @@ final class LeapSecondsTest extends TestCase
             [
                 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
                 20, 21, 22, 23, 24, 24, 25, 26, 27,
-                28, 29, 30, 31, 32, 33, 34, 36, 37,
+                28, 29, 30, 31, 32, 33, 34, 36, 37, 38
             ],
             \array_map(
                 function (LeapSecond $leapSecond) : int {
