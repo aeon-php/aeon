@@ -485,7 +485,7 @@ final class DateTimeTest extends TestCase
         $this->assertSame(1577836800, $dateTime->timestampUNIX()->inSeconds());
         $this->assertSame(1577836800, $dateTime->timestamp(TimeEpoch::UNIX())->inSeconds());
         $this->assertSame(1577836800, $dateTime->timestamp(TimeEpoch::POSIX())->inSeconds());
-        $this->assertSame(1514764838, $dateTime->timestamp(TimeEpoch::UTC())->inSeconds());
+        $this->assertSame(1514764837, $dateTime->timestamp(TimeEpoch::UTC())->inSeconds());
         $this->assertSame(1261872018, $dateTime->timestamp(TimeEpoch::GPS())->inSeconds());
         $this->assertSame(1956528038, $dateTime->timestamp(TimeEpoch::TAI())->inSeconds());
     }

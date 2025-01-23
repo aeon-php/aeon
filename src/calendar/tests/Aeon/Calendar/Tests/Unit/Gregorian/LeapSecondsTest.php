@@ -67,7 +67,7 @@ final class LeapSecondsTest extends TestCase
         $leapSeconds = LeapSeconds::load();
 
         $this->assertSame(
-            29,
+            28,
             $leapSeconds->since(
                 DateTime::fromString('1970-01-01 00:00:00 UTC')
             )->count()
