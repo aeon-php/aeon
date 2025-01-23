@@ -110,8 +110,7 @@
             "Composer\\Config::disableProcessTimeout",
             "tools/vendor/bin/infection -j2"
         ],
-        "static:analyze": [
-            "tools/vendor/bin/psalm --output-format=compact",
+        "static:analyze": [            
             "tools/vendor/bin/phpstan analyze -c phpstan.neon --memory-limit=-1",
             "tools/vendor/bin/php-cs-fixer fix --dry-run"
         ],
