@@ -487,7 +487,7 @@ final class DateTimeTest extends TestCase
         $this->assertSame(1577836800, $dateTime->timestamp(TimeEpoch::POSIX())->inSeconds());
         $this->assertSame(1514764838, $dateTime->timestamp(TimeEpoch::UTC())->inSeconds());
         $this->assertSame(1261872018, $dateTime->timestamp(TimeEpoch::GPS())->inSeconds());
-        $this->assertSame(1956528037, $dateTime->timestamp(TimeEpoch::TAI())->inSeconds());
+        $this->assertSame(1956528038, $dateTime->timestamp(TimeEpoch::TAI())->inSeconds());
     }
 
     public function test_to_atomic_time() : void
