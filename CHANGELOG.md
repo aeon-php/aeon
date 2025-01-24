@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-01-24
+## [1.0.11] - 2025-01-24
 
 ### Added
 - [#219](https://github.com/aeon-php/aeon/pull/219) - **changelog automation** - [@norberttech](https://github.com/norberttech)
