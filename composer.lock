@@ -1190,16 +1190,16 @@
         },
         {
             "name": "symfony/form",
-            "version": "v7.2.0",
+            "version": "v7.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "264cff30f52f12149aff92bbc23e78160a45c2f3"
+                "reference": "092a89345db25f8e4fc1804a4d3f184766e36e69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/264cff30f52f12149aff92bbc23e78160a45c2f3",
-                "reference": "264cff30f52f12149aff92bbc23e78160a45c2f3",
+                "url": "https://api.github.com/repos/symfony/form/zipball/092a89345db25f8e4fc1804a4d3f184766e36e69",
+                "reference": "092a89345db25f8e4fc1804a4d3f184766e36e69",
                 "shasum": ""
             },
             "require": {
@@ -1267,7 +1267,7 @@
             "description": "Allows to easily create, process and reuse HTML forms",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/form/tree/v7.2.0"
+                "source": "https://github.com/symfony/form/tree/v7.2.3"
             },
             "funding": [
                 {
@@ -1283,7 +1283,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-27T11:55:00+00:00"
+            "time": "2024-12-24T12:02:08+00:00"
         },
         {
             "name": "symfony/http-foundation",
