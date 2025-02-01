@@ -1,3 +1,8 @@
+## [Unreleased] - 2025-02-01
+
+### Fixed
+- [#240](https://github.com/aeon-php/aeon/pull/240) - **Type in Business Hours library namespace** - [@matusstafura](https://github.com/matusstafura)
+
 ## [1.0.11] - 2025-01-24
 
 ### Added
@@ -971,6 +976,7 @@
 - @GwendolenLynch
 - @kristijonasb
 - @maciejlebkowski
+- @matusstafura
 - @mlebkowski
 - @norbert@mohawkgp.com
 - @norbertmwk
