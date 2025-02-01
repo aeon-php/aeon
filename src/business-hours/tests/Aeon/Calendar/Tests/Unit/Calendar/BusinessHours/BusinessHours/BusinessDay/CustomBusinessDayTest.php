@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Aeon\Calendar\Tests\Unit\Calendar\BusinessHours\BusinessHours\BusinessDay;
 
-use Aeon\Calendar\BusinessHours\BusinssDay\CustomBusinessDay;
+use Aeon\Calendar\BusinessHours\BusinessDay\CustomBusinessDay;
 use Aeon\Calendar\BusinessHours\WorkingHours\LinearWorkingHours;
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\Day;

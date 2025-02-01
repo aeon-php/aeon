@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Aeon\Calendar\Tests\Functional;
 
+use Aeon\Calendar\BusinessHours\BusinessDay\CustomBusinessDay;
 use Aeon\Calendar\BusinessHours\BusinessDays;
 use Aeon\Calendar\BusinessHours\BusinessHours;
-use Aeon\Calendar\BusinessHours\BusinssDay\CustomBusinessDay;
 use Aeon\Calendar\BusinessHours\Exception\BusinessDayException;
 use Aeon\Calendar\BusinessHours\NonBusinessDay\Holidays;
 use Aeon\Calendar\BusinessHours\NonBusinessDay\NonWorkingDay;

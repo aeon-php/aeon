@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Aeon\Calendar\BusinessHours\BusinssDay;
+namespace Aeon\Calendar\BusinessHours\BusinessDay;
 
 use Aeon\Calendar\BusinessHours\BusinessDay;
 use Aeon\Calendar\BusinessHours\WorkingHours;
