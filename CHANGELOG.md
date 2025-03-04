@@ -1,7 +1,10 @@
-## [Unreleased] - 2025-02-01
+## [Unreleased] - 2025-03-04
 
 ### Fixed
 - [#240](https://github.com/aeon-php/aeon/pull/240) - **Type in Business Hours library namespace** - [@matusstafura](https://github.com/matusstafura)
+
+### Updated
+- [5f7dc9](https://github.com/aeon-php/aeon/commit/5f7dc9ab5237ed0fac2535c60514d4271cff9244) - **test-suite.yml** - [@norberttech](https://github.com/norberttech)
 
 ## [1.0.11] - 2025-01-24
 
