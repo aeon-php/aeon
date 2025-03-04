@@ -40,7 +40,7 @@ jobs:
           echo "::set-output name=dir::$(composer config cache-files-dir)"
 
       - name: "Cache Composer dependencies"
-        uses: "actions/cache@v2"
+        uses: "actions/cache@v4"
         with:
           path: |
             ${{ steps.composer-cache.outputs.dir }}
@@ -87,7 +87,7 @@ jobs:
           echo "::set-output name=dir::$(composer config cache-files-dir)"
 
       - name: "Cache Composer dependencies"
-        uses: "actions/cache@v2"
+        uses: "actions/cache@v4"
         with:
           path: |
             ${{ steps.composer-cache.outputs.dir }}
@@ -138,7 +138,7 @@ jobs:
           echo "::set-output name=dir::$(composer config cache-files-dir)"
 
       - name: "Cache Composer dependencies"
-        uses: "actions/cache@v2"
+        uses: "actions/cache@v4"
         with:
           path: |
             ${{ steps.composer-cache.outputs.dir }}
@@ -195,7 +195,7 @@ jobs:
           echo "::set-output name=dir::$(composer config cache-files-dir)"
 
       - name: "Cache Composer dependencies"
-        uses: "actions/cache@v2"
+        uses: "actions/cache@v4"
         with:
           path: |
             ${{ steps.composer-cache.outputs.dir }}
