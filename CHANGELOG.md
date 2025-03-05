@@ -1,4 +1,7 @@
-## [Unreleased] - 2025-03-04
+## [Unreleased] - 2025-03-05
+
+### Changed
+- [#261](https://github.com/aeon-php/aeon/pull/261) - **Update action cache from @v2 to @v4 in Github Action workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
 - [#240](https://github.com/aeon-php/aeon/pull/240) - **Type in Business Hours library namespace** - [@matusstafura](https://github.com/matusstafura)
