@@ -24,7 +24,7 @@ final class AfterOrEqual extends AbstractComparison
         self::BEFORE_ERROR => 'BEFORE_ERROR',
     ];
 
-    public function __construct(mixed $value = null, string $propertyPath = null, string $message = 'This value should be after or equal {{ compared_value }}.', array $groups = null, mixed $payload = null, array $options = [])
+    public function __construct(mixed $value = null, ?string $propertyPath = null, string $message = 'This value should be after or equal {{ compared_value }}.', ?array $groups = null, mixed $payload = null, array $options = [])
     {
         parent::__construct(
             $value,
