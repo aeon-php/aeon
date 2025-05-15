@@ -1,9 +1,10 @@
-## [Unreleased] - 2025-03-05
+## [Unreleased] - 2025-05-15
 
 ### Changed
 - [#261](https://github.com/aeon-php/aeon/pull/261) - **Update action cache from @v2 to @v4 in Github Action workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [#293](https://github.com/aeon-php/aeon/pull/293) - **Deprecated messages "Implicitly marking parameter type nullable is deprecated"** - [@Edhrendal](https://github.com/Edhrendal)
 - [#240](https://github.com/aeon-php/aeon/pull/240) - **Type in Business Hours library namespace** - [@matusstafura](https://github.com/matusstafura)
 
 ### Updated
@@ -978,6 +979,7 @@
 - @christian-kolb
 - @DawidSajdak
 - @eamirgh
+- @Edhrendal
 - @github-actions[bot]
 - @GwendolenLynch
 - @kristijonasb
