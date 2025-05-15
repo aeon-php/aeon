@@ -17,7 +17,7 @@ use Aeon\Sleep\SystemProcess;
  *
  * @return ?FunctionReturnType
  */
-function retry(callable $function, int $retries, TimeUnit $delay, DelayModifier $delayModifier = null)
+function retry(callable $function, int $retries, TimeUnit $delay, ?DelayModifier $delayModifier = null)
 {
     return (new Retry(
         SystemProcess::current(),
@@ -40,7 +40,7 @@ function retry(callable $function, int $retries, TimeUnit $delay, DelayModifier 
  *
  * @return ?FunctionReturnType
  */
-function retryOnlyFor(callable $function, int $retries, TimeUnit $delay, array $exceptionClasses, DelayModifier $delayModifier = null)
+function retryOnlyFor(callable $function, int $retries, TimeUnit $delay, array $exceptionClasses, ?DelayModifier $delayModifier = null)
 {
     return (new Retry(
         SystemProcess::current(),
