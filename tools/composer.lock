@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53321ef7b09ed99fff229ebd1d8b1a32",
+    "content-hash": "bb788ed00bc36eb4ae04b48e9b66ced4",
     "packages": [],
     "packages-dev": [
         {
@@ -5549,16 +5549,16 @@
         },
         {
             "name": "symplify/monorepo-builder",
-            "version": "11.2.2.72",
+            "version": "11.2.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/monorepo-builder.git",
-                "reference": "680ce13f48fa9e213db934b89fecd841cd031aaa"
+                "reference": "cd0faf050efe72b1348e8432e9b85620b476c678"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/monorepo-builder/zipball/680ce13f48fa9e213db934b89fecd841cd031aaa",
-                "reference": "680ce13f48fa9e213db934b89fecd841cd031aaa",
+                "url": "https://api.github.com/repos/symplify/monorepo-builder/zipball/cd0faf050efe72b1348e8432e9b85620b476c678",
+                "reference": "cd0faf050efe72b1348e8432e9b85620b476c678",
                 "shasum": ""
             },
             "require": {
@@ -5585,7 +5585,7 @@
             "description": "Prefixed version of Not only Composer tools to build a Monorepo.",
             "support": {
                 "issues": "https://github.com/symplify/monorepo-builder/issues",
-                "source": "https://github.com/symplify/monorepo-builder/tree/11.2.2.72"
+                "source": "https://github.com/symplify/monorepo-builder/tree/11.2.23"
             },
             "funding": [
                 {
@@ -5597,7 +5597,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-28T15:09:50+00:00"
+            "time": "2025-07-11T02:50:53+00:00"
         },
         {
             "name": "thecodingmachine/safe",
@@ -5898,10 +5898,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
