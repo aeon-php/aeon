@@ -89,7 +89,7 @@ final class CalendarExtension extends AbstractExtension
      *
      * @psalm-suppress RedundantConditionGivenDocblockType
      */
-    public function aeon_datetime_create($dateTime, string $timezone = null) : DateTime
+    public function aeon_datetime_create($dateTime, ?string $timezone = null) : DateTime
     {
         if (\is_string($dateTime)) {
             $aeonDateTime = DateTime::fromString($dateTime);
@@ -112,7 +112,7 @@ final class CalendarExtension extends AbstractExtension
         return $aeonDateTime;
     }
 
-    public function aeon_datetime_format(DateTime $dateTime, string $format = null, string $timezone = null) : string
+    public function aeon_datetime_format(DateTime $dateTime, ?string $format = null, ?string $timezone = null) : string
     {
         $tz = (\is_string($timezone) && TimeZone::isValid($timezone))
             ? TimeZone::fromString($timezone)
@@ -129,7 +129,7 @@ final class CalendarExtension extends AbstractExtension
         return $dateTime->toTimeZone($this->defaultTimeZone)->format($fmt);
     }
 
-    public function aeon_time_format(Time $time, string $format = null) : string
+    public function aeon_time_format(Time $time, ?string $format = null) : string
     {
         $fmt = \is_string($format)
             ? $format
@@ -138,7 +138,7 @@ final class CalendarExtension extends AbstractExtension
         return $time->format($fmt);
     }
 
-    public function aeon_day_format(Day $day, string $format = null) : string
+    public function aeon_day_format(Day $day, ?string $format = null) : string
     {
         $fmt = \is_string($format)
             ? $format
@@ -196,7 +196,7 @@ final class CalendarExtension extends AbstractExtension
         return TimeUnit::days($days);
     }
 
-    public function aeon_now(string $timezone = null) : DateTime
+    public function aeon_now(?string $timezone = null) : DateTime
     {
         if (\is_string($timezone) && TimeZone::isValid($timezone)) {
             return $this->calendar->now()->toTimeZone(TimeZone::fromString($timezone));

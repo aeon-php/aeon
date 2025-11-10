@@ -36,7 +36,7 @@ final class AfterValidatorTest extends AbstractComparisonValidatorTestCase
         return new AfterValidator();
     }
 
-    protected function createConstraint(array $options = null) : Constraint
+    protected function createConstraint(?array $options = null) : Constraint
     {
         return new After($options);
     }
