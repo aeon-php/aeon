@@ -69,8 +69,8 @@ final class BusinessHours
         $daysChecked = 0;
 
         while (
-            $this->nonBusinessDays->is($nextDay) || (!$this->regularBusinessDays->isOpenOn($nextDay)
-                && !$this->customBusinessDays->isOpenOn($nextDay))
+            $this->nonBusinessDays->is($nextDay)
+            || (!$this->regularBusinessDays->isOpenOn($nextDay) && !$this->customBusinessDays->isOpenOn($nextDay))
         ) {
             $nextDay = $nextDay->next();
             $daysChecked += 1;
@@ -81,6 +81,31 @@ final class BusinessHours
         }
 
         return $nextDay;
+    }
+
+    public function previousBusinessDay(Day $day, int $maximumDays = 365) : Day
+    {
+        if ($maximumDays <= 0) {
+            throw new InvalidArgumentException('Maximum days must be greater or equal 1');
+        }
+
+        $prevDay = $day->previous();
+
+        $daysChecked = 0;
+
+        while (
+            $this->nonBusinessDays->is($prevDay)
+            || (!$this->regularBusinessDays->isOpenOn($prevDay) && !$this->customBusinessDays->isOpenOn($prevDay))
+        ) {
+            $prevDay = $prevDay->previous();
+            $daysChecked += 1;
+
+            if ($daysChecked >= $maximumDays) {
+                throw new BusinessDayException(\sprintf('Could not find any business days in past %d days', $daysChecked));
+            }
+        }
+
+        return $prevDay;
     }
 
     public function workingHours(Day $day) : WorkingHours
