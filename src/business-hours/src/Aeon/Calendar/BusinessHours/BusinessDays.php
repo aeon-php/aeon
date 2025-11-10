@@ -43,8 +43,8 @@ final class BusinessDays
             new RegularBusinessDay(Day\WeekDay::wednesday(), $weekWorkingHours),
             new RegularBusinessDay(Day\WeekDay::thursday(), $weekWorkingHours),
             new RegularBusinessDay(Day\WeekDay::friday(), $weekWorkingHours),
-            new RegularBusinessDay(Day\WeekDay::saturday(), $weekendWorkingHours ? $weekendWorkingHours : $weekWorkingHours),
-            new RegularBusinessDay(Day\WeekDay::sunday(), $weekendWorkingHours ? $weekendWorkingHours : $weekWorkingHours),
+            new RegularBusinessDay(Day\WeekDay::saturday(), $weekendWorkingHours ?: $weekWorkingHours),
+            new RegularBusinessDay(Day\WeekDay::sunday(), $weekendWorkingHours ?: $weekWorkingHours),
         );
     }
 
@@ -59,6 +59,21 @@ final class BusinessDays
             new RegularBusinessDay(Day\WeekDay::wednesday(), $workingHours),
             new RegularBusinessDay(Day\WeekDay::thursday(), $workingHours),
             new RegularBusinessDay(Day\WeekDay::friday(), $workingHours),
+        );
+    }
+
+    /**
+     * @psalm-pure
+     */
+    public static function mondaySaturday(WorkingHours $weekWorkingHours, ?WorkingHours $weekendWorkingHours = null) : self
+    {
+        return new self(
+            new RegularBusinessDay(Day\WeekDay::monday(), $weekWorkingHours),
+            new RegularBusinessDay(Day\WeekDay::tuesday(), $weekWorkingHours),
+            new RegularBusinessDay(Day\WeekDay::wednesday(), $weekWorkingHours),
+            new RegularBusinessDay(Day\WeekDay::thursday(), $weekWorkingHours),
+            new RegularBusinessDay(Day\WeekDay::friday(), $weekWorkingHours),
+            new RegularBusinessDay(Day\WeekDay::saturday(), $weekendWorkingHours ?: $weekWorkingHours),
         );
     }
 
