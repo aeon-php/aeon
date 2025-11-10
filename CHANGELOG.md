@@ -1,4 +1,7 @@
-## [Unreleased] - 2025-09-29
+## [Unreleased] - 2025-11-10
+
+### Added
+- [#377](https://github.com/aeon-php/aeon/pull/377) - **Added CODEOWNERS file to define project ownership and responsibilities.** - [@stloyd](https://github.com/stloyd)
 
 ### Changed
 - [#261](https://github.com/aeon-php/aeon/pull/261) - **Update action cache from @v2 to @v4 in Github Action workflows** - [@norberttech](https://github.com/norberttech)
