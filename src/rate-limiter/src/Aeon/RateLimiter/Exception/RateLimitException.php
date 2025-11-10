@@ -16,7 +16,7 @@ final class RateLimitException extends RuntimeException
 
     private TimeUnit $reset;
 
-    public function __construct(string $id, int $limit, TimeUnit $retryIn, TimeUnit $reset, \Throwable $previous = null)
+    public function __construct(string $id, int $limit, TimeUnit $retryIn, TimeUnit $reset, ?\Throwable $previous = null)
     {
         parent::__construct("Execution \"{$id}\" was limited for the next " . $retryIn->inSecondsPrecise() . ' seconds', 0, $previous);
 

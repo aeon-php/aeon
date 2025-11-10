@@ -58,7 +58,7 @@ abstract class AbstractComparisonValidatorTestCase extends ConstraintValidatorTe
         yield [];
     }
 
-    abstract protected function createConstraint(array $options = null) : Constraint;
+    abstract protected function createConstraint(?array $options = null) : Constraint;
 
     protected function getErrorCode() : ?string
     {

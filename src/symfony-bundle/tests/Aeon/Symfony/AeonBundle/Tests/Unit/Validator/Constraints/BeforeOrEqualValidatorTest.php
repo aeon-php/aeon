@@ -38,7 +38,7 @@ final class BeforeOrEqualValidatorTest extends AbstractComparisonValidatorTestCa
         return new BeforeOrEqualValidator();
     }
 
-    protected function createConstraint(array $options = null) : Constraint
+    protected function createConstraint(?array $options = null) : Constraint
     {
         return new BeforeOrEqual($options);
     }

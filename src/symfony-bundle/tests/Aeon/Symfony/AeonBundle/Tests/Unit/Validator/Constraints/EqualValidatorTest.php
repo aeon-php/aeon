@@ -36,7 +36,7 @@ final class EqualValidatorTest extends AbstractComparisonValidatorTestCase
         return new EqualValidator();
     }
 
-    protected function createConstraint(array $options = null) : Constraint
+    protected function createConstraint(?array $options = null) : Constraint
     {
         return new Equal($options);
     }

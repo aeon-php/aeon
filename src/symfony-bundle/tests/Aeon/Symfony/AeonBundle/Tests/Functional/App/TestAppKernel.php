@@ -42,7 +42,7 @@ abstract class TestAppKernel extends BaseKernel
         return \sys_get_temp_dir() . '/AeonBundle/logs';
     }
 
-    public function holiday(Request $request, FormFactoryInterface $formFactory = null) : Response
+    public function holiday(Request $request, ?FormFactoryInterface $formFactory = null) : Response
     {
         $formFactory = $formFactory ?: $this->getContainer()->get('form.factory');
         $form = $formFactory->create(NotHolidaysFormType::class);
