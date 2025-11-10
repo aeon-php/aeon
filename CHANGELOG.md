@@ -1,6 +1,7 @@
 ## [Unreleased] - 2025-11-10
 
 ### Added
+- [#375](https://github.com/aeon-php/aeon/pull/375) - **Add `BusinessHours::previousBusinessDay()` method** - [@stloyd](https://github.com/stloyd)
 - [#377](https://github.com/aeon-php/aeon/pull/377) - **Added CODEOWNERS file to define project ownership and responsibilities.** - [@stloyd](https://github.com/stloyd)
 
 ### Changed
