@@ -7,6 +7,7 @@
 - [#261](https://github.com/aeon-php/aeon/pull/261) - **Update action cache from @v2 to @v4 in Github Action workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [#376](https://github.com/aeon-php/aeon/pull/376) - **Remove PHP 8.4 deprecations** - [@stloyd](https://github.com/stloyd)
 - [#293](https://github.com/aeon-php/aeon/pull/293) - **Deprecated messages "Implicitly marking parameter type nullable is deprecated"** - [@Edhrendal](https://github.com/Edhrendal)
 - [#240](https://github.com/aeon-php/aeon/pull/240) - **Type in Business Hours library namespace** - [@matusstafura](https://github.com/matusstafura)
 
