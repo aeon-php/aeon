@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-11-10
+## [Unreleased] - 2025-11-11
 
 ### Added
 - [#378](https://github.com/aeon-php/aeon/pull/378) - **Add a `BusinessDays::mondaySaturday()`** - [@stloyd](https://github.com/stloyd)
@@ -6,6 +6,7 @@
 - [#377](https://github.com/aeon-php/aeon/pull/377) - **Added CODEOWNERS file to define project ownership and responsibilities.** - [@stloyd](https://github.com/stloyd)
 
 ### Changed
+- [#379](https://github.com/aeon-php/aeon/pull/379) - **Rework tools setup to allow independent updates** - [@stloyd](https://github.com/stloyd)
 - [#261](https://github.com/aeon-php/aeon/pull/261) - **Update action cache from @v2 to @v4 in Github Action workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
