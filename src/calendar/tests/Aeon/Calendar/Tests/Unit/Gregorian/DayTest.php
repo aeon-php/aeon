@@ -12,6 +12,7 @@ use Aeon\Calendar\Gregorian\Time;
 use Aeon\Calendar\Gregorian\TimeZone;
 use Aeon\Calendar\Gregorian\Year;
 use Aeon\Calendar\TimeUnit;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class DayTest extends TestCase
@@ -85,9 +86,7 @@ final class DayTest extends TestCase
         yield [Day::fromString('2022-10-26'), Day::fromString('2022-10-25'), 1];
     }
 
-    /**
-     * @dataProvider create_day_with_invalid_number_provider
-     */
+    #[DataProvider('create_day_with_invalid_number_provider')]
     public function test_create_day_with_invalid_number(int $number) : void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -108,9 +107,7 @@ final class DayTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider creating_day_data_provider_from_string
-     */
+    #[DataProvider('creating_day_data_provider_from_string')]
     public function test_creating_day_from_string(string $dateTimeString, string $dateTime, string $format) : void
     {
         try {
@@ -128,9 +125,7 @@ final class DayTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider invalid_string_day_format
-     */
+    #[DataProvider('invalid_string_day_format')]
     public function test_from_invalid_string(string $invalidValue) : void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -139,9 +134,7 @@ final class DayTest extends TestCase
         Day::fromString($invalidValue);
     }
 
-    /**
-     * @dataProvider valid_string_day_format
-     */
+    #[DataProvider('valid_string_day_format')]
     public function test_from_string(string $invalidValue, Day $month) : void
     {
         $this->assertObjectEquals($month, Day::fromString($invalidValue), 'isEqual');
@@ -390,9 +383,7 @@ final class DayTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider compare_to_provider
-     */
+    #[DataProvider('compare_to_provider')]
     public function test_compare_to(Day $time, Day $comparable, int $compareResult) : void
     {
         $this->assertSame($compareResult, $time->compareTo($comparable));

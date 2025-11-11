@@ -8,6 +8,7 @@ use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\Interval;
 use Aeon\Calendar\Gregorian\Month;
 use Aeon\Calendar\Gregorian\Year;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class MonthTest extends TestCase
@@ -101,9 +102,7 @@ final class MonthTest extends TestCase
         $this->assertSame(2, $month->number());
     }
 
-    /**
-     * @dataProvider creating_month_data_provider_from_string
-     */
+    #[DataProvider('creating_month_data_provider_from_string')]
     public function test_creating_month_from_string(string $dateTimeString, string $dateTime) : void
     {
         try {
@@ -113,9 +112,7 @@ final class MonthTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider invalid_string_day_format
-     */
+    #[DataProvider('invalid_string_day_format')]
     public function test_from_invalid_string(string $invalidValue) : void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -124,9 +121,7 @@ final class MonthTest extends TestCase
         Month::fromString($invalidValue);
     }
 
-    /**
-     * @dataProvider valid_string_day_format
-     */
+    #[DataProvider('valid_string_day_format')]
     public function test_from_string(string $invalidValue, Month $month) : void
     {
         $this->assertObjectEquals($month, Month::fromString($invalidValue), 'isEqual');
@@ -355,9 +350,7 @@ final class MonthTest extends TestCase
         $this->assertSame(28, (new Month(new Year(2021), 2))->numberOfDays());
     }
 
-    /**
-     * @dataProvider compare_to_provider
-     */
+    #[DataProvider('compare_to_provider')]
     public function test_compare_to(Month $time, Month $comparable, int $compareResult) : void
     {
         $this->assertSame($compareResult, $time->compareTo($comparable));

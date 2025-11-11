@@ -7,6 +7,7 @@ namespace Aeon\Calendar\Tests\Unit;
 use Aeon\Calendar\Exception\Exception;
 use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\TimeUnit;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class TimeUnitTest extends TestCase
@@ -405,65 +406,49 @@ final class TimeUnitTest extends TestCase
         $this->assertSame('-0.500000', TimeUnit::precise(-0.5)->inSecondsPrecise());
     }
 
-    /**
-     * @dataProvider greater_than_data_provider
-     */
+    #[DataProvider('greater_than_data_provider')]
     public function test_greater_than(TimeUnit $timeUnit, TimeUnit $nextTimeUnit, bool $expectedResult) : void
     {
         $this->assertSame($expectedResult, $timeUnit->isGreaterThan($nextTimeUnit));
     }
 
-    /**
-     * @dataProvider greater_than_eq_data_provider
-     */
+    #[DataProvider('greater_than_eq_data_provider')]
     public function test_greater_than_eq(TimeUnit $timeUnit, TimeUnit $nextTimeUnit, bool $expectedResult) : void
     {
         $this->assertSame($expectedResult, $timeUnit->isGreaterThanOrEqualTo($nextTimeUnit));
     }
 
-    /**
-     * @dataProvider less_than_data_provider
-     */
+    #[DataProvider('less_than_data_provider')]
     public function test_less_than(TimeUnit $timeUnit, TimeUnit $nextTimeUnit, bool $expectedResult) : void
     {
         $this->assertSame($expectedResult, $timeUnit->isLessThan($nextTimeUnit));
     }
 
-    /**
-     * @dataProvider less_than_eq_data_provider
-     */
+    #[DataProvider('less_than_eq_data_provider')]
     public function test_less_than_eq(TimeUnit $timeUnit, TimeUnit $nextTimeUnit, bool $expectedResult) : void
     {
         $this->assertSame($expectedResult, $timeUnit->isLessThanOrEqualTo($nextTimeUnit));
     }
 
-    /**
-     * @dataProvider equal_data_provider
-     */
+    #[DataProvider('equal_data_provider')]
     public function test_equal(TimeUnit $timeUnit, TimeUnit $nextTimeUnit, bool $expectedResult) : void
     {
         $this->assertSame($expectedResult, $timeUnit->isEqualTo($nextTimeUnit));
     }
 
-    /**
-     * @dataProvider adding_time_test_data_provider
-     */
+    #[DataProvider('adding_time_test_data_provider')]
     public function test_adding_time_units(int $seconds, int $addedSeconds, int $expectedSeconds) : void
     {
         $this->assertSame($expectedSeconds, TimeUnit::seconds($seconds)->add(TimeUnit::seconds($addedSeconds))->inSeconds());
     }
 
-    /**
-     * @dataProvider subtracting_time_test_data_provider
-     */
+    #[DataProvider('subtracting_time_test_data_provider')]
     public function test_subtracting_time_units(int $seconds, int $substractedSeconds, int $expectedSeconds) : void
     {
         $this->assertSame($expectedSeconds, TimeUnit::seconds($seconds)->sub(TimeUnit::seconds($substractedSeconds))->inSeconds());
     }
 
-    /**
-     * @dataProvider adding_precise_time_test_data_provider
-     */
+    #[DataProvider('adding_precise_time_test_data_provider')]
     public function test_adding_precise_time_units(int $expectedSeconds, int $expectedMicrosecond, string $expectedPreciseString, float $seconds, float $addedSeconds) : void
     {
         $this->assertSame(
@@ -480,9 +465,7 @@ final class TimeUnitTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider subtracting_precise_time_test_data_provider
-     */
+    #[DataProvider('subtracting_precise_time_test_data_provider')]
     public function test_subtracting_precise_time_units(int $expectedSeconds, int $expectedMicrseond, string $expectedPreciseString, float $seconds, float $addedSeconds) : void
     {
         $this->assertSame(
@@ -499,17 +482,13 @@ final class TimeUnitTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider creating_from_date_interval_provider
-     */
+    #[DataProvider('creating_from_date_interval_provider')]
     public function test_creating_from_date_interval(\DateInterval $dateInterval, TimeUnit $timeUnit) : void
     {
         $this->assertObjectEquals(TimeUnit::fromDateInterval($dateInterval), $timeUnit, 'isEqual');
     }
 
-    /**
-     * @dataProvider creating_from_date_string_provider
-     */
+    #[DataProvider('creating_from_date_string_provider')]
     public function test_creating_from_date_string(string $dateString, TimeUnit $timeUnit) : void
     {
         $this->assertObjectEquals(TimeUnit::fromDateString($dateString), $timeUnit, 'isEqual');
@@ -531,9 +510,7 @@ final class TimeUnitTest extends TestCase
         TimeUnit::fromDateInterval(\DateInterval::createFromDateString('4 months'));
     }
 
-    /**
-     * @dataProvider half_round_up_to_microsecond_data_provider
-     */
+    #[DataProvider('half_round_up_to_microsecond_data_provider')]
     public function test_half_round_up_to_microsecond(string $stringFloat, float $float) : void
     {
         $this->assertSame(
@@ -543,25 +520,19 @@ final class TimeUnitTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider multiplication_data_provider
-     */
+    #[DataProvider('multiplication_data_provider')]
     public function test_multiplication(TimeUnit $timeUnit, TimeUnit $multiplier, TimeUnit $expectedResult) : void
     {
         $this->assertSame($expectedResult->inSecondsPrecise(), $timeUnit->multiply($multiplier)->inSecondsPrecise());
     }
 
-    /**
-     * @dataProvider division_data_provider
-     */
+    #[DataProvider('division_data_provider')]
     public function test_division(TimeUnit $timeUnit, TimeUnit $multiplier, TimeUnit $expectedResult) : void
     {
         $this->assertSame($expectedResult->inSecondsPrecise(), $timeUnit->divide($multiplier)->inSecondsPrecise());
     }
 
-    /**
-     * @dataProvider modulo_data_provider
-     */
+    #[DataProvider('modulo_data_provider')]
     public function test_modulo(TimeUnit $timeUnit, TimeUnit $multiplier, TimeUnit $expectedResult) : void
     {
         $this->assertSame($expectedResult->inSecondsPrecise(), $timeUnit->modulo($multiplier)->inSecondsPrecise());

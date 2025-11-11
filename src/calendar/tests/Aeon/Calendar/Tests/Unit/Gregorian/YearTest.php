@@ -8,6 +8,7 @@ use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\Day;
 use Aeon\Calendar\Gregorian\Interval;
 use Aeon\Calendar\Gregorian\Year;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class YearTest extends TestCase
@@ -98,9 +99,7 @@ final class YearTest extends TestCase
         $this->assertSame(2020, Year::fromDateTime(new \DateTimeImmutable('2020-05-01'))->number());
     }
 
-    /**
-     * @dataProvider month_number_of_days_data_provider
-     */
+    #[DataProvider('month_number_of_days_data_provider')]
     public function test_month_number_of_days(int $year, int $month, int $numberOfDays) : void
     {
         $this->assertSame($numberOfDays, (new Year($year))->months()->byNumber($month)->numberOfDays());
@@ -322,17 +321,13 @@ final class YearTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider leap_years
-     */
+    #[DataProvider('leap_years')]
     public function test_leap_year(int $year, bool $isLeap) : void
     {
         $this->assertSame($isLeap, (new Year($year))->isLeap());
     }
 
-    /**
-     * @dataProvider compare_to_provider
-     */
+    #[DataProvider('compare_to_provider')]
     public function test_compare_to(Year $time, Year $comparable, int $compareResult) : void
     {
         $this->assertSame($compareResult, $time->compareTo($comparable));

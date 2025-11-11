@@ -6,6 +6,7 @@ namespace Aeon\Calendar\Tests\Unit\TimeUnit;
 
 use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\TimeUnit\HRTime;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class HRTimeTest extends TestCase
@@ -31,9 +32,7 @@ final class HRTimeTest extends TestCase
         HRTime::convert(0, -1);
     }
 
-    /**
-     * @dataProvider converting_hr_time_to_timeunit_data_provider
-     */
+    #[DataProvider('converting_hr_time_to_timeunit_data_provider')]
     public function test_converting_hr_time_to_timeunit(string $expected, int $seconds, int $nanoseconds) : void
     {
         $this->assertSame($expected, HRTime::convert($seconds, $nanoseconds)->inSecondsPrecise());

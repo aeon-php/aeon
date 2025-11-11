@@ -6,6 +6,7 @@ namespace Aeon\Calendar\Tests\Unit\Gregorian;
 
 use Aeon\Calendar\Gregorian\DateTime;
 use Aeon\Calendar\Gregorian\TimeEpoch;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class TimeEpochTest extends TestCase
@@ -36,9 +37,7 @@ final class TimeEpochTest extends TestCase
         yield [TimeEpoch::TAI(), TimeEpoch::TAI(), DateTime::fromString('1958-01-01 00:00:00 UTC'), DateTime::fromString('1958-01-01 00:00:00 UTC')];
     }
 
-    /**
-     * @dataProvider seconds_since_data_provider
-     */
+    #[DataProvider('seconds_since_data_provider')]
     public function test_distance_to_epoch(TimeEpoch $epoch, TimeEpoch $sinceEpoch, DateTime $dateTime, DateTime $sinceDateTime) : void
     {
         $this->assertSame(

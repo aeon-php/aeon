@@ -7,6 +7,7 @@ namespace Aeon\Calendar\Tests\Unit\Gregorian;
 use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\Time;
 use Aeon\Calendar\TimeUnit;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class TimeTest extends TestCase
@@ -76,9 +77,7 @@ final class TimeTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider invalid_string_day_format
-     */
+    #[DataProvider('invalid_string_day_format')]
     public function test_from_invalid_string(string $invalidValue) : void
     {
         $this->expectException(InvalidArgumentException::class);
@@ -97,17 +96,13 @@ final class TimeTest extends TestCase
         $this->assertSame(0, $time->microsecond());
     }
 
-    /**
-     * @dataProvider valid_string_day_format
-     */
+    #[DataProvider('valid_string_day_format')]
     public function test_from_string(string $invalidValue, Time $time) : void
     {
         $this->assertObjectEquals($time, Time::fromString($invalidValue), 'isEqual');
     }
 
-    /**
-     * @dataProvider creating_time_data_provider_from_string
-     */
+    #[DataProvider('creating_time_data_provider_from_string')]
     public function test_creating_time_from_string(string $dateTime, string $format) : void
     {
         try {
@@ -274,9 +269,7 @@ final class TimeTest extends TestCase
         $this->assertFalse(Time::fromString('00:00:00')->isNotMidnight());
     }
 
-    /**
-     * @dataProvider compare_to_provider
-     */
+    #[DataProvider('compare_to_provider')]
     public function test_compare_to(Time $time, Time $comparable, int $compareResult) : void
     {
         $this->assertSame($compareResult, $time->compareTo($comparable));

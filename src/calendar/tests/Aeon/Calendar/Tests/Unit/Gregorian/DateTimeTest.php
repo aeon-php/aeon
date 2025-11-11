@@ -17,6 +17,7 @@ use Aeon\Calendar\Gregorian\TimeZone;
 use Aeon\Calendar\Gregorian\Year;
 use Aeon\Calendar\RelativeTimeUnit;
 use Aeon\Calendar\TimeUnit;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class DateTimeTest extends TestCase
@@ -237,9 +238,7 @@ final class DateTimeTest extends TestCase
         \date_default_timezone_set('UTC');
     }
 
-    /**
-     * @dataProvider creating_datetime_data_provider
-     */
+    #[DataProvider('creating_datetime_data_provider')]
     public function test_creating_datetime(string $dateTimeString, DateTime $dateTime, string $format) : void
     {
         try {
@@ -249,9 +248,7 @@ final class DateTimeTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider creating_datetime_data_provider_from_string
-     */
+    #[DataProvider('creating_datetime_data_provider_from_string')]
     public function test_creating_datetime_from_string(string $dateTimeString, string $dateTime, string $format) : void
     {
         try {
@@ -261,9 +258,7 @@ final class DateTimeTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider invalid_date_time_string
-     */
+    #[DataProvider('invalid_date_time_string')]
     public function test_creating_datetime_from_invalid_string(string $dateTimeInvalidString) : void
     {
         $this->expectExceptionMessage("Value \"{$dateTimeInvalidString}\" is not valid date time format.");
@@ -491,9 +486,7 @@ final class DateTimeTest extends TestCase
         DateTime::fromString('2020-01-01 00:00:00 UTC')->modify('2020-02-03 00:00:00 UTC');
     }
 
-    /**
-     * @dataProvider modify_datetime
-     */
+    #[DataProvider('modify_datetime')]
     public function test_modify(string $date, string $modifier, string $expectedDate) : void
     {
         $this->assertSame(
@@ -833,9 +826,7 @@ final class DateTimeTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider add_relative_timeunit_months
-     */
+    #[DataProvider('add_relative_timeunit_months')]
     public function test_add_relative_timeunit_months(string $date, int $addMonths, string $expectedDate) : void
     {
         $this->assertSame(
@@ -844,9 +835,7 @@ final class DateTimeTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider sub_relative_timeunit_months
-     */
+    #[DataProvider('sub_relative_timeunit_months')]
     public function test_sub_relative_timeunit_months(string $date, int $addMonths, string $expectedDate) : void
     {
         $this->assertSame(
@@ -977,17 +966,13 @@ final class DateTimeTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider ambiguous_time_data_provider
-     */
+    #[DataProvider('ambiguous_time_data_provider')]
     public function test_checking_is_ambiguous(DateTime $dateTime) : void
     {
         $this->assertTrue($dateTime->isAmbiguous(), $dateTime->toISO8601() . ' is not ambiguous, timezonedb version: ' . \timezone_version_get());
     }
 
-    /**
-     * @dataProvider not_ambiguous_time_data_provider
-     */
+    #[DataProvider('not_ambiguous_time_data_provider')]
     public function test_checking_is_not_ambiguous(DateTime $dateTime) : void
     {
         $this->assertFalse($dateTime->isAmbiguous());
@@ -1103,9 +1088,7 @@ final class DateTimeTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider timezone_abbreviation_provider
-     */
+    #[DataProvider('timezone_abbreviation_provider')]
     public function test_timezone_abbreviation(string $abbreviation, string $date) : void
     {
         $this->assertSame($abbreviation, DateTime::fromString($date)->timeZoneAbbreviation()->name());
@@ -1151,9 +1134,7 @@ final class DateTimeTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider compare_to_provider
-     */
+    #[DataProvider('compare_to_provider')]
     public function test_compare_to(DateTime $dateTime, DateTime $comparable, int $compareResult) : void
     {
         $this->assertSame($compareResult, $dateTime->compareTo($comparable));

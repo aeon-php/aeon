@@ -8,6 +8,7 @@ use Aeon\Calendar\Exception\InvalidArgumentException;
 use Aeon\Calendar\Gregorian\TimeZone;
 use Aeon\Calendar\Gregorian\TimeZone\TimeOffset;
 use Aeon\Calendar\TimeUnit;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class TimeOffsetTest extends TestCase
@@ -98,17 +99,13 @@ final class TimeOffsetTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider valid_time_offset_data_provider
-     */
+    #[DataProvider('valid_time_offset_data_provider')]
     public function test_valid_time_offset(string $offset) : void
     {
         $this->assertTrue(TimeOffset::isValid($offset));
     }
 
-    /**
-     * @dataProvider invalid_time_offset_data_provider
-     */
+    #[DataProvider('invalid_time_offset_data_provider')]
     public function test_invalid_time_offset(string $offset) : void
     {
         $this->assertFalse(TimeOffset::isValid($offset));

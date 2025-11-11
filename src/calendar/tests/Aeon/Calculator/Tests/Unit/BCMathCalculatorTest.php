@@ -6,6 +6,7 @@ namespace Aeon\Calculator\Tests\Unit;
 
 use Aeon\Calculator\BCMathCalculator;
 use Aeon\Calculator\Exception\InvalidTypeException;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class BCMathCalculatorTest extends TestCase
@@ -137,81 +138,61 @@ final class BCMathCalculatorTest extends TestCase
         yield [true, 0.000_000_1, 0.000_000_51];
     }
 
-    /**
-     * @dataProvider add_data_provider
-     */
+    #[DataProvider('add_data_provider')]
     public function test_add(string $result, float $value, float $nextValue) : void
     {
         $this->assertSame($result, (new BCMathCalculator(6))->add(\number_format($value, 9), \number_format($nextValue, 9)));
     }
 
-    /**
-     * @dataProvider sub_provider
-     */
+    #[DataProvider('sub_provider')]
     public function test_sub(string $result, float $value, float $nextValue) : void
     {
         $this->assertSame($result, (new BCMathCalculator(6))->sub(\number_format($value, 9), \number_format($nextValue, 9)));
     }
 
-    /**
-     * @dataProvider multiply_provider
-     */
+    #[DataProvider('multiply_provider')]
     public function test_multiply(string $result, float $value, float $nextValue) : void
     {
         $this->assertSame($result, (new BCMathCalculator(6))->multiply(\number_format($value, 9), \number_format($nextValue, 9)));
     }
 
-    /**
-     * @dataProvider divide_provider
-     */
+    #[DataProvider('divide_provider')]
     public function test_divide(string $result, float $value, float $nextValue) : void
     {
         $this->assertSame($result, (new BCMathCalculator(6))->divide(\number_format($value, 9), \number_format($nextValue, 9)));
     }
 
-    /**
-     * @dataProvider modulo_provider
-     */
+    #[DataProvider('modulo_provider')]
     public function test_modulo(string $result, float $value, float $nextValue) : void
     {
         $this->assertSame($result, (new BCMathCalculator(6))->modulo(\number_format($value, 9), \number_format($nextValue, 9)));
     }
 
-    /**
-     * @dataProvider is_equal_data_provider
-     */
+    #[DataProvider('is_equal_data_provider')]
     public function test_is_equal(bool $equal, float $value, float $nextValue) : void
     {
         $this->assertSame($equal, (new BCMathCalculator(6))->isEqualTo(\number_format($value, 9), \number_format($nextValue, 9)));
     }
 
-    /**
-     * @dataProvider is_less_data_provider
-     */
+    #[DataProvider('is_less_data_provider')]
     public function test_is_less(bool $equal, float $value, float $nextValue) : void
     {
         $this->assertSame($equal, (new BCMathCalculator(6))->isLessThan(\number_format($value, 8), \number_format($nextValue, 8)));
     }
 
-    /**
-     * @dataProvider is_greater_data_provider
-     */
+    #[DataProvider('is_greater_data_provider')]
     public function test_is_greater(bool $equal, float $value, float $nextValue) : void
     {
         $this->assertSame($equal, (new BCMathCalculator(6))->isGreaterThan(\number_format($value, 9), \number_format($nextValue, 9)));
     }
 
-    /**
-     * @dataProvider is_greater_than_eq_data_provider
-     */
+    #[DataProvider('is_greater_than_eq_data_provider')]
     public function test_is_greater_than_eq(bool $equal, float $value, float $nextValue) : void
     {
         $this->assertSame($equal, (new BCMathCalculator(6))->isGreaterThanOrEqualTo(\number_format($value, 9), \number_format($nextValue, 9)));
     }
 
-    /**
-     * @dataProvider is_less_than_eq_data_provider
-     */
+    #[DataProvider('is_less_than_eq_data_provider')]
     public function test_is_less_than_eq(bool $equal, float $value, float $nextValue) : void
     {
         $this->assertSame($equal, (new BCMathCalculator(6))->isLessThanOrEqualTo(\number_format($value, 9), \number_format($nextValue, 9)));

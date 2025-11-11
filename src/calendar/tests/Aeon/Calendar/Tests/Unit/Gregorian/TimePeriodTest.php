@@ -10,6 +10,7 @@ use Aeon\Calendar\Gregorian\Interval;
 use Aeon\Calendar\Gregorian\TimePeriod;
 use Aeon\Calendar\RelativeTimeUnit;
 use Aeon\Calendar\TimeUnit;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 final class TimePeriodTest extends TestCase
@@ -276,9 +277,7 @@ final class TimePeriodTest extends TestCase
         $this->assertTrue(DateTime::fromString('2020-01-01 00:00:00.0000')->year()->isLeap());
     }
 
-    /**
-     * @dataProvider iterating_through_intervals_provider
-     */
+    #[DataProvider('iterating_through_intervals_provider')]
     public function test_iterating_through_intervals(string $startDate, string $endDate, bool $forward, TimeUnit $timeUnit, Interval $interval, array $periods, string $format = 'Y-m-d') : void
     {
         $period = new TimePeriod(
@@ -559,9 +558,7 @@ final class TimePeriodTest extends TestCase
         $this->assertCount(1, $timePeriods);
     }
 
-    /**
-     * @dataProvider overlapping_time_periods_data_provider
-     */
+    #[DataProvider('overlapping_time_periods_data_provider')]
     public function test_overlapping_time_periods(bool $overlap, TimePeriod $firstPeriod, TimePeriod $secondPeriod) : void
     {
         $this->assertSame($overlap, $firstPeriod->overlaps($secondPeriod));
@@ -591,9 +588,7 @@ final class TimePeriodTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider period_abuts_other_period_data_provider
-     */
+    #[DataProvider('period_abuts_other_period_data_provider')]
     public function test_period_abuts_other_period(bool $abuts, TimePeriod $firstPeriod, TimePeriod $secondPeriod) : void
     {
         $this->assertSame($abuts, $firstPeriod->abuts($secondPeriod));
