@@ -1,0 +1,10 @@
+{
+    "name": "aeon-php/calendar-tools",
+    "description": "Aeon PHP Calendar - Tools",
+    "require-dev": {
+        "infection/infection": "^0.29.10"
+    },
+    "config": {
+        "allow-plugins": false
+    }
+}
