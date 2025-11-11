@@ -3,7 +3,7 @@
   "description": "Aeon PHP Calendar - Tools",
   "require-dev": {
     "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
-    "phpstan/phpstan": "^1.1.2"
+    "phpstan/phpstan": "^2.1.31"
   },
   "config": {
     "allow-plugins": false
