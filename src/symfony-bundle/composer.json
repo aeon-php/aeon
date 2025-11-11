@@ -19,18 +19,18 @@
         "aeon-php/rate-limiter": "~1.0",
         "aeon-php/retry": "~1.0",
         "aeon-php/sleep": "~1.0",
-        "symfony/config": "~5.4.21||~6.3||~7.0",
-        "symfony/dependency-injection": "~5.4.21||~6.3||~7.0",
-        "symfony/form": "~5.4.21||~6.3||~7.0",
-        "symfony/http-kernel": "~5.4.21||~6.3||~7.0",
-        "symfony/validator": "~5.4.21||~6.3||~7.0"
+        "symfony/config": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/dependency-injection": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/form": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/http-kernel": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/validator": "^5.4.21 || ^6.4 || ^7.3 || ^8.0"
     },
     "require-dev": {
         "aeon-php/calendar-holidays-yasumi": "~1.0",
-        "symfony/browser-kit": "~5.4.21||~6.3||~7.0",
-        "symfony/dom-crawler": "~5.4.21||~6.3||~7.0",
-        "symfony/framework-bundle": "~5.4.21||~6.3||~7.0",
-        "symfony/security-bundle": "~5.4.21||~6.3||~7.0"
+        "symfony/browser-kit": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/dom-crawler": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/framework-bundle": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/security-bundle": "^5.4.21 || ^6.4 || ^7.3 || ^8.0"
     },
     "license": "MIT",
     "autoload": {
