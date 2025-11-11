@@ -6,6 +6,7 @@
 - [#377](https://github.com/aeon-php/aeon/pull/377) - **Added CODEOWNERS file to define project ownership and responsibilities.** - [@stloyd](https://github.com/stloyd)
 
 ### Changed
+- [#380](https://github.com/aeon-php/aeon/pull/380) - **Adjust `dependabot.yml` setup** - [@stloyd](https://github.com/stloyd)
 - [#379](https://github.com/aeon-php/aeon/pull/379) - **Rework tools setup to allow independent updates** - [@stloyd](https://github.com/stloyd)
 - [#261](https://github.com/aeon-php/aeon/pull/261) - **Update action cache from @v2 to @v4 in Github Action workflows** - [@norberttech](https://github.com/norberttech)
 
