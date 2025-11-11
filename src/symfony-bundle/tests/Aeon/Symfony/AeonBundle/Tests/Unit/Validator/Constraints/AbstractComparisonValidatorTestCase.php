@@ -4,17 +4,27 @@ declare(strict_types=1);
 
 namespace Aeon\Symfony\AeonBundle\Tests\Unit\Validator\Constraints;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Test\ConstraintValidatorTestCase;
 
 abstract class AbstractComparisonValidatorTestCase extends ConstraintValidatorTestCase
 {
+    public static function provideInvalidComparisons() : \Generator
+    {
+        yield [];
+    }
+
+    public static function provideValidComparisons() : \Generator
+    {
+        yield [];
+    }
+
     /**
-     * @dataProvider provideValidComparisons
-     *
      * @param mixed $dirtyValue
      * @param mixed $comparisonValue
      */
+    #[DataProvider('provideValidComparisons')]
     public function testValidComparisonToValue($dirtyValue, $comparisonValue) : void
     {
         $constraint = $this->createConstraint(['value' => $comparisonValue]);
@@ -25,14 +35,13 @@ abstract class AbstractComparisonValidatorTestCase extends ConstraintValidatorTe
     }
 
     /**
-     * @dataProvider provideInvalidComparisons
-     *
      * @param mixed $dirtyValue
      * @param mixed $dirtyValueAsString
      * @param mixed $comparedValue
      * @param mixed $comparedValueString
      * @param string $comparedValueType
      */
+    #[DataProvider('provideInvalidComparisons')]
     public function testInvalidComparisonToValue($dirtyValue, $dirtyValueAsString, $comparedValue, $comparedValueString, $comparedValueType) : void
     {
         $constraint = $this->createConstraint(['value' => $comparedValue]);
@@ -46,16 +55,6 @@ abstract class AbstractComparisonValidatorTestCase extends ConstraintValidatorTe
             ->setParameter('{{ compared_value_type }}', $comparedValueType)
             ->setCode($this->getErrorCode())
             ->assertRaised();
-    }
-
-    public function provideInvalidComparisons() : \Generator
-    {
-        yield [];
-    }
-
-    public function provideValidComparisons() : \Generator
-    {
-        yield [];
     }
 
     abstract protected function createConstraint(?array $options = null) : Constraint;
