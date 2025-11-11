@@ -28,7 +28,6 @@
     },
     "require-dev": {
         "ext-bcmath": "*",
-        "ext-pcov": "*",
         "flow-php/etl": "^0.1",
         "flow-php/etl-adapter-http": "^0.1 || ^0.2",
         "google/apiclient": "^2.0",
@@ -96,7 +95,7 @@
     "scripts": {
         "benchmark": [
             "Composer\\Config::disableProcessTimeout",
-            "tools/vendor/bin/phpbench run --report=aeon"
+            "tools/phpbench/vendor/bin/phpbench run --report=aeon"
         ],
         "build": [
             "@static:analyze",
@@ -104,24 +103,39 @@
             "@test:mutation"
         ],
         "test": [
-            "tools/vendor/bin/phpunit"
+            "tools/phpunit/vendor/bin/phpunit --coverage-html=./var/phpunit/coverage/html"
         ],
         "test:mutation": [
             "Composer\\Config::disableProcessTimeout",
-            "tools/vendor/bin/infection --threads=max"
+            "tools/infection/vendor/bin/infection --threads=max"
         ],
         "static:analyze": [
-            "tools/vendor/bin/phpstan analyze -c phpstan.neon --memory-limit=-1",
-            "tools/vendor/bin/php-cs-fixer fix --dry-run"
+            "tools/phpstan/vendor/bin/phpstan analyze -c phpstan.neon --memory-limit=-1",
+            "tools/cs-fixer/vendor/bin/php-cs-fixer fix --dry-run"
         ],
-        "monorepo:validate": "tools/vendor/bin/monorepo-builder validate",
-        "cs:php:fix": "tools/vendor/bin/php-cs-fixer fix",
-        "tools:install": "composer install --working-dir=./tools",
+        "monorepo:validate": "tools/monorepo/vendor/bin/monorepo-builder validate",
+        "cs:php:fix": "tools/cs-fixer/vendor/bin/php-cs-fixer fix",
         "post-install-cmd": [
             "@tools:install"
         ],
         "post-update-cmd": [
             "@tools:install"
+        ],
+        "tools:install": [
+          "composer install --working-dir=./tools/cs-fixer",
+          "composer install --working-dir=./tools/infection",
+          "composer install --working-dir=./tools/monorepo",
+          "composer install --working-dir=./tools/phpbench",
+          "composer install --working-dir=./tools/phpstan",
+          "composer install --working-dir=./tools/phpunit"
+        ],
+        "tools:update": [
+          "composer update --working-dir=./tools/cs-fixer",
+          "composer update --working-dir=./tools/infection",
+          "composer update --working-dir=./tools/monorepo",
+          "composer update --working-dir=./tools/phpbench",
+          "composer update --working-dir=./tools/phpstan",
+          "composer update --working-dir=./tools/phpunit"
         ]
     },
     "replace": {
