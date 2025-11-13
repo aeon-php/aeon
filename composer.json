@@ -14,29 +14,29 @@
         "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "azuyalabs/yasumi": "~2.0",
+        "azuyalabs/yasumi": "~2.8",
         "doctrine/dbal": "~3.0",
         "psr/cache": "~1.0|~2.0|~3.0",
         "psr/clock": "*",
-        "symfony/config": "~5.4.21||~6.3||~7.0",
-        "symfony/dependency-injection": "~5.4.21||~6.3||~7.0",
-        "symfony/form": "~5.4.21||~6.3||~7.0",
-        "symfony/http-kernel": "~5.4.21||~6.3||~7.0",
+        "symfony/config": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/dependency-injection": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/form": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/http-kernel": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
         "symfony/polyfill-mbstring": "~1.0",
-        "symfony/validator": "~5.4.21||~6.3||~7.0",
-        "twig/twig": "~2.10||~3"
+        "symfony/validator": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "twig/twig": "^3.19"
     },
     "require-dev": {
         "ext-bcmath": "*",
         "flow-php/etl": "^0.1",
         "flow-php/etl-adapter-http": "^0.1 || ^0.2",
-        "google/apiclient": "^2.0",
+        "google/apiclient": "^2.18",
         "phpbench/phpbench": "^1.2.6",
-        "symfony/browser-kit": "~5.4.21||~6.3||~7.0",
-        "symfony/cache": "~5.4||~6.3||~7.0",
-        "symfony/dom-crawler": "~5.4.21||~6.3||~7.0",
-        "symfony/framework-bundle": "~5.4.21||~6.3||~7.0",
-        "symfony/security-bundle": "~5.4.21||~6.3||~7.0"
+        "symfony/browser-kit": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/cache": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/dom-crawler": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/framework-bundle": "^5.4.21 || ^6.4 || ^7.3 || ^8.0",
+        "symfony/security-bundle": "^5.4.21 || ^6.4 || ^7.3 || ^8.0"
     },
     "suggest": {
         "ext-bcmath": "Compare time units with high precision"
