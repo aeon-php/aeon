@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-11-11
+## [Unreleased] - 2025-11-13
 
 ### Added
 - [#378](https://github.com/aeon-php/aeon/pull/378) - **Add a `BusinessDays::mondaySaturday()`** - [@stloyd](https://github.com/stloyd)
@@ -6,6 +6,7 @@
 - [#377](https://github.com/aeon-php/aeon/pull/377) - **Added CODEOWNERS file to define project ownership and responsibilities.** - [@stloyd](https://github.com/stloyd)
 
 ### Changed
+- [#389](https://github.com/aeon-php/aeon/pull/389) - **Update dependencies to the latest supported** - [@stloyd](https://github.com/stloyd)
 - [#388](https://github.com/aeon-php/aeon/pull/388) - **Upgrade PHPUnit to 10.5** - [@stloyd](https://github.com/stloyd)
 - [#380](https://github.com/aeon-php/aeon/pull/380) - **Adjust `dependabot.yml` setup** - [@stloyd](https://github.com/stloyd)
 - [#379](https://github.com/aeon-php/aeon/pull/379) - **Rework tools setup to allow independent updates** - [@stloyd](https://github.com/stloyd)
