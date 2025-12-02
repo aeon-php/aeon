@@ -38,9 +38,9 @@ final class AfterOrEqualValidatorTest extends AbstractComparisonValidatorTestCas
         return new AfterOrEqualValidator();
     }
 
-    protected function createConstraint(?array $options = null) : Constraint
+    protected function createConstraint(mixed $value) : Constraint
     {
-        return new AfterOrEqual($options);
+        return new AfterOrEqual(value: $value);
     }
 
     protected function getErrorCode() : ?string

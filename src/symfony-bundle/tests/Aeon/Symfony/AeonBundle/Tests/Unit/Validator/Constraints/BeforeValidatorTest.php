@@ -36,9 +36,9 @@ final class BeforeValidatorTest extends AbstractComparisonValidatorTestCase
         return new BeforeValidator();
     }
 
-    protected function createConstraint(?array $options = null) : Constraint
+    protected function createConstraint(mixed $value) : Constraint
     {
-        return new Before($options);
+        return new Before(value: $value);
     }
 
     protected function getErrorCode() : ?string

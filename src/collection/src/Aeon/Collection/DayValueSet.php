@@ -149,9 +149,9 @@ final class DayValueSet implements \Countable
     }
 
     /**
-     * @psalm-param pure-callable(DayValue $dayValue) : bool $callback
-     *
      * @param callable(DayValue $dayValue) : bool $callback
+     *
+     * @psalm-param pure-callable(DayValue $dayValue) : bool $callback
      */
     public function filter(callable $callback) : self
     {
@@ -159,9 +159,9 @@ final class DayValueSet implements \Countable
     }
 
     /**
-     * @psalm-param pure-callable(DayValue $dayValue) : DayValue $callback
-     *
      * @param callable(DayValue $dayValue) : DayValue $callback
+     *
+     * @psalm-param pure-callable(DayValue $dayValue) : DayValue $callback
      */
     public function map(callable $callback) : self
     {
@@ -172,10 +172,10 @@ final class DayValueSet implements \Countable
     }
 
     /**
-     * @psalm-param pure-callable(mixed $initial, DayValue $nextDayValue) : mixed $callback
-     *
      * @param callable(mixed $initial, DayValue $nextDayValue) : mixed $callback
      * @param null|mixed $initial
+     *
+     * @psalm-param pure-callable(mixed $initial, DayValue $nextDayValue) : mixed $callback
      *
      * @return mixed
      */
