@@ -27,7 +27,7 @@ abstract class AbstractComparisonValidatorTestCase extends ConstraintValidatorTe
     #[DataProvider('provideValidComparisons')]
     public function testValidComparisonToValue($dirtyValue, $comparisonValue) : void
     {
-        $constraint = $this->createConstraint(['value' => $comparisonValue]);
+        $constraint = $this->createConstraint($comparisonValue);
 
         $this->validator->validate($dirtyValue, $constraint);
 
@@ -44,7 +44,7 @@ abstract class AbstractComparisonValidatorTestCase extends ConstraintValidatorTe
     #[DataProvider('provideInvalidComparisons')]
     public function testInvalidComparisonToValue($dirtyValue, $dirtyValueAsString, $comparedValue, $comparedValueString, $comparedValueType) : void
     {
-        $constraint = $this->createConstraint(['value' => $comparedValue]);
+        $constraint = $this->createConstraint($comparedValue);
         $constraint->message = 'Constraint Message';
 
         $this->validator->validate($dirtyValue, $constraint);
@@ -57,7 +57,7 @@ abstract class AbstractComparisonValidatorTestCase extends ConstraintValidatorTe
             ->assertRaised();
     }
 
-    abstract protected function createConstraint(?array $options = null) : Constraint;
+    abstract protected function createConstraint(mixed $value) : Constraint;
 
     protected function getErrorCode() : ?string
     {

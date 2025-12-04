@@ -37,7 +37,7 @@ jobs:
       - name: "Get Composer Cache Directory"
         id: composer-cache
         run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: "Cache Composer dependencies"
         uses: "actions/cache@v4"
@@ -84,7 +84,7 @@ jobs:
       - name: "Get Composer Cache Directory"
         id: composer-cache
         run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: "Cache Composer dependencies"
         uses: "actions/cache@v4"
@@ -117,6 +117,7 @@ jobs:
           - "8.2"
           - "8.3"
           - "8.4"
+          - "8.5"
         operating-system:
           - "ubuntu-latest"
 
@@ -135,7 +136,7 @@ jobs:
       - name: "Get Composer Cache Directory"
         id: composer-cache
         run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: "Cache Composer dependencies"
         uses: "actions/cache@v4"
@@ -192,7 +193,7 @@ jobs:
       - name: "Get Composer Cache Directory"
         id: composer-cache
         run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: "Cache Composer dependencies"
         uses: "actions/cache@v4"

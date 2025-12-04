@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Aeon\Symfony\AeonBundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\Exception\MissingOptionsException;
 
 final class Holiday extends Constraint
 {
@@ -30,12 +31,17 @@ final class Holiday extends Constraint
 
     public function __construct($options = null)
     {
-        parent::__construct($options);
-    }
+        if (!isset($options['countryCode'])) {
+            throw new MissingOptionsException(
+                \sprintf('The option "countryCode" must be set for constraint "%s".', self::class),
+                ['countryCode'],
+            );
+        }
 
-    public function getRequiredOptions() : array
-    {
-        return ['countryCode'];
+        $this->countryCode = $options['countryCode'];
+        unset($options['countryCode']);
+
+        parent::__construct($options);
     }
 
     public function validatedBy() : string
