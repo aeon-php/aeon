@@ -1,6 +1,7 @@
-## [Unreleased] - 2025-11-13
+## [Unreleased] - 2025-12-04
 
 ### Added
+- [#398](https://github.com/aeon-php/aeon/pull/398) - **PHP 8.5 support** - [@smoench](https://github.com/smoench)
 - [#378](https://github.com/aeon-php/aeon/pull/378) - **Add a `BusinessDays::mondaySaturday()`** - [@stloyd](https://github.com/stloyd)
 - [#375](https://github.com/aeon-php/aeon/pull/375) - **Add `BusinessHours::previousBusinessDay()` method** - [@stloyd](https://github.com/stloyd)
 - [#377](https://github.com/aeon-php/aeon/pull/377) - **Added CODEOWNERS file to define project ownership and responsibilities.** - [@stloyd](https://github.com/stloyd)
@@ -13,6 +14,7 @@
 - [#261](https://github.com/aeon-php/aeon/pull/261) - **Update action cache from @v2 to @v4 in Github Action workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [#398](https://github.com/aeon-php/aeon/pull/398) - **Symfony 8 support** - [@smoench](https://github.com/smoench)
 - [#376](https://github.com/aeon-php/aeon/pull/376) - **Remove PHP 8.4 deprecations** - [@stloyd](https://github.com/stloyd)
 - [#293](https://github.com/aeon-php/aeon/pull/293) - **Deprecated messages "Implicitly marking parameter type nullable is deprecated"** - [@Edhrendal](https://github.com/Edhrendal)
 - [#240](https://github.com/aeon-php/aeon/pull/240) - **Type in Business Hours library namespace** - [@matusstafura](https://github.com/matusstafura)
@@ -1000,6 +1002,7 @@
 - @norbertmwk
 - @norberttech
 - @owsiakl
+- @smoench
 - @stloyd
 - @tomaszhanc
 - @unixslayer
