@@ -1,6 +1,7 @@
 parameters:
-    checkGenericClassInNonGenericObjectType: false
     level: max
+    ignoreErrors:
+        - identifier: missingType.generics
     paths:
         - src/business-hours/src
         - src/calendar/src
