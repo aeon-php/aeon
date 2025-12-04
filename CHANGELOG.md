@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-12-04
+## [1.0.12] - 2025-12-04
 
 ### Added
 - [#398](https://github.com/aeon-php/aeon/pull/398) - **PHP 8.5 support** - [@smoench](https://github.com/smoench)
