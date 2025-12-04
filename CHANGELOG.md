@@ -7,6 +7,7 @@
 - [#377](https://github.com/aeon-php/aeon/pull/377) - **Added CODEOWNERS file to define project ownership and responsibilities.** - [@stloyd](https://github.com/stloyd)
 
 ### Changed
+- [3c6091](https://github.com/aeon-php/aeon/commit/3c6091480083f9dd97066412bb218e21b19f62ef) - **chore: updated dependencies** - [@norberttech](https://github.com/norberttech)
 - [#389](https://github.com/aeon-php/aeon/pull/389) - **Update dependencies to the latest supported** - [@stloyd](https://github.com/stloyd)
 - [#388](https://github.com/aeon-php/aeon/pull/388) - **Upgrade PHPUnit to 10.5** - [@stloyd](https://github.com/stloyd)
 - [#380](https://github.com/aeon-php/aeon/pull/380) - **Adjust `dependabot.yml` setup** - [@stloyd](https://github.com/stloyd)
