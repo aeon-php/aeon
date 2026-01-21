@@ -15,9 +15,12 @@ use PHPUnit\Framework\TestCase;
 
 final class GoogleCalendarRegionalHolidaysTest extends TestCase
 {
+    private const FIXTURES_PATH = __DIR__ . '/../../../../../Fixtures/holidays';
+
     public function test_checking_regional_holidays() : void
     {
-        $holidays = new GoogleCalendarRegionalHolidays(CountryCodes::PL);
+        $holidays = (new GoogleCalendarRegionalHolidays(CountryCodes::PL))
+            ->withDatasetPath(self::FIXTURES_PATH);
 
         $this->assertTrue($holidays->isHoliday(Day::fromString('2021-01-01')));
         $this->assertFalse($holidays->isHoliday(Day::fromString('2021-01-02')));
@@ -25,7 +28,8 @@ final class GoogleCalendarRegionalHolidaysTest extends TestCase
 
     public function test_getting_regional_holidays() : void
     {
-        $holidays = new GoogleCalendarRegionalHolidays(CountryCodes::PL);
+        $holidays = (new GoogleCalendarRegionalHolidays(CountryCodes::PL))
+            ->withDatasetPath(self::FIXTURES_PATH);
 
         $this->assertCount(1, $holidays->holidaysAt(Day::fromString('2021-01-01')));
         $this->assertInstanceOf(Holiday::class, $holidays->holidaysAt(Day::fromString('2021-01-01'))[0]);
@@ -33,7 +37,8 @@ final class GoogleCalendarRegionalHolidaysTest extends TestCase
 
     public function test_getting_regional_holidays_from_multiple_regions() : void
     {
-        $holidays = new GoogleCalendarRegionalHolidays(CountryCodes::PL, CountryCodes::US);
+        $holidays = (new GoogleCalendarRegionalHolidays(CountryCodes::PL, CountryCodes::US))
+            ->withDatasetPath(self::FIXTURES_PATH);
 
         $this->assertCount(2, $holidays->holidaysAt(Day::fromString('2021-01-01')));
         $this->assertInstanceOf(Holiday::class, $holidays->holidaysAt(Day::fromString('2021-01-01'))[0]);
@@ -54,7 +59,8 @@ final class GoogleCalendarRegionalHolidaysTest extends TestCase
 
     public function test_getting_holidays_for_a_time_period() : void
     {
-        $holidays = new GoogleCalendarRegionalHolidays(CountryCodes::PL);
+        $holidays = (new GoogleCalendarRegionalHolidays(CountryCodes::PL))
+            ->withDatasetPath(self::FIXTURES_PATH);
 
         $januaryHolidays = $holidays->in(
             new TimePeriod(
