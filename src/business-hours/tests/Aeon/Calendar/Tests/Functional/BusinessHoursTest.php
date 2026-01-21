@@ -23,9 +23,12 @@ use PHPUnit\Framework\TestCase;
 
 final class BusinessHoursTest extends TestCase
 {
+    private const FIXTURES_PATH = __DIR__ . '/../../../../Fixtures/holidays';
+
     public function test_working_days_during_holiday_with_one_custom_working_day_and_time_period_of_non_working_days() : void
     {
-        $regionalHolidays = new GoogleCalendarRegionalHolidays(CountryCodes::US);
+        $regionalHolidays = (new GoogleCalendarRegionalHolidays(CountryCodes::US))
+            ->withDatasetPath(self::FIXTURES_PATH);
 
         $businessHours = new BusinessHours(
             BusinessDays::mondayFriday(
@@ -53,7 +56,8 @@ final class BusinessHoursTest extends TestCase
 
     public function test_finding_next_working_day() : void
     {
-        $regionalHolidays = new GoogleCalendarRegionalHolidays(CountryCodes::US);
+        $regionalHolidays = (new GoogleCalendarRegionalHolidays(CountryCodes::US))
+            ->withDatasetPath(self::FIXTURES_PATH);
 
         $businessHours = new BusinessHours(
             BusinessDays::mondayFriday(
@@ -76,7 +80,8 @@ final class BusinessHoursTest extends TestCase
 
     public function test_finding_previous_working_day() : void
     {
-        $regionalHolidays = new GoogleCalendarRegionalHolidays(CountryCodes::US);
+        $regionalHolidays = (new GoogleCalendarRegionalHolidays(CountryCodes::US))
+            ->withDatasetPath(self::FIXTURES_PATH);
 
         $businessHours = new BusinessHours(
             BusinessDays::mondayFriday(
@@ -220,7 +225,7 @@ final class BusinessHoursTest extends TestCase
             ),
             BusinessDays::none(),
             new NonBusinessDays(
-                new Holidays(new GoogleCalendarRegionalHolidays(CountryCodes::US))
+                new Holidays((new GoogleCalendarRegionalHolidays(CountryCodes::US))->withDatasetPath(self::FIXTURES_PATH))
             )
         );
 
@@ -237,7 +242,7 @@ final class BusinessHoursTest extends TestCase
             ),
             BusinessDays::none(),
             new NonBusinessDays(
-                new Holidays(new GoogleCalendarRegionalHolidays(CountryCodes::US))
+                new Holidays((new GoogleCalendarRegionalHolidays(CountryCodes::US))->withDatasetPath(self::FIXTURES_PATH))
             )
         );
 
@@ -270,7 +275,7 @@ final class BusinessHoursTest extends TestCase
             ),
             BusinessDays::none(),
             new NonBusinessDays(
-                new Holidays(new GoogleCalendarRegionalHolidays(CountryCodes::US))
+                new Holidays((new GoogleCalendarRegionalHolidays(CountryCodes::US))->withDatasetPath(self::FIXTURES_PATH))
             )
         );
 
