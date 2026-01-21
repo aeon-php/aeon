@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Aeon\Symfony\AeonBundle\Tests\Unit\Validator\Constraints;
 
 use Aeon\Calendar\Gregorian\Day;
-use Aeon\Calendar\Holidays\GoogleRegionalHolidaysFactory;
+use Aeon\Symfony\AeonBundle\Tests\Fixtures\TestGoogleRegionalHolidaysFactory;
 use Aeon\Symfony\AeonBundle\Validator\Constraints\Holiday;
 use Aeon\Symfony\AeonBundle\Validator\Constraints\HolidayValidator;
 use Symfony\Component\Validator\ConstraintValidator;
@@ -90,6 +90,6 @@ final class HolidayValidatorTest extends ConstraintValidatorTestCase
 
     protected function createValidator() : ConstraintValidator
     {
-        return new HolidayValidator(new GoogleRegionalHolidaysFactory());
+        return new HolidayValidator(new TestGoogleRegionalHolidaysFactory(__DIR__ . '/../../../../../../../Fixtures/holidays'));
     }
 }

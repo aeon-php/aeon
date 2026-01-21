@@ -19,27 +19,27 @@ final class GoogleCalendarRegionalHolidaysTest extends TestCase
     {
         $holidays = new GoogleCalendarRegionalHolidays(CountryCodes::PL);
 
-        $this->assertTrue($holidays->isHoliday(Day::fromString('2020-01-01')));
-        $this->assertFalse($holidays->isHoliday(Day::fromString('2020-01-02')));
+        $this->assertTrue($holidays->isHoliday(Day::fromString('2021-01-01')));
+        $this->assertFalse($holidays->isHoliday(Day::fromString('2021-01-02')));
     }
 
     public function test_getting_regional_holidays() : void
     {
         $holidays = new GoogleCalendarRegionalHolidays(CountryCodes::PL);
 
-        $this->assertCount(1, $holidays->holidaysAt(Day::fromString('2020-01-01')));
-        $this->assertInstanceOf(Holiday::class, $holidays->holidaysAt(Day::fromString('2020-01-01'))[0]);
+        $this->assertCount(1, $holidays->holidaysAt(Day::fromString('2021-01-01')));
+        $this->assertInstanceOf(Holiday::class, $holidays->holidaysAt(Day::fromString('2021-01-01'))[0]);
     }
 
     public function test_getting_regional_holidays_from_multiple_regions() : void
     {
         $holidays = new GoogleCalendarRegionalHolidays(CountryCodes::PL, CountryCodes::US);
 
-        $this->assertCount(2, $holidays->holidaysAt(Day::fromString('2020-01-01')));
-        $this->assertInstanceOf(Holiday::class, $holidays->holidaysAt(Day::fromString('2020-01-01'))[0]);
-        $this->assertInstanceOf(Holiday::class, $holidays->holidaysAt(Day::fromString('2020-01-01'))[1]);
-        $this->assertSame('New Year\'s Day', $holidays->holidaysAt(Day::fromString('2020-01-01'))[0]->name());
-        $this->assertSame('New Year\'s Day', $holidays->holidaysAt(Day::fromString('2020-01-01'))[1]->name());
+        $this->assertCount(2, $holidays->holidaysAt(Day::fromString('2021-01-01')));
+        $this->assertInstanceOf(Holiday::class, $holidays->holidaysAt(Day::fromString('2021-01-01'))[0]);
+        $this->assertInstanceOf(Holiday::class, $holidays->holidaysAt(Day::fromString('2021-01-01'))[1]);
+        $this->assertSame('New Year\'s Day', $holidays->holidaysAt(Day::fromString('2021-01-01'))[0]->name());
+        $this->assertSame('New Year\'s Day', $holidays->holidaysAt(Day::fromString('2021-01-01'))[1]->name());
     }
 
     public function test_getting_holidays_without_providing_country_code() : void
@@ -49,7 +49,7 @@ final class GoogleCalendarRegionalHolidaysTest extends TestCase
 
         $holidays = new GoogleCalendarRegionalHolidays();
 
-        $holidays->holidaysAt(Day::fromString('2020-01-01'));
+        $holidays->holidaysAt(Day::fromString('2021-01-01'));
     }
 
     public function test_getting_holidays_for_a_time_period() : void

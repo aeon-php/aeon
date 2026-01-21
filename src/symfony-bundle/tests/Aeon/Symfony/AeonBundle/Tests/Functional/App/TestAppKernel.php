@@ -8,6 +8,7 @@ use Aeon\Calendar\Gregorian\Calendar;
 use Aeon\RateLimiter\Storage\PSRCacheStorage;
 use Aeon\Symfony\AeonBundle\AeonBundle;
 use Aeon\Symfony\AeonBundle\RateLimiter\RateLimiters;
+use Aeon\Symfony\AeonBundle\Tests\Fixtures\TestGoogleRegionalHolidaysFactory;
 use Aeon\Symfony\AeonBundle\Tests\Functional\App\Form\NotHolidaysFormType;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
@@ -78,6 +79,14 @@ abstract class TestAppKernel extends BaseKernel
         $c->register('cache.psr.array.adapter', ArrayAdapter::class);
         $c->register('cache.psr.array', PSRCacheStorage::class)
             ->setArguments([new Reference('cache.psr.array.adapter'), new Reference(Calendar::class)]);
+
+        // Register test holidays factory with fixtures
+        $fixturesPath = \dirname(__DIR__, 6) . '/Fixtures/holidays';
+        $c->register('test.calendar.holidays.factory', TestGoogleRegionalHolidaysFactory::class)
+            ->setArguments([$fixturesPath])
+            ->setPublic(true);
+        $c->setAlias(TestGoogleRegionalHolidaysFactory::class, 'test.calendar.holidays.factory');
+        $c->setAlias('aeon.calendar.holidays.factory', 'test.calendar.holidays.factory');
 
         $session = ['enabled' => true];
 
