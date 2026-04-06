@@ -8,21 +8,21 @@
     "packages": [
         {
             "name": "azuyalabs/yasumi",
-            "version": "2.9.0",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/azuyalabs/yasumi.git",
-                "reference": "36005a0796b64bc07257f39c11c42f147fe5320f"
+                "reference": "e24bc345d2dd0b9425ff19abf7f11574bbb1d7be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/azuyalabs/yasumi/zipball/36005a0796b64bc07257f39c11c42f147fe5320f",
-                "reference": "36005a0796b64bc07257f39c11c42f147fe5320f",
+                "url": "https://api.github.com/repos/azuyalabs/yasumi/zipball/e24bc345d2dd0b9425ff19abf7f11574bbb1d7be",
+                "reference": "e24bc345d2dd0b9425ff19abf7f11574bbb1d7be",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=8.1"
+                "php": ">=8.2"
             },
             "require-dev": {
                 "azuyalabs/php-cs-fixer-config": "^0.3",
@@ -30,7 +30,7 @@
                 "mikey179/vfsstream": "^1.6",
                 "phpstan/phpstan": "^2.1",
                 "phpstan/phpstan-deprecation-rules": "^2.0",
-                "phpunit/phpunit": "^8.5 || ^9.6"
+                "phpunit/phpunit": "^11.5"
             },
             "suggest": {
                 "ext-calendar": "For calculating the date of Easter"
@@ -77,7 +77,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-12-29T16:13:54+00:00"
+            "time": "2026-03-30T13:35:38+00:00"
         },
         {
             "name": "doctrine/dbal",
