@@ -3,7 +3,7 @@
   "description": "Aeon PHP Calendar - Tools",
   "require-dev": {
     "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
-    "symplify/monorepo-builder": "11.2.23"
+    "symplify/monorepo-builder": "12.7.0"
   },
   "config": {
     "allow-plugins": false
