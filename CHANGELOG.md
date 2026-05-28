@@ -1,10 +1,11 @@
-## [Unreleased] - 2026-01-21
+## [Unreleased] - 2026-05-28
 
 ### Added
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **GoogleCalendarRegionalHolidays::withDatasetPath() method to support custom holidays data location** - [@norberttech](https://github.com/norberttech)
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **Nix Shell for local development** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [b61cc7](https://github.com/aeon-php/aeon/commit/b61cc7ab2061ef9ef22b1a5906ff0a2c6b56850e) - **refactor: updated dependencies** - [@norberttech](https://github.com/norberttech)
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **Holidays data structure changed from flat files (PL.json) to Hive-style partitioned format (country_code=PL/holidays.json)** - [@norberttech](https://github.com/norberttech)
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **Refactored bin/countriesdb.php ETL script to use Flow PHP DSL functions instead of legacy transformers** - [@norberttech](https://github.com/norberttech)
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **GoogleCalendarEventsExtractor updated to use Flow PHP DSL functions and yield rows individually** - [@norberttech](https://github.com/norberttech)
