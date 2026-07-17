@@ -1,4 +1,4 @@
-## [Unreleased] - 2026-05-28
+## [Unreleased] - 2026-07-17
 
 ### Added
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **GoogleCalendarRegionalHolidays::withDatasetPath() method to support custom holidays data location** - [@norberttech](https://github.com/norberttech)
@@ -9,6 +9,9 @@
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **Holidays data structure changed from flat files (PL.json) to Hive-style partitioned format (country_code=PL/holidays.json)** - [@norberttech](https://github.com/norberttech)
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **Refactored bin/countriesdb.php ETL script to use Flow PHP DSL functions instead of legacy transformers** - [@norberttech](https://github.com/norberttech)
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **GoogleCalendarEventsExtractor updated to use Flow PHP DSL functions and yield rows individually** - [@norberttech](https://github.com/norberttech)
+
+### Fixed
+- [93a1f5](https://github.com/aeon-php/aeon/commit/93a1f58a4583561d8a3225c6de6bda31764b7934) - **failing leap seconds guard** - [@norberttech](https://github.com/norberttech)
 
 ### Removed
 - [#415](https://github.com/aeon-php/aeon/pull/415) - **Removed legacy ETL transformers: DateTimeComparator, FilterHistoricalHolidaysTransformer, FlattenHolidaysTransformer, GoogleCalendarEventsTransformer, HolidaysJsonLoader, SortHolidaysTransformer, UpdateFutureHolidaysTransformer** - [@norberttech](https://github.com/norberttech)
